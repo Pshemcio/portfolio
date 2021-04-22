@@ -1,11 +1,10 @@
 import { Container } from './Home.styled';
-import { Button, Heading1 } from '../Components/index';
-
+import { Header, About } from './index';
 const Home = () => {
     return (
         <Container>
-            <Heading1>Hej</Heading1>
-            <Button>Hej</Button>
+            <Header></Header>
+            <About></About>
         </Container>
     )
 }
