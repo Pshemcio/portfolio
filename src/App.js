@@ -10,8 +10,6 @@ const AppStyled = styled.div`
 
 function App() {
   useEffect(() => {
-    console.log(document.querySelector('.App'));
-
     const scroll = new LocomotiveScroll({
       el: document.querySelector(".App"),
       lerp: 0.09,
@@ -24,6 +22,8 @@ function App() {
         smooth: true
       }
     });
+
+    console.log(scroll);
   }, [])
 
   return (

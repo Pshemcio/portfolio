@@ -2,7 +2,8 @@ const Theme = {
     colors: {
         primaryColor: '#0B2027',
         secondaryColor: '#f2f5ea',
-        tertiaryColor: '#39C0D2',
+        tertiaryColor: '#1ee5ff',
+        tertiaryColorDark: '#1ee5ff1a',
         quaternaryColor: '#e75a7c'
     },
     typography: {

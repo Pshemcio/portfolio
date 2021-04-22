@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components';
 import Theme from '../Settings/theme';
 
 let {
-    primaryColor,
     secondaryColor,
     tertiaryColor,
     quaternaryColor

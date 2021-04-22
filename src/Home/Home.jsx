@@ -1,5 +1,4 @@
-import { Container } from './Home.styled';
-import { Header, About } from './index';
+import { Header, About, Container } from './index';
 const Home = () => {
     return (
         <Container>
