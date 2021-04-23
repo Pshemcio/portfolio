@@ -2,72 +2,61 @@ import React, { useState, useEffect } from 'react';
 import {
     Switch,
     Route,
-    Link
+    NavLink
 } from "react-router-dom";
-// import { useHistory } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 import { Home } from '../Home';
-import Work from '../Work/Work';
+import Projects from '../Projects/Projects';
+import {
+    MainNavigation,
+    MainNavigationList,
+    MainNavigationItem,
+    SocialsName,
+} from './Header.styled';
 
 function Header() {
-    // const history = useHistory();
-    // NIE DZIALA TO Z LINKAMI, buttony jak najbardziej
     const [showMenu, setShowMenu] = useState(false);
+
+    const links = [
+        { name: "Home", path: "/" },
+        { name: "Projekty", path: "/projects" },
+    ];
+
+    const socials = [
+        { name: "Github", path: "https://github.com/Pshemcio", icon: faGithub },
+        { name: "Linkedin", path: "https://www.linkedin.com/in/przemys%C5%82aw-majka-9540b01b7/", icon: faLinkedin },
+    ];
 
     return (
         <div>
-            {/* <div onClick={() => setShowMenu(!showMenu)}>
-                {showMenu ? 'Schowaj counter' : 'Pokaż counter'}
-
-            </div> */}
-
-            {/* <img src={logo} className="App-logo" alt="logo" onClick={() => setShowMenu(!showMenu)} /> */}
-
-            {/* <div className={
-                showMenu ? 'main-navigation' : 'main-navigation hidden'
-            }>
-                <nav>
-                    <ul >
-                        <li>
-                            <Link to='/' onClick={() => setShowMenu(!showMenu)}>Home Page</Link>
-                        </li>
-                        <li>
-                            <Link to='/counter' onClick={() => setShowMenu(!showMenu)}>counter</Link>
-                        </li>
-                        <li>
-                            <Link to='/props' onClick={() => setShowMenu(!showMenu)}>props</Link>
-                        </li>
-                        <li>
-                            <Link to='/destructure' onClick={() => setShowMenu(!showMenu)}>destructure</Link>
-                        </li>
-                        <li>
-                            <Link to='/logic' onClick={() => setShowMenu(!showMenu)}>logic</Link>
-                        </li>
-                        <li>
-                            <Link to='/lifecycles' onClick={() => setShowMenu(!showMenu)}>lifecycles</Link>
-                        </li>
-                        <li>
-                            <Link to='/useeffect' onClick={() => setShowMenu(!showMenu)}>useeffect</Link>
-                        </li>
-                    </ul>
-                </nav>
-            </div> */}
-
-            <nav>
-                <ul >
-                    <li>
-                        <Link to='/'>Home Page</Link>
-                    </li>
-                    <li>
-                        <Link to='/work'>Work</Link>
-                    </li>
-                </ul>
-            </nav>
-
-
+            <MainNavigation>
+                <MainNavigationList grow>
+                    {links.map((link, index) => (
+                        <MainNavigationItem key={index}>
+                            <NavLink to={link.path} exact activeClassName="current">
+                                {link.name}
+                            </NavLink>
+                        </MainNavigationItem>
+                    ))}
+                </MainNavigationList>
+                <MainNavigationList>
+                    {socials.map((link, index) => (
+                        <MainNavigationItem key={index}>
+                            <a target='_blank' href={link.path} rel="noreferrer">
+                                <FontAwesomeIcon icon={link.icon} />
+                                <SocialsName>
+                                    {link.name}
+                                </SocialsName>
+                            </a>
+                        </MainNavigationItem>
+                    ))}
+                </MainNavigationList>
+            </MainNavigation>
 
             <Switch>
-                <Route path='/work' render={props => <Work {...props} />} />
+                <Route path='/projects' render={props => <Projects {...props} />} />
                 {/* <Route path='/props' render={props => <Props {...props} />} />
                 <Route path='/destructure' render={props => <Destructure {...props} />} />
                 <Route path='/logic' render={props => <Logic {...props} />} />

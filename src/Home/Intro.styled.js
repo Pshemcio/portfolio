@@ -3,7 +3,8 @@ import Theme from '../Settings/theme';
 
 const {
     colors: {
-        primaryColor
+        primaryColor,
+        primaryColorLight
     }
 } = Theme;
 
@@ -11,7 +12,8 @@ export const HeaderStyled = styled.header`
     height: 100vh;
     display: grid;
     place-content: center;
-    background-color: ${primaryColor};
+    /* background-color: ${primaryColor}; */
+    background-image: radial-gradient(${primaryColor},${primaryColorLight});
 `
 
 export const SvgWrapper = styled.div`

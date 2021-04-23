@@ -1,4 +1,4 @@
-import Header from './shared/Header';
+import { Header } from './shared/';
 import styled from 'styled-components';
 import { GlobalStyle } from './Settings/';
 import { useEffect, useState } from 'react';

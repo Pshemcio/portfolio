@@ -1,9 +1,9 @@
 import { MainContainer } from '../Components/index';
-import { ContainerWork } from './index';
+import { ContainerProjects } from './index';
 import LocomotiveScroll from 'locomotive-scroll';
 import { useEffect } from 'react';
 
-const Work = () => {
+const Projects = () => {
     useEffect(() => {
         const scroll = new LocomotiveScroll({
             el: document.querySelector(".smooth-scroll"),
@@ -15,10 +15,10 @@ const Work = () => {
 
     return (
         <MainContainer className="smooth-scroll">
-            <ContainerWork />
-            <ContainerWork white />
+            <ContainerProjects />
+            <ContainerProjects white />
         </MainContainer>
     )
 }
 
-export default Work
+export default Projects

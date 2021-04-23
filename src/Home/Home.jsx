@@ -1,4 +1,4 @@
-import { Header, About, Container } from './index';
+import { Intro, About, Container } from './index';
 import { MainContainer } from '../Components/index';
 import LocomotiveScroll from 'locomotive-scroll';
 import { useEffect } from 'react';
@@ -15,7 +15,7 @@ const Home = () => {
 
     return (
         <MainContainer className="smooth-scroll">
-            <Header></Header>
+            <Intro />
             <About data-scroll-section data-scroll-target></About>
         </MainContainer>
     )

@@ -10,7 +10,7 @@ const {
     }
 } = Theme;
 
-const Header = () => {
+const Intro = () => {
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
@@ -41,4 +41,4 @@ const Header = () => {
     )
 }
 
-export default Header;
+export default Intro;
