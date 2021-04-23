@@ -27,7 +27,6 @@ const dash = keyframes`
 const fill = keyframes`
   to {
         fill-opacity: 1;
-        stroke-opacity: .6;
     }
 `
 

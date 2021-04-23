@@ -3,7 +3,7 @@ import { AboutStyled } from './Home.styled';
 
 const About = () => {
     return (
-        <AboutStyled>
+        <AboutStyled id="about">
             <Button>No elo</Button>
         </AboutStyled>
     )

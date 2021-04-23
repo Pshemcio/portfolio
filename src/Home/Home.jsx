@@ -1,9 +1,10 @@
 import { Header, About, Container } from './index';
+
 const Home = () => {
     return (
         <Container>
             <Header></Header>
-            <About></About>
+            <About data-scroll-section></About>
         </Container>
     )
 }
