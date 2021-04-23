@@ -1,4 +1,4 @@
-import { Heading1, Links } from '../Components/index';
+import { Links } from '../Components/index';
 import { useEffect, useState } from 'react';
 import { HeaderStyled, SvgWrapper, LogoPath } from './index';
 import Theme from '../Settings/theme';

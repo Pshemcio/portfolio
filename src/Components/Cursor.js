@@ -14,22 +14,14 @@ const fadeIn = keyframes`
     opacity: 1;
   }
 `
-const SecondaryCursorWrapper = styled.div`
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-`
 
-const SecondaryCursor = styled.div`
+const CursorStyled = styled.div`
     width: 60px;
     height: 60px;
     z-index: 1000;
     border-radius: 50%;
     border: 1px solid ${tertiaryColor};
-    position: absolute;
+    position: fixed;
     opacity: 0;
     pointer-events: none;
     transition: border .5s;
@@ -57,6 +49,12 @@ const SecondaryCursor = styled.div`
     `}
 
     ${props =>
+        props.mobile &&
+        css`
+        display: none;
+    `}
+
+    ${props =>
         props.hovered &&
         css`
         border: none;
@@ -69,8 +67,8 @@ const SecondaryCursor = styled.div`
     `}
 `
 
-const Cursor = ({ isHovered }) => {
-    const secondaryCursor = useRef(null);
+const Cursor = ({ isHovered, isMobile }) => {
+    const cursor = useRef(null);
     const positionRef = useRef({
         mouseX: 0,
         mouseY: 0,
@@ -82,6 +80,7 @@ const Cursor = ({ isHovered }) => {
     });
 
     const [isReady, setIsReady] = useState(false);
+    // const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
         document.addEventListener("mouseover", () => {
@@ -99,9 +98,9 @@ const Cursor = ({ isHovered }) => {
             const mouseY = clientY;
 
             positionRef.current.mouseX =
-                mouseX - secondaryCursor.current.clientWidth / 2;
+                mouseX - cursor.current.clientWidth / 2;
             positionRef.current.mouseY =
-                mouseY - secondaryCursor.current.clientHeight / 2;
+                mouseY - cursor.current.clientHeight / 2;
         });
 
         return () => { };
@@ -136,16 +135,14 @@ const Cursor = ({ isHovered }) => {
                     positionRef.current.destinationY += distanceY;
                 }
             }
-            secondaryCursor.current.style.transform = `translate3d(${destinationX}px, ${destinationY}px, 0)`;
+            cursor.current.style.transform = `translate3d(${destinationX}px, ${destinationY}px, 0)`;
         };
         followMouse();
     }, []);
 
     return (
-        <SecondaryCursorWrapper>
-            <SecondaryCursor ref={secondaryCursor} ready={isReady} hovered={isHovered} />
-        </SecondaryCursorWrapper>
+        <CursorStyled ref={cursor} ready={isReady} hovered={isHovered} mobile={isMobile} />
     )
 }
 
-export default Cursor
+export default Cursor;

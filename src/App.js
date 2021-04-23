@@ -1,9 +1,8 @@
-import { Home } from './Home';
+import Header from './shared/Header';
 import styled from 'styled-components';
 import { GlobalStyle } from './Settings/';
-import LocomotiveScroll from 'locomotive-scroll';
 import { useEffect, useState } from 'react';
-import { Cursor } from './Components/'
+import { Cursor } from './Components/';
 
 const AppStyled = styled.div`
     background-color: white;
@@ -11,39 +10,51 @@ const AppStyled = styled.div`
 
 function App() {
   const [isHovered, setIsHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
 
   useEffect(() => {
-    handleLinkHoverEvents();
-    return () => { };
-  }, []);
+    window.addEventListener('resize', isMobileTest)
 
-  const handleLinkHoverEvents = () => {
+    return _ => {
+      window.removeEventListener('resize', isMobileTest)
+
+    }
+  })
+
+
+  useEffect(() => {
+    // handleLinkHoverEvents();
     document.querySelectorAll("a").forEach(el => {
       el.addEventListener("mouseover", () => setIsHovered(true));
       el.addEventListener("mouseout", () => setIsHovered(false));
     });
-  };
+    isMobileTest();
+    return () => {
+      document.querySelectorAll("a").forEach(el => {
+        el.removeEventListener("mouseover", () => setIsHovered(true));
+        el.removeEventListener("mouseout", () => setIsHovered(false));
+      });
+    };
+  }, []);
 
-  useEffect(() => {
-    const scroll = new LocomotiveScroll({
-      el: document.querySelector(".App"),
-      lerp: 0.09,
-      reloadOnContextChange: true,
-      smooth: true
-      // smartphone: {
-      //   smooth: true
-      // },
-      // tablet: {
-      //   smooth: true
-      // }
-    });
-  }, [])
+  const isMobileTest = () => {
+    const ua = navigator.userAgent;
+    const test = /Android|Mobi/i.test(ua)
+    setIsMobile(test);
+  };
 
   return (
     <AppStyled className="App">
       <GlobalStyle />
-      <Cursor isHovered={isHovered} />
-      <Home></Home>
+      {
+        isMobile ? (
+          <Cursor isMobile={isMobile} />
+        ) : (
+          <Cursor isHovered={isHovered} />
+        )
+      }
+      {/* <Home></Home> */}
+      <Header></Header>
     </AppStyled>
   );
 }
