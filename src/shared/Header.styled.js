@@ -3,9 +3,7 @@ import Theme from '../Settings/theme';
 
 let {
     colors: {
-        secondaryColor,
         tertiaryColor,
-        quaternaryColor
     },
     typography: {
         secondaryFont

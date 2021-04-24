@@ -5,9 +5,7 @@ import App from './App';
 import { Header } from './shared/';
 import reportWebVitals from './reportWebVitals';
 import {
-  BrowserRouter as Router,
-  Route,
-  Switch
+  BrowserRouter as Router
 } from "react-router-dom";
 
 

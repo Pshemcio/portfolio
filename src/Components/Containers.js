@@ -1,19 +1,5 @@
-import styled, { css } from 'styled-components';
-import { motion } from "framer-motion";
+import styled from 'styled-components';
 
-export const MainContainer = styled(motion.div)`
-    background-color: white;
-`;
-
-const variants = {
-    visible: { height: "auto", transition: { duration: 1 } },
-    hidden: { height: 0 }
-};
-
-export const InitialContainer = styled(motion.div).attrs(() => ({
-    initial: "hidden",
-    variants,
-    animate: "visible"
-}))`
-    background-color: white;
+export const MainContainer = styled.div`
+    background-color: transparent;
 `;

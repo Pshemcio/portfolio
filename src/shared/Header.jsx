@@ -1,14 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
-    Switch,
-    Route,
     NavLink
 } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-import { Home } from '../Home';
-import Projects from '../Projects/Projects';
 import {
     MainNavigation,
     MainNavigationList,
@@ -17,8 +13,6 @@ import {
 } from './Header.styled';
 
 function Header() {
-    const [showMenu, setShowMenu] = useState(false);
-
     const links = [
         { name: "Home", path: "/" },
         { name: "Projekty", path: "/projects" },

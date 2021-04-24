@@ -5,7 +5,6 @@ import { Cursor } from './Components/';
 import {
   Switch,
   useLocation,
-  useHistory,
   Route
 } from "react-router-dom";
 import { AnimatePresence } from 'framer-motion';
@@ -15,14 +14,13 @@ import Projects from './Projects/Projects';
 
 
 const AppStyled = styled.div`
-    background-color: white;
+    /* background-color: white; */
 `
-function App({ children }) {
+function App() {
   const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(true);
 
   const location = useLocation();
-  console.log(location);
 
   const isMobileTest = () => {
     const ua = navigator.userAgent;
