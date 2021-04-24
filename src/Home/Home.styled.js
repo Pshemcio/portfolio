@@ -12,6 +12,14 @@ export const Container = styled.div`
 `;
 
 export const AboutStyled = styled.section`
-    min-height: 100vh;
+    min-height: 200vh;
     background-color: ${quaternaryColor};
+    display: grid;
+    place-content: center;
+`
+
+export const AboutDiv = styled.div`
+    background-color: #fff;
+    height: 20vh;
+    width: 20vh;
 `

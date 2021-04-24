@@ -1,4 +1,4 @@
-import { Links } from '../Components/index';
+import { Links, Heading1 } from '../Components/index';
 import { useEffect, useState } from 'react';
 import { HeaderStyled, SvgWrapper, LogoPath } from './index';
 import Theme from '../Settings/theme';
@@ -37,6 +37,7 @@ const Intro = () => {
                 </svg>
             </SvgWrapper>
             <Links href="#about" data-scroll-to>Hejka</Links>
+            <Heading1 data-scroll>Home</Heading1>
         </HeaderStyled>
     )
 }

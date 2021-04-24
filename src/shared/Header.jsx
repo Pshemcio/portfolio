@@ -30,43 +30,29 @@ function Header() {
     ];
 
     return (
-        <div>
-            <MainNavigation>
-                <MainNavigationList grow>
-                    {links.map((link, index) => (
-                        <MainNavigationItem key={index}>
-                            <NavLink to={link.path} exact activeClassName="current">
+        <MainNavigation>
+            <MainNavigationList grow>
+                {links.map((link, index) => (
+                    <MainNavigationItem key={index}>
+                        <NavLink to={link.path} exact activeClassName="current">
+                            {link.name}
+                        </NavLink>
+                    </MainNavigationItem>
+                ))}
+            </MainNavigationList>
+            <MainNavigationList>
+                {socials.map((link, index) => (
+                    <MainNavigationItem key={index}>
+                        <a target='_blank' href={link.path} rel="noreferrer">
+                            <FontAwesomeIcon icon={link.icon} />
+                            <SocialsName>
                                 {link.name}
-                            </NavLink>
-                        </MainNavigationItem>
-                    ))}
-                </MainNavigationList>
-                <MainNavigationList>
-                    {socials.map((link, index) => (
-                        <MainNavigationItem key={index}>
-                            <a target='_blank' href={link.path} rel="noreferrer">
-                                <FontAwesomeIcon icon={link.icon} />
-                                <SocialsName>
-                                    {link.name}
-                                </SocialsName>
-                            </a>
-                        </MainNavigationItem>
-                    ))}
-                </MainNavigationList>
-            </MainNavigation>
-
-            <Switch>
-                <Route path='/projects' render={props => <Projects {...props} />} />
-                {/* <Route path='/props' render={props => <Props {...props} />} />
-                <Route path='/destructure' render={props => <Destructure {...props} />} />
-                <Route path='/logic' render={props => <Logic {...props} />} />
-                <Route path='/lifecycles' render={props => <Lifecycles {...props} />} />
-                <Route path='/useeffect' render={props => <UseEffect {...props} />} /> */}
-                <Route path='/'>
-                    <Home />
-                </Route>
-            </Switch>
-        </div>
+                            </SocialsName>
+                        </a>
+                    </MainNavigationItem>
+                ))}
+            </MainNavigationList>
+        </MainNavigation>
     )
 }
 

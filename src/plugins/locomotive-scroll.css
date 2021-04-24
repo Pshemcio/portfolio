@@ -24,6 +24,8 @@ html.has-scroll-dragging * {
     transform-origin: center right;
     transition: transform 0.3s, opacity 0.3s;
     opacity: 0;
+    pointer-events: none;
+    mix-blend-mode: difference;
 }
 
 .c-scrollbar:hover {
@@ -40,16 +42,16 @@ html.has-scroll-dragging * {
     position: absolute;
     top: 0;
     right: 0;
-    background-color: #000;
-    opacity: 0.5;
+    background-color: white;
+    opacity: 1;
     width: 7px;
     border-radius: 10px;
     margin: 2px;
-    cursor: -webkit-grab;
-    cursor: grab;
+    /* cursor: -webkit-grab;
+    cursor: grab; */
 }
 
-.has-scroll-dragging .c-scrollbar_thumb {
+/* .has-scroll-dragging .c-scrollbar_thumb {
     cursor: -webkit-grabbing;
     cursor: grabbing;
-}
+} */

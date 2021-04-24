@@ -10,7 +10,7 @@ const {
 
 export const ContainerProjects = styled.div`
     text-align: center;
-    min-height: 220vh;
+    min-height: 100vh;
     background-image: radial-gradient(${primaryColor},${primaryColorLight});    display: grid;
     place-content: center;
 

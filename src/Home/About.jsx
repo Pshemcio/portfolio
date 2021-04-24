@@ -1,10 +1,11 @@
 import { Button } from '../Components/index';
-import { AboutStyled } from './Home.styled';
+import { AboutStyled, AboutDiv } from './Home.styled';
 
 const About = () => {
     return (
         <AboutStyled id="about">
-            <Button>No elo</Button>
+            <Button data-scroll data-scroll-position-top>No elo</Button>
+            <AboutDiv data-scroll data-scroll-repeat data-scroll-direction="horizontal" data-scroll-speed="-8" />
         </AboutStyled>
     )
 }
