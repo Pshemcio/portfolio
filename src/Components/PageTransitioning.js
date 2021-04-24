@@ -8,10 +8,10 @@ let {
 
 const variants = {
     initial: {
-        bottom: "0",
+        bottom: 0,
     },
     animate: {
-        bottom: "100%",
+        bottom: "105vh",
         transition: {
             duration: .8,
             ease: [1, 0, 0.13, 1]
@@ -53,7 +53,7 @@ const ExitTransition = styled(TransitionHelper).attrs(() => ({
     variants,
     exit: "exitStop"
 }))`
-    bottom: -100%;
+    bottom: -105vh;
 `;
 
 const PageTransitioning = () => {
