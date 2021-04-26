@@ -1,15 +1,15 @@
 import { Heading1 } from '../Components/';
-import { ContainerProjects } from './';
+import { ProjectsContainer, ProjectsWrapper } from './';
 
 const Projects = () => {
 
     return (
-        <>
-            <ContainerProjects>
+        <ProjectsWrapper id="projects">
+            <ProjectsContainer>
                 <Heading1>Projects</Heading1>
-            </ContainerProjects>
-            <ContainerProjects white />
-        </>
+            </ProjectsContainer>
+            <ProjectsContainer white />
+        </ProjectsWrapper>
     )
 }
 

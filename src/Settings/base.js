@@ -25,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     overscroll-behavior: contain;
     background-color: ${tertiaryColor};
+    color: ${secondaryColor};
   }
 
   ::selection {

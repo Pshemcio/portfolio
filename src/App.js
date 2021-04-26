@@ -12,21 +12,33 @@ import LocomotiveScroll from 'locomotive-scroll';
 
 import { Home } from './Home';
 import { Projects } from './Projects';
+import { Header, LoadingScreen } from './shared';
 
 const {
   colors: {
-    tertiaryColor,
+    primaryColor,
   }
 } = Theme;
 
 const AppStyled = styled.div`
-    background-color: ${tertiaryColor};
+    background-color: ${primaryColor};
 `
+
 function App() {
   const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(true);
+  const [isReady, setIsReady] = useState(false);
 
   const location = useLocation();
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsReady(true);
+    }, 1500);
+    return () => {
+      setIsReady(false);
+    }
+  }, [])
 
   const isMobileTest = () => {
     const ua = navigator.userAgent;
@@ -77,22 +89,29 @@ function App() {
 
   return (
     <AppStyled className="App">
-      <GlobalStyle />
       {
-        isMobile ? (
-          <Cursor isMobile={isMobile} />
+        isReady ? (<>
+          <Header />
+          <GlobalStyle />
+          {
+            isMobile ? (
+              <Cursor isMobile={isMobile} />
+            ) : (
+              <Cursor isHovered={isHovered} />
+            )
+          }
+
+          <AnimatePresence exitBeforeEnter >
+            <Switch location={location} key={location.pathname}>
+              <Route exact path='/projects' render={props => <Projects {...props} {...routingProps} />} />
+              <Route path='/' render={props => <Home {...props} {...routingProps} />} />
+            </Switch>
+          </AnimatePresence>
+        </>
         ) : (
-          <Cursor isHovered={isHovered} />
+          <LoadingScreen />
         )
       }
-
-      <AnimatePresence exitBeforeEnter >
-        <Switch location={location} key={location.pathname}>
-          <Route exact path='/projects' render={props => <Projects {...props} {...routingProps} />} />
-          <Route path='/' render={props => <Home {...props} {...routingProps} />} />
-        </Switch>
-      </AnimatePresence>
-
     </AppStyled>
   );
 }

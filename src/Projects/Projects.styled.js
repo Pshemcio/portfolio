@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import Theme from '../Settings/theme';
+import { Theme } from '../Settings';
 
 const {
     colors: {
@@ -8,20 +8,21 @@ const {
     }
 } = Theme;
 
-export const ContainerProjects = styled.div`
+export const ProjectsWrapper = styled.div`
+
+`
+
+export const ProjectsContainer = styled.div`
     text-align: center;
     min-height: 100vh;
     background-image: radial-gradient(${primaryColor},${primaryColorLight});    display: grid;
     place-content: center;
-
     
     ${props =>
         props.white &&
         css`
             background-image: none;
             background-color: #fff;
-;
         `
-
     }
 `;

@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { Header } from './shared/';
 import reportWebVitals from './reportWebVitals';
 import {
   BrowserRouter as Router
@@ -13,7 +12,6 @@ import {
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Header />
       <App />
     </Router>
   </React.StrictMode>,
