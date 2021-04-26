@@ -1,6 +1,6 @@
-import { HeadingDesc, Heading1, TextReveal, Links } from '../Components/index';
+import { HeadingDesc, Heading1, TextReveal, BaseLink } from '../Components/index';
 import {
-    HeaderStyled,
+    IntroStyled,
     SvgWrapper,
     IntroContainer,
     LogoPath,
@@ -18,7 +18,7 @@ const {
 
 const Intro = () => {
     return (
-        <HeaderStyled data-scroll-section >
+        <IntroStyled data-scroll-section >
             <IntroContainer>
                 <SvgWrapper data-scroll>
                     <svg viewBox="0 0 294 282" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,18 +50,18 @@ const Intro = () => {
                     </HeadingDesc>
                 </InfoWrapper>
                 <IntroLinksList data-scroll>
-                    <Links href="#about" data-scroll-to>
+                    <BaseLink href="#about" intro data-scroll-to>
                         O mnie
-                    </Links>
-                    <Links href="#projects" data-scroll-to>
+                    </BaseLink>
+                    <BaseLink href="#projects" intro data-scroll-to>
                         Projekty
-                    </Links>
-                    <Links href="#contact" data-scroll-to>
+                    </BaseLink>
+                    <BaseLink href="#contact" intro data-scroll-to>
                         Kontakt
-                    </Links>
+                    </BaseLink>
                 </IntroLinksList>
             </IntroContainer>
-        </HeaderStyled>
+        </IntroStyled>
     )
 }
 

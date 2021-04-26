@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import Theme from '../Settings/theme';
 
-let {
+const {
     secondaryColor,
     tertiaryColor,
     quaternaryColor

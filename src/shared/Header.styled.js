@@ -10,7 +10,7 @@ let {
     }
 } = Theme;
 
-export const MainNavigation = styled.nav`
+export const MainHeader = styled.header`
     position: fixed;
     top: 20px;
     left: 0;
@@ -19,6 +19,18 @@ export const MainNavigation = styled.nav`
     display: flex;
     justify-content: space-between;
     padding: 0 10vw;
+`
+
+export const MainNavigation = styled.nav`
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+`
+
+export const MainNavigationList = styled.ul`
+    display: flex;
+    list-style: none;
 
     ${props =>
         props.grow &&
@@ -27,40 +39,13 @@ export const MainNavigation = styled.nav`
     `}
 `
 
-export const MainNavigationList = styled.ul`
+export const MainNavigationItem = styled.li`
+    position: relative;
+`
+
+export const Socials = styled.div`
     display: flex;
     justify-content: flex-start;
     align-items: center;
     list-style: none;
-`
-
-export const MainNavigationItem = styled.li`
-    position: relative;
-
-    a {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        padding: 2px 2px;
-        text-transform: uppercase;
-        font-size: .75rem;
-        font-weight: 300;
-        font-family: ${secondaryFont};
-        letter-spacing: 3px;
-        color: white;
-        text-align: center;
-
-        &.current {
-            color: ${tertiaryColor};
-        } 
-
-        svg {
-            font-size: 20px;
-            margin-left: 10px;
-        }
-    }
-`
-
-export const SocialsName = styled.span`
-    display: none;
 `

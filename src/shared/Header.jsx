@@ -1,21 +1,22 @@
-import React from 'react';
-import {
-    NavLink
-} from "react-router-dom";
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-
 import {
+    MainHeader,
     MainNavigation,
     MainNavigationList,
     MainNavigationItem,
-    SocialsName,
+    Socials
 } from './Header.styled';
+import { StyledNavLink, BaseLink } from '../Components';
 
 function Header() {
+    const [menuIsOpen, setMenuIsOpen] = useState(false);
+
     const links = [
         { name: "Home", path: "/" },
         { name: "Projekty", path: "/projects" },
+        { name: "O mnie", path: "/about" }
     ];
 
     const socials = [
@@ -24,29 +25,26 @@ function Header() {
     ];
 
     return (
-        <MainNavigation>
-            <MainNavigationList grow>
-                {links.map((link, index) => (
-                    <MainNavigationItem key={index}>
-                        <NavLink to={link.path} exact activeClassName="current">
-                            {link.name}
-                        </NavLink>
-                    </MainNavigationItem>
-                ))}
-            </MainNavigationList>
-            <MainNavigationList>
-                {socials.map((link, index) => (
-                    <MainNavigationItem key={index}>
-                        <a target='_blank' href={link.path} rel="noreferrer">
-                            <FontAwesomeIcon icon={link.icon} />
-                            <SocialsName>
+        <MainHeader>
+            <MainNavigation>
+                <MainNavigationList grow>
+                    {links.map((link, index) => (
+                        <MainNavigationItem key={index}>
+                            <StyledNavLink to={link.path} exact activeClassName="current" >
                                 {link.name}
-                            </SocialsName>
-                        </a>
-                    </MainNavigationItem>
+                            </StyledNavLink>
+                        </MainNavigationItem>
+                    ))}
+                </MainNavigationList>
+            </MainNavigation>
+            <Socials>
+                {socials.map((link, index) => (
+                    <BaseLink target='_blank' key={index} href={link.path} rel="noreferrer" iconLink>
+                        <FontAwesomeIcon icon={link.icon} />
+                    </BaseLink>
                 ))}
-            </MainNavigationList>
-        </MainNavigation>
+            </Socials>
+        </MainHeader>
     )
 }
 

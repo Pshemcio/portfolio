@@ -16,13 +16,16 @@ const dash = keyframes`
 `
 
 const fill = keyframes`
-  to {
+    20% {
+        stroke-opacity: 0;
+    }
+    100%{
         stroke-opacity: 0;
         fill-opacity: 1;
     }
 `
 
-export const HeaderStyled = styled.header`
+export const IntroStyled = styled.section`
     position: relative;
     height: 100vh;
     display: grid;
@@ -43,7 +46,7 @@ export const SvgWrapper = styled.div`
 
     &.is-inview {
         path {
-            animation: ${dash} 3s 1s cubic-bezier(0.43, 0.29, 0.58, 1.01) forwards, ${fill} 1.5s 3.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+            animation: ${dash} 3s 1s cubic-bezier(0.43, 0.29, 0.58, 1.01) forwards, ${fill} 1.5s 3.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
         }
     }
 `
@@ -78,30 +81,5 @@ export const IntroLinksList = styled.div`
     &.is-inview {
         opacity: 1;
         transform: translateX(-50%);
-    }
-
-    a {
-        text-transform: uppercase;
-        padding: 4px 5px;
-        font-weight: 500;
-        font-size: 16px;   
-        overflow: hidden;
-
-        &:nth-of-type(2) {
-            &::before,
-            &::after {
-                content: '/';
-                color: ${tertiaryColor};
-                font-weight: 600;
-            }
-
-            &::before {
-                margin-right: 10px;
-            }
-
-            &::after {
-                margin-left: 10px;
-            }
-        } 
     }
 `

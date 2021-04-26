@@ -1,6 +1,8 @@
-import { Intro, About } from './';
+import { Intro } from './';
 import { MainContainer, PageTransitioning } from '../Components';
 import { ProjectsContent } from '../Projects';
+import { AboutContent } from '../About';
+import { Footer } from '../shared';
 
 const Home = (props) => {
     const { HandleMouseoverEffects, HandleLocomotiveScroll } = props;
@@ -13,8 +15,9 @@ const Home = (props) => {
             <PageTransitioning />
             <MainContainer className="smooth-scroll" data-scroll-container>
                 <Intro />
-                <About />
+                <AboutContent />
                 <ProjectsContent />
+                <Footer />
             </MainContainer>
         </>
     )

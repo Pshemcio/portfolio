@@ -13,6 +13,7 @@ import LocomotiveScroll from 'locomotive-scroll';
 import { Home } from './Home';
 import { Projects } from './Projects';
 import { Header, LoadingScreen } from './shared';
+import { About } from './About';
 
 const {
   colors: {
@@ -34,7 +35,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setIsReady(true);
-    }, 1500);
+    }, 1200);
     return () => {
       setIsReady(false);
     }
@@ -90,24 +91,26 @@ function App() {
   return (
     <AppStyled className="App">
       {
-        isReady ? (<>
-          <Header />
-          <GlobalStyle />
-          {
-            isMobile ? (
-              <Cursor isMobile={isMobile} />
-            ) : (
-              <Cursor isHovered={isHovered} />
-            )
-          }
+        isReady ? (
+          <>
+            <Header />
+            <GlobalStyle />
+            {
+              isMobile ? (
+                <Cursor isMobile={isMobile} />
+              ) : (
+                <Cursor isHovered={isHovered} />
+              )
+            }
 
-          <AnimatePresence exitBeforeEnter >
-            <Switch location={location} key={location.pathname}>
-              <Route exact path='/projects' render={props => <Projects {...props} {...routingProps} />} />
-              <Route path='/' render={props => <Home {...props} {...routingProps} />} />
-            </Switch>
-          </AnimatePresence>
-        </>
+            <AnimatePresence exitBeforeEnter >
+              <Switch location={location} key={location.pathname}>
+                <Route exact path='/projects' render={props => <Projects {...props} {...routingProps} key={props.location.key} />} />
+                <Route path='/about' render={props => <About {...props} {...routingProps} key={props.location.key} />} />
+                <Route path='/' render={props => <Home {...props} {...routingProps} key={props.location.key} />} />
+              </Switch>
+            </AnimatePresence>
+          </>
         ) : (
           <LoadingScreen />
         )
