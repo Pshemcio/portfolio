@@ -15,7 +15,6 @@ ReactDOM.render(
     <Router>
       <Header />
       <App />
-      {/* <Route path='/projects' render={props => <Projects {...props} />} /> */}
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

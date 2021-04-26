@@ -1,21 +1,12 @@
 import { Intro, About } from './';
-import { MainContainer, PageTransitioning } from '../Components/';
-import LocomotiveScroll from 'locomotive-scroll';
-import { useEffect } from 'react';
+import { MainContainer, PageTransitioning } from '../Components';
+import { ProjectsContent } from '../Projects';
 
+const Home = (props) => {
+    const { HandleMouseoverEffects, HandleLocomotiveScroll } = props;
 
-const Home = () => {
-    useEffect(() => {
-        const scroll = new LocomotiveScroll({
-            el: document.querySelector(".smooth-scroll"),
-            lerp: 0.09,
-            reloadOnContextChange: true,
-            smooth: true
-        });
-        return () => {
-            scroll.destroy();
-        }
-    }, []);
+    HandleMouseoverEffects();
+    HandleLocomotiveScroll();
 
     return (
         <>
@@ -23,6 +14,7 @@ const Home = () => {
             <MainContainer className="smooth-scroll" data-scroll-container>
                 <Intro data-scroll-section />
                 <About data-scroll-section data-scroll-target></About>
+                <ProjectsContent />
             </MainContainer>
         </>
     )

@@ -1,20 +1,26 @@
 import styled from 'styled-components';
-import { GlobalStyle } from './Settings/';
+import { GlobalStyle, Theme } from './Settings';
 import { useEffect, useState } from 'react';
-import { Cursor } from './Components/';
+import { Cursor } from './Components';
 import {
   Switch,
   useLocation,
   Route
 } from "react-router-dom";
 import { AnimatePresence } from 'framer-motion';
+import LocomotiveScroll from 'locomotive-scroll';
+
 import { Home } from './Home';
-import Projects from './Projects/Projects';
+import { Projects } from './Projects';
 
-
+const {
+  colors: {
+    tertiaryColor,
+  }
+} = Theme;
 
 const AppStyled = styled.div`
-    /* background-color: white; */
+    background-color: ${tertiaryColor};
 `
 function App() {
   const [isHovered, setIsHovered] = useState(false);
@@ -28,24 +34,46 @@ function App() {
     setIsMobile(test);
   };
 
-  useEffect(() => {
-    window.addEventListener('resize', isMobileTest);
-
-    document.querySelectorAll("a").forEach(el => {
-      el.addEventListener("mouseover", () => setIsHovered(true));
-      el.addEventListener("mouseout", () => setIsHovered(false));
-    });
-    isMobileTest();
-    return () => {
-      window.removeEventListener('resize', isMobileTest);
+  const HandleMouseoverEffects = () => {
+    useEffect(() => {
+      window.addEventListener('resize', isMobileTest);
 
       document.querySelectorAll("a").forEach(el => {
-        el.removeEventListener("mouseover", () => setIsHovered(true));
-        el.removeEventListener("mouseout", () => setIsHovered(false));
+        el.addEventListener("mouseover", () => setIsHovered(true));
+        el.addEventListener("mouseout", () => setIsHovered(false));
       });
-    };
-  }, []);
+      isMobileTest();
+      return () => {
+        window.removeEventListener('resize', isMobileTest);
 
+        document.querySelectorAll("a").forEach(el => {
+          el.removeEventListener("mouseover", () => setIsHovered(true));
+          el.removeEventListener("mouseout", () => setIsHovered(false));
+        });
+      };
+    }, []);
+  };
+
+  const HandleLocomotiveScroll = () => {
+    useEffect(() => {
+      const scroll = new LocomotiveScroll({
+        el: document.querySelector(".smooth-scroll"),
+        lerp: 0.09,
+        reloadOnContextChange: true,
+        smooth: true
+      });
+      return () => {
+        scroll.destroy();
+      }
+    }, []);
+  }
+
+  HandleMouseoverEffects();
+
+  const routingProps = {
+    HandleMouseoverEffects,
+    HandleLocomotiveScroll
+  }
 
   return (
     <AppStyled className="App">
@@ -60,8 +88,8 @@ function App() {
 
       <AnimatePresence exitBeforeEnter >
         <Switch location={location} key={location.pathname}>
-          <Route exact path='/projects' component={Projects} />
-          <Route exact path='/' component={Home} />
+          <Route exact path='/projects' render={props => <Projects {...props} {...routingProps} />} />
+          <Route path='/' render={props => <Home {...props} {...routingProps} />} />
         </Switch>
       </AnimatePresence>
 

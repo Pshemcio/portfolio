@@ -1,5 +1,5 @@
-import { Button } from '../Components/index';
-import { AboutStyled, AboutDiv } from './Home.styled';
+import { Button } from '../Components';
+import { AboutStyled, AboutDiv } from './';
 
 const About = () => {
     return (
