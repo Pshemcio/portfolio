@@ -1,11 +1,10 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import Theme from '../Settings/theme';
 
 const {
     colors: {
         primaryColor,
-        primaryColorLight,
-        tertiaryColor
+        primaryColorLight
     }
 } = Theme;
 

@@ -38,7 +38,7 @@ const CursorStyled = styled.div`
         border-radius: 50%;
         opacity: 0;
         transform: translate(-50%, -50%);
-        transition: transform .3s, opacity .3s;
+        transition: transform .5s, opacity .5s;
         transition-timing-function: ease-out;
     }
 

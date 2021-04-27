@@ -1,14 +1,4 @@
 import styled, { } from 'styled-components';
-import { Theme } from '../Settings';
-
-const {
-    typography: {
-        secondaryFont
-    },
-    colors: {
-        secondaryColor
-    }
-} = Theme;
 
 export const TextReveal = styled.span`
     font-family: inherit;

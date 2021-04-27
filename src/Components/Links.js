@@ -6,7 +6,7 @@ let {
     colors: {
         secondaryColor,
         tertiaryColor,
-        // quaternaryColor    
+        primaryColor
     },
     typography: {
         secondaryFont
@@ -34,6 +34,7 @@ export const BaseLink = styled.a`
     ${props =>
         props.intro &&
         css`
+        display: inline-block;
         text-transform: uppercase;
         padding: 4px 5px;
         font-weight: 500;
@@ -62,25 +63,17 @@ export const BaseLink = styled.a`
 export const StyledNavLink = styled(NavLink)`
     ${linksBase}
     text-transform: uppercase;
-    font-size: .75rem;
+    font-size: 1.6rem;
     font-weight: 300;
     font-family: ${secondaryFont};
+    color: ${primaryColor};
     letter-spacing: 3px;
+    line-height: 50px;
+    transition: visibility 0s .6s;
+    visibility: ${(props) => (props.clicked ? "visible" : "hidden")};
     
     &.current {
     color: ${tertiaryColor};
+    font-weight: 400;
   }
 `;
-
-// export const StyledNavLink = styled(NavLink)`
-//     ${linksBase}
-//     text-transform: uppercase;
-//     font-size: .75rem;
-//     font-weight: 300;
-//     font-family: ${secondaryFont};
-//     letter-spacing: 3px;
-
-//     &.current {
-//     color: ${tertiaryColor};
-//   }
-// `;

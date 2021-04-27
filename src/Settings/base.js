@@ -7,7 +7,7 @@ const {
   },
   colors: {
     secondaryColor,
-    tertiaryColor,
+    primaryColor,
     quaternaryColor
   }
 } = Theme;
@@ -24,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overscroll-behavior: contain;
-    background-color: ${tertiaryColor};
+    background-color: ${primaryColor};
     color: ${secondaryColor};
   }
 
