@@ -19,12 +19,12 @@ const MainNavigation = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 600;
+  z-index: 2;
   background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .2));
   backdrop-filter: blur(7px);
   touch-action: none;
-  clip-path: ${(props) => (props.clicked ? "circle(150% at 0% 100%)" : "circle(5% at 0% 100%)")};
-  transition: ${(props) => (props.clicked ? "clip-path 0.6s" : "clip-path 0.6s .3s")};
+  clip-path: ${(props) => (props.clicked ? "circle(150% at 100% 0%)" : "circle(0% at 100% 0%)")};
+  transition: ${(props) => (props.clicked ? "clip-path 0.6s" : "clip-path .6s .4s")};
   pointer-events: ${(props) => (props.clicked ? "all" : "none")};
 
   transition-timing-function: cubic-bezier(.61,-0.02,.34,1.07);
@@ -40,7 +40,7 @@ const List = styled.ul`
   clip-path: ${(props) => (props.clicked ? "circle(100% at 100% 0%)" : "circle(5% at 100% 0%)")};
   pointer-events: ${(props) => (props.clicked ? "all" : "none")};
   transition-timing-function: cubic-bezier(.61,-0.02,.34,1.07);
-  transition: ${(props) => (props.clicked ? "clip-path 0.6s .4s" : "clip-path 2s")};
+  transition: ${(props) => (props.clicked ? "clip-path 0.6s .4s" : "clip-path 1s")};
 `;
 
 const links = [
