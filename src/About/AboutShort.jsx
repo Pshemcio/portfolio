@@ -1,17 +1,36 @@
-import { Button, HeadingDesc, TextReveal } from '../Components';
-import { AboutStyled, AboutDiv } from './';
+import { Heading2, Paragraph, SectionContainer, MainLink, TextReveal } from '../Components';
+import { AboutDiv } from './';
 
 const AboutContent = () => {
     return (
-        <AboutStyled id="about" data-scroll-section data-scroll-target >
-            <Button data-scroll data-scroll-position-top>No elo</Button>
-            <HeadingDesc>
-                <TextReveal data-scroll data-scroll-repeat>
-                    Lolek
+        <SectionContainer id="about" data-scroll-section data-scroll-target >
+            <Heading2>
+                <TextReveal data-scroll delay={.4}>
+                    Cześć
                 </TextReveal>
-            </HeadingDesc>
-            <AboutDiv data-scroll data-scroll-repeat data-scroll-direction="horizontal" data-scroll-speed="-8" />
-        </AboutStyled>
+            </Heading2>
+            <Paragraph>
+                <TextReveal data-scroll shift={.2} delay={1}>
+                    Nazywam się Przemysław Majka, mieszkam w Krakowie.
+                    Swoją przygodę z FrontEndem rozpocząłem pod koniec 2019 roku. Od tamtej pory na naukę poświęcam każdą wolną chwilę i sprawia mi ona ogromną przyjemność.
+                    Ciągle dążę do poszerzania swoich kompetencji poprzez poznawanie najnowszych rozwiązań i technologii.
+                </TextReveal>
+            </Paragraph>
+            <Paragraph marginBigger>
+                <TextReveal data-scroll delay={.6}>
+                    Poszukuję pracy jako Junior FrontEnd Developer.
+                </TextReveal>
+            </Paragraph>
+            <Paragraph nice>
+                <TextReveal data-scroll delay={1}>
+                    Życzę miłego zwiedzania!
+                </TextReveal>
+            </Paragraph>
+            <MainLink className="cursor_hover" to={"/about"}>
+                Więcej
+            </MainLink>
+
+        </SectionContainer>
     )
 }
 

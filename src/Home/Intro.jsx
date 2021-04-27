@@ -5,7 +5,8 @@ import {
     IntroContainer,
     LogoPath,
     InfoWrapper,
-    IntroLinksList
+    IntroLinksList,
+    CallToAction
 } from './';
 // import Theme from '../Settings/theme';
 
@@ -39,7 +40,7 @@ const Intro = () => {
                 </SvgWrapper>
                 <InfoWrapper>
                     <Heading1 data-scroll data-scroll-speed="-.5">
-                        <TextReveal data-scroll >
+                        <TextReveal data-scroll>
                             Przemek Majka
                         </TextReveal>
                     </Heading1>
@@ -61,6 +62,7 @@ const Intro = () => {
                     </BaseLink>
                 </IntroLinksList>
             </IntroContainer>
+            <CallToAction />
         </IntroStyled>
     )
 }

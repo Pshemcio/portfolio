@@ -4,6 +4,6 @@ export { default as Cursor } from './Cursor';
 export { default as PageTransitioning } from './PageTransitioning';
 
 export * from './Containers';
-export * from './Headings';
+export * from './Typography';
 export * from './Links';
 export * from './ContentReveal';

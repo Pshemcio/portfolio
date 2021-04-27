@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 import Theme from '../Settings/theme';
 
@@ -78,4 +78,13 @@ export const StyledNavLink = styled(NavLink)`
     text-decoration: line-through;
     /* pointer-events: none; */
   }
+`;
+
+export const MainLink = styled(Link)`
+    ${linksBase}
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-weight: 300;
+    font-family: ${secondaryFont};
+    display: inline-block;
 `;

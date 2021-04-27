@@ -1,8 +1,8 @@
 const Theme = {
     colors: {
         // primaryColor: '#0B2027',
-        primaryColor: '#252525',
-        primaryColorLight: '#181818',
+        primaryColor: '#181818',
+        primaryColorLight: '#252525',
         // primaryColor: '#000',
         secondaryColor: '#f2f5ea',
         tertiaryColor: '#1ee5ff',

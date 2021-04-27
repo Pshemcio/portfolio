@@ -3,8 +3,7 @@ import Theme from '../Settings/theme';
 
 const {
     colors: {
-        primaryColor,
-        primaryColorLight
+        primaryColor
     }
 } = Theme;
 
@@ -40,7 +39,7 @@ export const IntroStyled = styled.section`
     height: 100vh;
     display: grid;
     place-content: center;
-    background-image: radial-gradient(${primaryColor},${primaryColorLight});
+    background-color: ${primaryColor};
     text-align: center;
     overflow: hidden;
 `

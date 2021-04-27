@@ -3,8 +3,7 @@ import styled, { css, keyframes } from "styled-components";
 import { Theme } from "../Settings";
 
 let {
-    secondaryColor,
-    tertiaryColor
+    secondaryColor
 } = Theme.colors;
 
 const fadeIn = keyframes`
