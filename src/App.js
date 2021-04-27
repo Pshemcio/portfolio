@@ -105,9 +105,9 @@ function App() {
 
             <AnimatePresence exitBeforeEnter >
               <Switch location={location} key={location.pathname}>
-                <Route exact path='/projects' render={props => <Projects {...props} {...routingProps} key={props.location.key} />} />
-                <Route exact path='/about' render={props => <About {...props} {...routingProps} key={props.location.key} />} />
-                <Route exact path='/' render={props => <Home {...props} {...routingProps} key={props.location.key} />} />
+                <Route exact path='/projects' render={props => <Projects {...props} {...routingProps} />} />
+                <Route exact path='/about' render={props => <About {...props} {...routingProps} />} />
+                <Route exact path='/' render={props => <Home {...props} {...routingProps} />} />
               </Switch>
             </AnimatePresence>
           </>

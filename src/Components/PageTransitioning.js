@@ -13,7 +13,7 @@ const variants = {
     animate: {
         bottom: "100vh",
         transition: {
-            duration: 1,
+            duration: .7,
             ease: [0.12, 1, 0.2, 1]
         }
     },
@@ -26,8 +26,8 @@ const variants = {
     exitStop: {
         bottom: 0,
         transition: {
-            duration: 1,
-            delay: .5,
+            duration: .6,
+            delay: .9,
             ease: [0.12, 1, 0.2, 1]
         }
     }

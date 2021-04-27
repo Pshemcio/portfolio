@@ -68,12 +68,14 @@ export const StyledNavLink = styled(NavLink)`
     font-family: ${secondaryFont};
     color: ${primaryColor};
     letter-spacing: 3px;
-    line-height: 50px;
+    display: inline-block;
+    padding: clamp(12px, 1vw, 40px);
     transition: visibility 0s .6s;
     visibility: ${(props) => (props.clicked ? "visible" : "hidden")};
     
     &.current {
-    color: ${tertiaryColor};
-    font-weight: 400;
+    /* color: ${tertiaryColor}; */
+    text-decoration: line-through;
+    /* pointer-events: none; */
   }
 `;

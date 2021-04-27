@@ -24,7 +24,7 @@ const MainNavigation = styled.nav`
   backdrop-filter: blur(7px);
   touch-action: none;
   clip-path: ${(props) => (props.clicked ? "circle(150% at 100% 0%)" : "circle(0% at 100% 0%)")};
-  transition: ${(props) => (props.clicked ? "clip-path 0.6s" : "clip-path .6s .4s")};
+  transition: ${(props) => (props.clicked ? "clip-path 0.6s" : "clip-path .8s .1s")};
   pointer-events: ${(props) => (props.clicked ? "all" : "none")};
 
   transition-timing-function: cubic-bezier(.61,-0.02,.34,1.07);
@@ -37,7 +37,7 @@ const List = styled.ul`
   width: 100%;
   background-color: ${secondaryColor};
   list-style: none;
-  clip-path: ${(props) => (props.clicked ? "circle(100% at 100% 0%)" : "circle(5% at 100% 0%)")};
+  clip-path: ${(props) => (props.clicked ? "circle(100% at 100% 0%)" : "circle(0% at 100% 0%)")};
   pointer-events: ${(props) => (props.clicked ? "all" : "none")};
   transition-timing-function: cubic-bezier(.61,-0.02,.34,1.07);
   transition: ${(props) => (props.clicked ? "clip-path 0.6s .4s" : "clip-path 1s")};
