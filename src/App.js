@@ -14,6 +14,7 @@ import { Home } from './Home';
 import { Projects } from './Projects';
 import { Header, LoadingScreen } from './shared';
 import { About } from './About';
+import { NotFound } from './NotFound'
 
 const {
   colors: {
@@ -51,7 +52,7 @@ function App() {
     useEffect(() => {
       window.addEventListener('resize', isMobileTest);
 
-      document.querySelectorAll("a").forEach(el => {
+      document.querySelectorAll(".cursor_hover").forEach(el => {
         el.addEventListener("mouseover", () => setIsHovered(true));
         el.addEventListener("mouseout", () => setIsHovered(false));
       });
@@ -59,7 +60,7 @@ function App() {
       return () => {
         window.removeEventListener('resize', isMobileTest);
 
-        document.querySelectorAll("a").forEach(el => {
+        document.querySelectorAll(".cursor_hover").forEach(el => {
           el.removeEventListener("mouseover", () => setIsHovered(true));
           el.removeEventListener("mouseout", () => setIsHovered(false));
         });
@@ -108,6 +109,7 @@ function App() {
                 <Route exact path='/projects' render={props => <Projects {...props} {...routingProps} />} />
                 <Route exact path='/about' render={props => <About {...props} {...routingProps} />} />
                 <Route exact path='/' render={props => <Home {...props} {...routingProps} />} />
+                <Route render={props => <NotFound {...props} {...routingProps} />} />
               </Switch>
             </AnimatePresence>
           </>

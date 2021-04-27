@@ -3,6 +3,7 @@ import styled, { css, keyframes } from "styled-components";
 import { Theme } from "../Settings";
 
 let {
+    secondaryColor,
     tertiaryColor
 } = Theme.colors;
 
@@ -20,19 +21,20 @@ const CursorStyled = styled.div`
     height: 60px;
     z-index: 1000;
     border-radius: 50%;
-    border: 1px solid ${tertiaryColor};
+    border: 1px solid ${secondaryColor};
     position: fixed;
     opacity: 0;
     pointer-events: none;
-    transition: border .5s;
+    transition: border 1s;
     will-change: transform; 
+    mix-blend-mode: difference;
 
     &::before {
         content: '';
         position: absolute;
         top: 50%;
         left: 50%;
-        background-color: #fff;
+        background-color: ${secondaryColor};
         width: 100%;
         height: 100%;
         border-radius: 50%;
@@ -57,8 +59,8 @@ const CursorStyled = styled.div`
     ${props =>
         props.hovered &&
         css`
-        border: none;
-        mix-blend-mode: difference;
+        transition: border .1s;
+        border: 1px solid rgba(255,255,255, 0);
 
         &::before {
             transform: translate(-50%, -50%) scale(1.5);

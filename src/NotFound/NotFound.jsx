@@ -1,7 +1,7 @@
-import { MainContainer, PageTransitioning } from '../Components';
+import { MainContainer, PageTransitioning } from '../Components/';
 import { Footer } from '../shared';
 
-const About = (props) => {
+const NotFound = (props) => {
     const { HandleMouseoverEffects, HandleLocomotiveScroll } = props;
 
     HandleMouseoverEffects();
@@ -11,10 +11,15 @@ const About = (props) => {
         <>
             <PageTransitioning />
             <MainContainer className="smooth-scroll">
+                <div>
+                    <h1>
+                        Nie ma takiej strony :(
+                    </h1>
+                </div>
                 <Footer />
             </MainContainer>
         </>
     )
 }
 
-export default About;
+export default NotFound;

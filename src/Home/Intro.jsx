@@ -7,14 +7,14 @@ import {
     InfoWrapper,
     IntroLinksList
 } from './';
-import Theme from '../Settings/theme';
+// import Theme from '../Settings/theme';
 
-const {
-    colors: {
-        tertiaryColor,
-        tertiaryColorDark
-    }
-} = Theme;
+// // const {
+// //     colors: {
+// //         tertiaryColor,
+// //         tertiaryColorDark
+// //     }
+// // } = Theme;
 
 const Intro = () => {
     return (
@@ -22,13 +22,13 @@ const Intro = () => {
             <IntroContainer>
                 <SvgWrapper data-scroll>
                     <svg viewBox="0 0 294 282" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
+                        {/* <defs>
                             <linearGradient id="header-shape-gradient" x2="0.8" y2=".7">
                                 <stop offset="0%" stopColor={tertiaryColor} />
                                 <stop offset="10%" stopColor={tertiaryColor} />
                                 <stop offset="100%" stopColor={tertiaryColorDark} />
                             </linearGradient>
-                        </defs>
+                        </defs> */}
                         <LogoPath
                             d="M1 280.028H29.1874V35.089L144.853 151.727H146.797L202.2 94.8658C202.2 87.0899 197.826 72.5102 192.48 67.6503L145.825 112.847H144.853L33.0754 1.06966H1V280.028Z" />
                         <LogoPath
@@ -50,13 +50,13 @@ const Intro = () => {
                     </HeadingDesc>
                 </InfoWrapper>
                 <IntroLinksList data-scroll>
-                    <BaseLink href="#about" intro data-scroll-to>
+                    <BaseLink href="#about" className="cursor_hover" intro data-scroll-to>
                         O mnie
                     </BaseLink>
-                    <BaseLink href="#projects" intro data-scroll-to>
+                    <BaseLink href="#projects" className="cursor_hover" intro data-scroll-to>
                         Projekty
                     </BaseLink>
-                    <BaseLink href="#contact" intro data-scroll-to>
+                    <BaseLink href="#contact" className="cursor_hover" intro data-scroll-to>
                         Kontakt
                     </BaseLink>
                 </IntroLinksList>

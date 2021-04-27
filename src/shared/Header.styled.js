@@ -1,36 +1,15 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const MainHeader = styled.header`
     position: fixed;
-    top: 20px;
+    top: 0;
     left: 0;
     right: 0;
     z-index: 5;
     display: flex;
     justify-content: space-between;
-    padding: 0 10vw;
-`
-
-export const MainNavigation = styled.nav`
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-`
-
-export const MainNavigationList = styled.ul`
-    display: flex;
-    list-style: none;
-
-    ${props =>
-        props.grow &&
-        css`
-        flex-grow: 1;
-    `}
-`
-
-export const MainNavigationItem = styled.li`
-    position: relative;
+    padding: 2px 10vw;
+    mix-blend-mode: difference;
 `
 
 export const Socials = styled.div`

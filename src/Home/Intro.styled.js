@@ -8,8 +8,19 @@ const {
     }
 } = Theme;
 
+// const dash = keyframes`
+//   to {
+//         stroke-dashoffset: 0;
+//     }
+// `
+
 const dash = keyframes`
-  to {
+    80% {
+        stroke-dashoffset: 0;
+        stroke-opacity: 1;
+    }
+    100%{
+        stroke-opacity: .3;
         stroke-dashoffset: 0;
     }
 `
@@ -45,7 +56,9 @@ export const SvgWrapper = styled.div`
 
     &.is-inview {
         path {
-            animation: ${dash} 3s 1s cubic-bezier(0.43, 0.29, 0.58, 1.01) forwards, ${fill} 1.5s 3.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+            animation: ${dash} 3s 1s cubic-bezier(0.43, 0.29, 0.58, 1.01) forwards;
+
+            /* animation: ${dash} 3s 1s cubic-bezier(0.43, 0.29, 0.58, 1.01) forwards, ${fill} 1.5s 3.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; */
         }
     }
 `
@@ -71,7 +84,7 @@ export const InfoWrapper = styled.div`
 export const IntroLinksList = styled.div`
     position: absolute;
     width: 100%;
-    top: 115%;
+    top: 105%;
     left: 50%;
     transform: translateX(-40%);
     opacity: 0;

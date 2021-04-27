@@ -37,8 +37,8 @@ export const BaseLink = styled.a`
         display: inline-block;
         text-transform: uppercase;
         padding: 4px 5px;
-        font-weight: 500;
-        font-size: 16px;   
+        font-weight: 600;
+        font-size: 14px;   
 
         &:nth-of-type(2) {
             &::before,

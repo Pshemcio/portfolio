@@ -12,5 +12,3 @@ export const TextReveal = styled.span`
         transform: translateY(0);
     }
 `;
-
-export default TextReveal;

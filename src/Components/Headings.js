@@ -9,12 +9,12 @@ const {
 
 export const Heading1 = styled.h1`
     z-index: 1;
-    font-weight: 400;
-    text-transform: uppercase;
-    font-family: ${secondaryFont};
-    font-size: 35px;
+    font-weight: 800;
+    /* text-transform: uppercase; */
+    /* font-family: ${secondaryFont}; */
+    font-size: 39px;
     padding: 0 2px;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     overflow: hidden;
 `;
 
