@@ -21,7 +21,7 @@ function MainNavigation(props) {
                 <MainNavigationList clicked={click}>
                     {links.map((link, index) => (
                         <MainNavigationItem key={index}>
-                            <StyledNavLink className="cursor_hover" to={link.path} exact activeClassName="current" clicked={click ? "hack" : undefined}>
+                            <StyledNavLink className="cursor_hover" to={link.path} exact activeClassName="current" main="true" clicked={click ? "hack" : undefined}>
                                 {link.name}
                             </StyledNavLink>
                         </MainNavigationItem>

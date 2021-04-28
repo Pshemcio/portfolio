@@ -1,7 +1,6 @@
-import { Intro } from './';
+import { Intro, AboutShort, SkillsShort } from './';
 import { MainContainer, PageTransitioning } from '../Components';
 import { ProjectsContent } from '../Projects';
-import { AboutShort } from '../About';
 import { Footer } from '../shared';
 
 const Home = (props) => {
@@ -16,6 +15,7 @@ const Home = (props) => {
             <MainContainer className="smooth-scroll" data-scroll-container>
                 <Intro />
                 <AboutShort />
+                <SkillsShort />
                 <ProjectsContent />
                 <Footer />
             </MainContainer>

@@ -8,14 +8,6 @@ import {
     IntroLinksList,
     CallToAction
 } from './';
-// import Theme from '../Settings/theme';
-
-// // const {
-// //     colors: {
-// //         tertiaryColor,
-// //         tertiaryColorDark
-// //     }
-// // } = Theme;
 
 const Intro = () => {
     return (

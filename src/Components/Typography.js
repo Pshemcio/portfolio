@@ -6,7 +6,6 @@ const {
         secondaryFont
     },
     colors: {
-        secondaryColor,
         tertiaryColor
     }
 } = Theme;
@@ -26,7 +25,7 @@ export const Heading1 = styled.h1`
 
 export const Heading2 = styled.h2`
     ${typographyBase}
-    font-size: 50px;
+    font-size: ${(props) => (props.smaller ? "40px" : "50px")};
 
     span {
         &::after {
@@ -49,12 +48,13 @@ export const Paragraph = styled.p`
     font-family: ${secondaryFont};
     font-size: 16px;
     line-height: 1.7em;
-    margin: ${(props) => (props.marginBigger ? "1em 0" : ".5em 0")};
+    margin: .5em 0;
 
     ${props =>
         props.nice &&
         css`
         color: ${tertiaryColor};
         font-weight: 600;
+        margin: 1.5em 0 .5em;
     `}
 `;
