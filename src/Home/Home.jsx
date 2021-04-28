@@ -1,11 +1,10 @@
 import { Intro, AboutShort, SkillsShort } from './';
-import { MainContainer, PageTransitioning } from '../Components';
+import { MainContainer, MainLink, PageTransitioning } from '../Components';
 import { ProjectsContent } from '../Projects';
 import { Footer } from '../shared';
 
 const Home = (props) => {
     const { HandleMouseoverEffects, HandleLocomotiveScroll } = props;
-
     HandleMouseoverEffects();
     HandleLocomotiveScroll();
 
@@ -17,6 +16,9 @@ const Home = (props) => {
                 <AboutShort />
                 <SkillsShort />
                 <ProjectsContent />
+                <MainLink className="cursor_hover" to={"/projects"} arrow="true">
+                    Więcej
+                 </MainLink>
                 <Footer />
             </MainContainer>
         </>

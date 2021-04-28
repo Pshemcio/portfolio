@@ -14,6 +14,7 @@ import { Home } from './Home';
 import { Projects } from './Projects';
 import { Header, LoadingScreen } from './shared';
 import { About } from './About';
+import Project from './Projects/Project/Project';
 // import { NotFound } from './NotFound'
 
 const {
@@ -106,10 +107,18 @@ function App() {
 
             <AnimatePresence exitBeforeEnter >
               <Switch location={location} key={location.pathname}>
-                <Route exact path='/projects' render={props => <Projects {...props} {...routingProps} />} />
-                <Route exact path='/about' render={props => <About {...props} {...routingProps} />} />
-                <Route exact path='/' render={props => <Home {...props} {...routingProps} />} />
-                {/* <Route render={props => <NotFound {...props} {...routingProps} />} /> */}
+                <Route exact path='/projects'>
+                  <Projects {...routingProps} />
+                </Route>
+                <Route exact path='/projects/project'>
+                  <Project {...routingProps} />
+                </Route>
+                <Route exact path='/about'>
+                  <About {...routingProps} />
+                </Route>
+                <Route exact path='/'>
+                  <Home {...routingProps} />
+                </Route>
               </Switch>
             </AnimatePresence>
           </>

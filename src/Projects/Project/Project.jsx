@@ -1,8 +1,7 @@
-import { MainContainer, PageTransitioning } from '../Components/';
-import { Footer } from '../shared';
-import { ProjectsContent } from './';
+import { MainContainer, PageTransitioning } from "../../Components";
+import { Footer } from "../../shared";
 
-const Projects = (props) => {
+const Project = (props) => {
     const { HandleMouseoverEffects, HandleLocomotiveScroll } = props;
 
     HandleMouseoverEffects();
@@ -12,7 +11,8 @@ const Projects = (props) => {
         <>
             <PageTransitioning />
             <MainContainer className="smooth-scroll">
-                <ProjectsContent />
+                <h1>Hejka</h1>
+                <p>Czemu to zaczęło działać -_-</p>
                 {/* <Project /> */}
                 <Footer />
             </MainContainer>
@@ -20,4 +20,4 @@ const Projects = (props) => {
     )
 }
 
-export default Projects;
+export default Project;
