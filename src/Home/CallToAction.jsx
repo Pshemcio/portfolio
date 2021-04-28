@@ -40,7 +40,6 @@ const mouseScroll = keyframes`
     }
 `
 
-
 const MouseContainer = styled.a`
     position: absolute;
     bottom: 5vh;

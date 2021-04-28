@@ -6,3 +6,4 @@ export { default as CallToAction } from './CallToAction';
 
 export * from './Home.styled';
 export * from './Intro.styled';
+export * from './SkillsShort.styled';

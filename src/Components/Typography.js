@@ -26,6 +26,7 @@ export const Heading1 = styled.h1`
 export const Heading2 = styled.h2`
     ${typographyBase}
     font-size: ${(props) => (props.smaller ? "40px" : "50px")};
+    margin-bottom: ${(props) => (props.smaller ? "30px" : "inherit")};
 
     span {
         &::after {
@@ -48,7 +49,7 @@ export const Paragraph = styled.p`
     font-family: ${secondaryFont};
     font-size: 16px;
     line-height: 1.7em;
-    margin: .5em 0;
+    margin-bottom: .5em;
 
     ${props =>
         props.nice &&

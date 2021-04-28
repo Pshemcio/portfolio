@@ -1,15 +1,30 @@
-import { Heading1 } from '../Components/';
-import { ProjectsContainer, ProjectsWrapper } from './';
+import {
+    Heading2,
+    SectionContainer,
+    MainLink,
+    TextReveal
+} from '../Components';
 
-const Projects = () => {
+import {
+    ProjectsWrapper
+} from './'
+
+const ProjectsContent = () => {
     return (
-        <ProjectsWrapper id="projects" data-scroll-section>
-            <ProjectsContainer>
-                <Heading1>Projects</Heading1>
-            </ProjectsContainer>
-            <ProjectsContainer white />
-        </ProjectsWrapper>
+        <SectionContainer id="projects" data-scroll-section>
+            <Heading2>
+                <TextReveal data-scroll>
+                    Projekty
+                </TextReveal>
+            </Heading2>
+            <ProjectsWrapper>
+
+            </ProjectsWrapper>
+            <MainLink className="cursor_hover" to={"/projects"} arrow="true">
+                Więcej
+            </MainLink>
+        </SectionContainer>
     )
 }
 
-export default Projects;
+export default ProjectsContent;

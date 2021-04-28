@@ -7,8 +7,7 @@ import { BaseLink } from '../Components';
 import MainNavigation from './MainNavigation';
 import { Burger } from '.';
 
-import { Linkedin } from '@styled-icons/bootstrap/Linkedin';
-import { Github } from '@styled-icons/bootstrap/Github';
+import { Linkedin, Github } from '@styled-icons/bootstrap';
 
 
 function Header() {

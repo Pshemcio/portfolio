@@ -1,33 +1,68 @@
-import { Heading2, SectionContainer, TextReveal } from '../Components';
-import styled from 'styled-components';
-import { Linkedin } from '@styled-icons/bootstrap/Linkedin';
+import {
+    Heading2,
+    SectionContainer,
+    TextReveal
+} from '../Components';
 import { Github } from '@styled-icons/bootstrap/Github';
+import { PhoneDesktop } from '@styled-icons/fluentui-system-regular/PhoneDesktop';
+import {
+    ReactLogo,
+    Bootstrap
+} from '@styled-icons/boxicons-logos';
 
-const SvgWrapper = styled.div`
-  width: 50px;
-`
+import {
+    Css3,
+    Javascript,
+    StyledComponents,
+    Sass,
+    Wordpress,
+    Figma,
+    Html5,
+    Woo
+} from '@styled-icons/simple-icons';
+
+import {
+    SkillsContainer,
+    SkillsItem,
+    SkillsInfo,
+    SkillsSvgWrapper
+} from "./";
 
 const SkillsShort = () => {
     const skills = [
-        { name: "Github", path: "https://github.com/Pshemcio", icon: <Github /> },
-        { name: "Linkedin", path: "https://www.linkedin.com/in/przemys%C5%82aw-majka-9540b01b7/", icon: <Linkedin /> },
+        { name: "html", icon: <Html5 />, color: "#e34c26" },
+        { name: "scc3", icon: <Css3 />, color: "#2965f1" },
+        { name: "javascript", icon: <Javascript />, color: "#f0db4f" },
+        { name: "sass", icon: <Sass />, color: "#c69" },
+        { name: "bootstrap", icon: <Bootstrap />, color: "#563d7c" },
+        { name: "rwd", icon: <PhoneDesktop />, color: "#e75a7c" },
+        { name: "react", icon: <ReactLogo />, color: "#61dbfb" },
+        { name: "styled components", icon: <StyledComponents />, color: "#fff" },
+        { name: "wordpress", icon: <Wordpress />, color: "#21759b" },
+        { name: "Woocommerce", icon: <Woo />, color: "#764abc" },
+        { name: "git", icon: <Github />, color: "#fff" },
+        { name: "figma", icon: <Figma />, color: "#dac9ba" }
     ];
 
     return (
-        <SectionContainer id="about" data-scroll-section data-scroll-target >
+        <SectionContainer id="skills" data-scroll-section>
             <Heading2 smaller>
                 <TextReveal data-scroll>
-                    Technologie
+                    Umiejętności
                 </TextReveal>
             </Heading2>
-            {skills.map((link, index) => (
-                <div className="cursor_hover" key={index}>
-                    <SvgWrapper>
-                        {link.icon}
-                    </SvgWrapper>
-                    {link.name}
-                </div>
-            ))}
+            <SkillsContainer>
+                {skills.map((link, index) => (
+                    <SkillsItem className="cursor_hover" key={index}>
+                        <SkillsSvgWrapper color={link.color} data-scroll>
+                            {link.icon}
+                        </SkillsSvgWrapper>
+                        <SkillsInfo>
+                            {link.name}
+                        </SkillsInfo>
+                    </SkillsItem>
+                ))}
+            </SkillsContainer>
         </SectionContainer>
     )
 }

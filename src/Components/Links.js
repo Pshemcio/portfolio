@@ -109,7 +109,7 @@ export const MainLink = styled(Link)`
     font-family: ${secondaryFont};
     display: inline-block;
     line-height: 1.1em;
-    margin: 15px 0 40px;
+    margin-top: 30px;
 
     ${props =>
         props.arrow &&
