@@ -2,12 +2,24 @@ import {
     Heading2,
     SectionContainer,
     MainLink,
-    TextReveal
+    TextReveal,
+    ImageWrapper,
+    Image,
+    RevealImage,
+    Heading3,
+    Heading4,
+    ProjectsLink
 } from '../Components';
+import test from '../images/test.jpg';
+import test2 from '../images/test2.jpg';
+
 
 import {
-    ProjectsWrapper
-} from './'
+    ProjectsList,
+    ProjectsItem,
+    ProjectsInfoContainer,
+    ProjectsItemContainer
+} from './';
 
 const ProjectsContent = () => {
     return (
@@ -17,9 +29,40 @@ const ProjectsContent = () => {
                     Projekty
                 </TextReveal>
             </Heading2>
-            <ProjectsWrapper>
-
-            </ProjectsWrapper>
+            <ProjectsList>
+                <ProjectsItem>
+                    <ProjectsItemContainer className="cursor_hover" to={"/about"} arrow="true">
+                        <Heading3>
+                            Valorant Form
+                        </Heading3>
+                        <ImageWrapper>
+                            <RevealImage data-scroll>
+                                <Image src={test} alt="my face" />
+                            </RevealImage>
+                        </ImageWrapper>
+                        <ProjectsInfoContainer arrow>
+                            <Heading4>
+                                Formularz rejestracyjny
+                        </Heading4>
+                        </ProjectsInfoContainer>
+                    </ProjectsItemContainer>
+                </ProjectsItem>
+                <ImageWrapper>
+                    <RevealImage data-scroll>
+                        <Image src={test2} alt="my face" />
+                    </RevealImage>
+                </ImageWrapper>
+                <ImageWrapper>
+                    <RevealImage data-scroll>
+                        <Image src={test} alt="my face" />
+                    </RevealImage>
+                </ImageWrapper>
+                <ImageWrapper>
+                    <RevealImage data-scroll>
+                        <Image src={test2} alt="my face" />
+                    </RevealImage>
+                </ImageWrapper>
+            </ProjectsList>
             <MainLink className="cursor_hover" to={"/projects"} arrow="true">
                 Więcej
             </MainLink>

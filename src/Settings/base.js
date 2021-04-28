@@ -28,9 +28,14 @@ const GlobalStyle = createGlobalStyle`
     color: ${secondaryColor};
   }
 
+  a,
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+
   ::selection {
-      background: ${quaternaryColor};
-      color: ${secondaryColor};
+    background: ${quaternaryColor};
+    color: ${secondaryColor};
   }
 `
 

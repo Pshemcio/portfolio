@@ -1,7 +1,5 @@
 import { Heading2, Paragraph, SectionContainer, MainLink, TextReveal } from '../Components';
 
-import myFace from '../images/my-face.webp'
-
 const AboutShort = () => {
     return (
         <SectionContainer id="about" data-scroll-section>

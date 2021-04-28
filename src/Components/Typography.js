@@ -36,6 +36,20 @@ export const Heading2 = styled.h2`
     }
 `;
 
+export const Heading3 = styled.h3`
+    ${typographyBase}
+    font-size: 20px;
+    font-family: ${secondaryFont};
+    font-weight: 600;
+`;
+
+export const Heading4 = styled.h4`
+    ${typographyBase}
+    font-size: 16px;
+    font-family: ${secondaryFont};
+    font-weight: 400;
+`;
+
 export const HeadingDesc = styled.p`
     ${typographyBase}
     font-weight: 300;
