@@ -31,7 +31,7 @@ export const Heading2 = styled.h2`
     ${props =>
         props.project &&
         css`
-        font-size: 35px;
+        font-size: clamp(28px, 5vw, 60px);
         margin-top: 15px;
     `}
 
@@ -48,6 +48,13 @@ export const Heading3 = styled.h3`
     font-size: 20px;
     font-family: ${secondaryFont};
     font-weight: 600;
+
+    ${props =>
+        props.project &&
+        css`
+        font-size: clamp(14px, 4vw, 25px);
+        text-align: center;
+    `}
 `;
 
 export const Heading4 = styled.h4`
@@ -84,5 +91,12 @@ export const Paragraph = styled.p`
         color: ${tertiaryColor};
         font-weight: 600;
         margin: 1.5em 0 .5em;
+    `}
+
+    ${props =>
+        props.project &&
+        css`
+        font-size: 14px;
+        margin: 20px 0;
     `}
 `;

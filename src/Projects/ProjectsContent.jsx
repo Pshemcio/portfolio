@@ -31,13 +31,13 @@ const ProjectsContent = () => {
                 <ProjectsList>
                     {projects.map((project) => (
                         <ProjectsItem key={project.id}>
-                            <ProjectsItemContainer className="cursor_hover" to={project.path} arrow="true">
+                            <ProjectsItemContainer className="cursor_hover" to={project.path}>
                                 <Heading3>
                                     {project.name}
                                 </Heading3>
                                 <ImageWrapper>
                                     <RevealImage data-scroll>
-                                        <Image src={project.photos.main} alt="my face" />
+                                        <Image src={project.photos.thumb} alt="my face" />
                                     </RevealImage>
                                 </ImageWrapper>
                                 <ProjectsInfoContainer arrow>

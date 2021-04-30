@@ -1,12 +1,22 @@
 import { Link } from 'react-router-dom';
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import { Theme } from '../Settings';
 
 const {
     colors: {
-        secondaryColor
+        secondaryColor,
+        tertiaryColor
     }
 } = Theme;
+
+const showIcons = keyframes`
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+`
 
 export const ProjectsList = styled.ul`
     list-style: none;
@@ -42,6 +52,9 @@ export const ProjectsInfoContainer = styled.div`
             position: absolute;
             bottom: 10px;
             padding: 0 20px;
+            mix-blend-mode: difference;
+
+            animation: ${showIcons} 2s .5s cubic-bezier(.645,.045,.355,1) both;
     `} 
 `
 
@@ -55,4 +68,16 @@ export const ProjectsItemContainer = styled(Link)`
 
 export const ProjectImageContainer = styled.div`
     position: relative;
+`
+
+export const ProjectList = styled.ul`
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-top: 25px;
+`
+
+export const ProjectItem = styled.li`
+    padding-right: 15px;
+    color: ${tertiaryColor}
 `

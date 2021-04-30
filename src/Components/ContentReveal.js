@@ -11,11 +11,6 @@ export const TextReveal = styled.span`
             typeof props.delay === 'number' ? (props.delay + 0.2).toString() + 's' : '.1s'} cubic-bezier(0.12, .4, 0.2, 1);
     line-height: inherit;
 
-
-    /* transition: opacity 3s cubic-bezier(0.12, .4, 0.2, 1); */
-    /* transition-delay: ${(props) =>
-        typeof props.delay === 'number' ? props.delay.toString() + 's' : '.5s'}; */
-
     &.is-inview {
         transform: translateY(0);
         opacity: 1;

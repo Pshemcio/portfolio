@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import Theme from '../Settings/theme';
 
 let {
@@ -13,6 +13,19 @@ let {
     }
 } = Theme;
 
+const showIcon = keyframes`
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+    100%  {
+        transform: translateY(0);
+    }
+`
+
 const linksBase = css`
     position: relative;
     background-color: transparent;
@@ -20,6 +33,7 @@ const linksBase = css`
     text-decoration: none;
     text-align: center;
     padding: 2px 2px;
+    overflow: hidden;
 `;
 
 const showLineOnHover = css`
@@ -48,6 +62,7 @@ export const BaseLink = styled.a`
         css`
         width: 3em;
         height: 3em;
+        animation: ${showIcon} 2s 1s cubic-bezier(.645,.045,.355,1) infinite;
     `}
 
     ${props =>
@@ -130,4 +145,14 @@ export const MainLink = styled(Link)`
             transform: translateY(2.5px);
         }
     `} 
+
+    ${props =>
+        props.project &&
+        css`
+            display: block;
+            font-size: clamp(35px, 5vw, 100px);
+            margin-top: 0;
+            font-weight: 600;
+            text-transform: uppercase;
+    `}
 `;
