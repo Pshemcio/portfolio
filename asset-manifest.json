@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.27024f6b.chunk.css",
-    "main.js": "/portfolio/static/js/main.8ff73b3d.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.8ff73b3d.chunk.js.map",
-    "runtime-main.js": "/portfolio/static/js/runtime-main.7bb507e3.js",
-    "runtime-main.js.map": "/portfolio/static/js/runtime-main.7bb507e3.js.map",
-    "static/js/2.1ea4ccf4.chunk.js": "/portfolio/static/js/2.1ea4ccf4.chunk.js",
-    "static/js/2.1ea4ccf4.chunk.js.map": "/portfolio/static/js/2.1ea4ccf4.chunk.js.map",
-    "static/js/3.3a85c9c4.chunk.js": "/portfolio/static/js/3.3a85c9c4.chunk.js",
-    "static/js/3.3a85c9c4.chunk.js.map": "/portfolio/static/js/3.3a85c9c4.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.972e305d.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.972e305d.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.1cea68cd.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.1cea68cd.js.map",
+    "static/js/2.2b2e3912.chunk.js": "/portfolio/static/js/2.2b2e3912.chunk.js",
+    "static/js/2.2b2e3912.chunk.js.map": "/portfolio/static/js/2.2b2e3912.chunk.js.map",
+    "static/js/3.fd787405.chunk.js": "/portfolio/static/js/3.fd787405.chunk.js",
+    "static/js/3.fd787405.chunk.js.map": "/portfolio/static/js/3.fd787405.chunk.js.map",
     "index.html": "/portfolio/index.html",
     "static/css/main.27024f6b.chunk.css.map": "/portfolio/static/css/main.27024f6b.chunk.css.map",
-    "static/js/2.1ea4ccf4.chunk.js.LICENSE.txt": "/portfolio/static/js/2.1ea4ccf4.chunk.js.LICENSE.txt",
-    "static/media/test.b45081c4.jpg": "/portfolio/static/media/test.b45081c4.jpg",
-    "static/media/test2.88eb449a.jpg": "/portfolio/static/media/test2.88eb449a.jpg"
+    "static/js/2.2b2e3912.chunk.js.LICENSE.txt": "/portfolio/static/js/2.2b2e3912.chunk.js.LICENSE.txt",
+    "static/media/brunoMain.88eb449a.jpg": "/portfolio/static/media/brunoMain.88eb449a.jpg",
+    "static/media/valorantMain.b45081c4.jpg": "/portfolio/static/media/valorantMain.b45081c4.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.7bb507e3.js",
-    "static/js/2.1ea4ccf4.chunk.js",
+    "static/js/runtime-main.1cea68cd.js",
+    "static/js/2.2b2e3912.chunk.js",
     "static/css/main.27024f6b.chunk.css",
-    "static/js/main.8ff73b3d.chunk.js"
+    "static/js/main.972e305d.chunk.js"
   ]
 }
