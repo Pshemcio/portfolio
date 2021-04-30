@@ -45,7 +45,8 @@ const Project = (props) => {
         photos: {
             alt,
             thumb,
-            overview
+            overview,
+            rwd
         },
         links: {
             live,
@@ -106,11 +107,16 @@ const Project = (props) => {
                             </TextReveal>
                         )
                     })}
-                    <ImageWrapper>
+                    <ImageWrapper project>
                         <RevealImage data-scroll>
                             <Image src={overview} alt={alt} project />
                         </RevealImage>
                     </ImageWrapper>
+                    <ImageWrapper project>
+                        <RevealImage data-scroll>
+                            <Image src={rwd} alt={alt} project />
+                        </RevealImage>
+                    </ImageWrapper >
 
                     <Heading3 project>
                         <TextReveal data-scroll>
