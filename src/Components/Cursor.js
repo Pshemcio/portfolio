@@ -81,7 +81,6 @@ const Cursor = ({ isHovered, isMobile }) => {
     });
 
     const [isReady, setIsReady] = useState(false);
-    // const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
         document.addEventListener("mouseover", () => {

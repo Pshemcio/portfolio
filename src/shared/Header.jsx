@@ -24,9 +24,9 @@ function Header() {
             <MainHeader>
                 <Burger clicked={click} onclick={handleClick} />
                 <Socials>
-                    {socials.map((link, index) => (
-                        <BaseLink className="cursor_hover" target='_blank' key={index} href={link.path} rel="noreferrer" iconLink>
-                            {link.icon}
+                    {socials.map((social, index) => (
+                        <BaseLink className="cursor_hover" target='_blank' key={index} href={social.path} rel="noreferrer" iconLink>
+                            {social.icon}
                         </BaseLink>
                     ))}
                 </Socials>

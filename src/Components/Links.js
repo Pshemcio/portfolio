@@ -44,6 +44,13 @@ export const BaseLink = styled.a`
     ${linksBase}
 
     ${props =>
+        props.project &&
+        css`
+        width: 3em;
+        height: 3em;
+    `}
+
+    ${props =>
         props.iconLink &&
         css`
         width: 2.5em;

@@ -27,6 +27,13 @@ export const Heading2 = styled.h2`
     ${typographyBase}
     font-size: ${(props) => (props.smaller ? "40px" : "50px")};
     margin-bottom: ${(props) => (props.smaller ? "30px" : "inherit")};
+    
+    ${props =>
+        props.project &&
+        css`
+        font-size: 35px;
+        margin-top: 15px;
+    `}
 
     span {
         &::after {
@@ -45,7 +52,7 @@ export const Heading3 = styled.h3`
 
 export const Heading4 = styled.h4`
     ${typographyBase}
-    font-size: 16px;
+    font-size: 14px;
     font-family: ${secondaryFont};
     font-weight: 400;
 `;
@@ -55,6 +62,12 @@ export const HeadingDesc = styled.p`
     font-weight: 300;
     font-family: ${secondaryFont};
     font-size: 20px;
+
+    ${props =>
+        props.small &&
+        css`
+        font-size: 16px;
+    `}
 `;
 
 export const Paragraph = styled.p`

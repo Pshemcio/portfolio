@@ -4,8 +4,6 @@ import { Theme } from '../Settings';
 
 const {
     colors: {
-        primaryColor,
-        primaryColorLight,
         secondaryColor
     }
 } = Theme;
@@ -37,9 +35,24 @@ export const ProjectsInfoContainer = styled.div`
             transform: translateY(3px);
         }
     `} 
+
+    ${props =>
+        props.projectIcons &&
+        css`
+            position: absolute;
+            bottom: 10px;
+            padding: 0 20px;
+    `} 
 `
 
 export const ProjectsItemContainer = styled(Link)`
     color: ${secondaryColor};
     text-decoration: none;
+`
+
+
+////////////////////////// Project
+
+export const ProjectImageContainer = styled.div`
+    position: relative;
 `

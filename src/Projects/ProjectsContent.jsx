@@ -8,8 +8,7 @@ import {
     Heading3,
     Heading4
 } from '../Components';
-import test from '../images/test.jpg';
-import test2 from '../images/test2.jpg';
+import { projects } from '../Settings';
 
 
 import {
@@ -28,39 +27,27 @@ const ProjectsContent = () => {
                         Projekty
                 </TextReveal>
                 </Heading2>
+
                 <ProjectsList>
-                    <ProjectsItem>
-                        <ProjectsItemContainer className="cursor_hover" to={`/projects/project`} arrow="true">
-                            <Heading3>
-                                Valorant Form
-                        </Heading3>
-                            <ImageWrapper>
-                                <RevealImage data-scroll>
-                                    <Image src={test} alt="my face" />
-                                </RevealImage>
-                            </ImageWrapper>
-                            <ProjectsInfoContainer arrow>
-                                <Heading4>
-                                    Formularz rejestracyjny
-                        </Heading4>
-                            </ProjectsInfoContainer>
-                        </ProjectsItemContainer>
-                    </ProjectsItem>
-                    <ImageWrapper>
-                        <RevealImage data-scroll>
-                            <Image src={test2} alt="my face" />
-                        </RevealImage>
-                    </ImageWrapper>
-                    <ImageWrapper>
-                        <RevealImage data-scroll>
-                            <Image src={test} alt="my face" />
-                        </RevealImage>
-                    </ImageWrapper>
-                    <ImageWrapper>
-                        <RevealImage data-scroll>
-                            <Image src={test2} alt="my face" />
-                        </RevealImage>
-                    </ImageWrapper>
+                    {projects.map((project) => (
+                        <ProjectsItem key={project.id}>
+                            <ProjectsItemContainer className="cursor_hover" to={project.path} arrow="true">
+                                <Heading3>
+                                    {project.name}
+                                </Heading3>
+                                <ImageWrapper>
+                                    <RevealImage data-scroll>
+                                        <Image src={project.photos.main} alt="my face" />
+                                    </RevealImage>
+                                </ImageWrapper>
+                                <ProjectsInfoContainer arrow>
+                                    <Heading4>
+                                        {project.shortDescription}
+                                    </Heading4>
+                                </ProjectsInfoContainer>
+                            </ProjectsItemContainer>
+                        </ProjectsItem>
+                    ))}
                 </ProjectsList>
             </SectionContainer>
         </>

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { GlobalStyle, Theme } from './Settings';
+import { GlobalStyle, projects, Theme } from './Settings';
 import { useEffect, useState } from 'react';
 import { Cursor } from './Components';
 import {
@@ -14,7 +14,7 @@ import { Home } from './Home';
 import { Projects } from './Projects';
 import { Header, LoadingScreen } from './shared';
 import { About } from './About';
-import Project from './Projects/Project/Project';
+import Project from './Projects/Project';
 // import { NotFound } from './NotFound'
 
 const {
@@ -110,9 +110,11 @@ function App() {
                 <Route exact path='/projects'>
                   <Projects {...routingProps} />
                 </Route>
-                <Route exact path='/projects/project'>
-                  <Project {...routingProps} />
-                </Route>
+                {projects.map((project) => (
+                  <Route key={project.id} exact path={project.path}>
+                    <Project {...routingProps} />
+                  </Route>
+                ))}
                 <Route exact path='/about'>
                   <About {...routingProps} />
                 </Route>
