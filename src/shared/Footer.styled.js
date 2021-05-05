@@ -5,3 +5,7 @@ export const FooterWrapper = styled.div`
     background-color: green;
     margin-top: 50px;
 `
+
+export const FooterContactContainer = styled.div`
+    margin: 50px 0;
+`

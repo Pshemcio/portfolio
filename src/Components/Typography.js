@@ -3,9 +3,11 @@ import { Theme } from '../Settings';
 
 const {
     typography: {
+        primaryFont,
         secondaryFont
     },
     colors: {
+        secondaryColor,
         tertiaryColor
     }
 } = Theme;
@@ -54,6 +56,18 @@ export const Heading3 = styled.h3`
         css`
         font-size: clamp(14px, 4vw, 25px);
         text-align: center;
+    `}
+
+    ${props =>
+        props.footer &&
+        css`
+        font-family: ${primaryFont};
+        font-size: clamp(30px, 9vw, 80px);
+        color: ${secondaryColor};
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: ${secondaryColor};
+        text-transform: uppercase;
     `}
 `;
 

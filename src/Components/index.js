@@ -8,3 +8,4 @@ export * from './Typography';
 export * from './Links';
 export * from './ContentReveal';
 export * from './Images';
+export * from './Forms';

@@ -24,7 +24,7 @@ export const ProjectsList = styled.ul`
 `
 
 export const ProjectsItem = styled.li`
-    margin-bottom: 3em;
+    margin-bottom: 2em;
 `
 
 export const ProjectsInfoContainer = styled.div`

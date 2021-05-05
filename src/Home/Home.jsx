@@ -16,7 +16,7 @@ const Home = (props) => {
                 <AboutShort />
                 <SkillsShort />
                 <ProjectsContent />
-                <MainLink className="cursor_hover" to={"/projects"} arrow="true">
+                <MainLink className="cursor_hover" to={"/projects"} arrow="true" homelink="true">
                     Więcej
                  </MainLink>
                 <Footer />

@@ -128,9 +128,8 @@ const Project = (props) => {
                             {projects[nextSite].name}
                         </TextReveal>
                     </MainLink>
-                    <Footer />
                 </SectionContainer>
-
+                <Footer />
             </MainContainer>
         </>
     )

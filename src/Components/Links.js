@@ -34,6 +34,11 @@ const linksBase = css`
     text-align: center;
     padding: 2px 2px;
     overflow: hidden;
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
 `;
 
 const showLineOnHover = css`
@@ -102,6 +107,21 @@ export const BaseLink = styled.a`
             }
         }
     `}
+
+    ${props =>
+        props.footer &&
+        css`
+        display: block;
+        font-size: clamp(16px, 5vw, 50px);
+        padding: 8px 0;
+        font-weight: 600;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+
+        &:first-of-type {
+            border-bottom: none;
+        }
+    `}
 `
 
 export const StyledNavLink = styled(NavLink)`
@@ -131,7 +151,7 @@ export const MainLink = styled(Link)`
     font-family: ${secondaryFont};
     display: inline-block;
     line-height: 1.1em;
-    margin-top: 30px;
+    /* margin-top: 10px; */
 
     ${props =>
         props.arrow &&
@@ -155,4 +175,25 @@ export const MainLink = styled(Link)`
             font-weight: 600;
             text-transform: uppercase;
     `}
+
+    ${props =>
+        props.homelink &&
+        css`
+            display: block;
+            text-align: center;
+        `}
 `;
+
+export const CryptoMailLink = styled(BaseLink)`
+    display: block;
+    &::before {
+        content: attr(data-name) "@" attr(data-domain) "." attr(data-tld); 
+    }
+`
+
+export const CryptoPhoneLink = styled(BaseLink)`
+    display: block;
+    &::before {
+        content: "+48 " attr(data-first) " " attr(data-second) " " attr(data-third); 
+    }
+`
