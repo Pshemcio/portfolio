@@ -4,13 +4,13 @@ export const MainContainer = styled.div`
     background-color: transparent;
     padding-top: 50px;
 
-    ${props =>
-        props.home &&
-        css`
-        padding-top: 0;
-    `}
+    padding-top: ${(props) => (props.clicked ? "0" : "50px")};
 `;
 
 export const SectionContainer = styled.section`
     padding: 4vh 15px;
+
+    &#footer {
+        padding-top: 0;
+    }
 `

@@ -1,9 +1,10 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import Theme from '../Settings/theme';
 
 const {
     colors: {
-        primaryColor
+        primaryColor,
+        secondaryColor
     }
 } = Theme;
 
@@ -53,6 +54,16 @@ export const SvgWrapper = styled.div`
     width: 250px;
     margin: 0 auto;
 
+    ${props =>
+        props.footer &&
+        css`
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 110px;
+    `}
+
     &.is-inview {
         path {
             animation: ${dash} 3s 1s cubic-bezier(0.43, 0.29, 0.58, 1.01) forwards;
@@ -69,6 +80,14 @@ export const LogoPath = styled.path`
     stroke-width: 2;
     fill: url(#header-shape-gradient) #fff;
     fill-opacity: 0;
+
+    ${props =>
+        props.footer &&
+        css`
+        stroke: transparent;
+        fill: ${secondaryColor};
+        fill-opacity: .3;
+    `}
 `
 
 export const InfoWrapper = styled.div`

@@ -55,7 +55,6 @@ export const Heading3 = styled.h3`
         props.project &&
         css`
         font-size: clamp(14px, 4vw, 25px);
-        text-align: center;
     `}
 
     ${props =>
@@ -68,6 +67,7 @@ export const Heading3 = styled.h3`
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: ${secondaryColor};
         text-transform: uppercase;
+        margin-bottom: 10px;
     `}
 `;
 

@@ -23,6 +23,7 @@ import {
 } from '@styled-icons/simple-icons';
 
 import {
+    SkillsWrapper,
     SkillsContainer,
     SkillsItem,
     SkillsInfo,
@@ -46,25 +47,28 @@ const SkillsShort = () => {
     ];
 
     return (
-        <SectionContainer id="skills" data-scroll-section>
-            <Heading2 smaller>
-                <TextReveal data-scroll>
-                    Umiejętności
+        <SkillsWrapper>
+            <SectionContainer id="skills" data-scroll-section>
+                <Heading2 smaller>
+                    <TextReveal data-scroll>
+                        Umiejętności
                 </TextReveal>
-            </Heading2>
-            <SkillsContainer>
-                {skills.map((link, index) => (
-                    <SkillsItem className="cursor_hover" key={index}>
-                        <SkillsSvgWrapper color={link.color} data-scroll>
-                            {link.icon}
-                        </SkillsSvgWrapper>
-                        <SkillsInfo>
-                            {link.name}
-                        </SkillsInfo>
-                    </SkillsItem>
-                ))}
-            </SkillsContainer>
-        </SectionContainer>
+                </Heading2>
+                <SkillsContainer>
+                    {skills.map((link, index) => (
+                        <SkillsItem className="cursor_hover" key={index}>
+                            <SkillsSvgWrapper color={link.color} data-scroll>
+                                {link.icon}
+                            </SkillsSvgWrapper>
+                            <SkillsInfo>
+                                {link.name}
+                            </SkillsInfo>
+                        </SkillsItem>
+                    ))}
+                </SkillsContainer>
+            </SectionContainer>
+        </SkillsWrapper>
+
     )
 }
 

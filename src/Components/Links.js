@@ -31,7 +31,7 @@ const linksBase = css`
     background-color: transparent;
     color: ${secondaryColor};
     text-decoration: none;
-    text-align: center;
+    /* text-align: center; */
     padding: 2px 2px;
     overflow: hidden;
 
@@ -117,6 +117,7 @@ export const BaseLink = styled.a`
         font-weight: 600;
         border-top: 1px solid white;
         border-bottom: 1px solid white;
+        text-align: center;
 
         &:first-of-type {
             border-bottom: none;
@@ -149,9 +150,9 @@ export const MainLink = styled(Link)`
     font-size: 1.2rem;
     font-weight: 400;
     font-family: ${secondaryFont};
-    display: inline-block;
+    display: ${(props) => (props.hide ? "none" : "inline-block")};
     line-height: 1.1em;
-    /* margin-top: 10px; */
+    margin-top: 25px;
 
     ${props =>
         props.arrow &&
@@ -172,16 +173,10 @@ export const MainLink = styled(Link)`
             display: block;
             font-size: clamp(35px, 5vw, 100px);
             margin-top: 0;
+            padding-bottom: 5px;
             font-weight: 600;
             text-transform: uppercase;
     `}
-
-    ${props =>
-        props.homelink &&
-        css`
-            display: block;
-            text-align: center;
-        `}
 `;
 
 export const CryptoMailLink = styled(BaseLink)`

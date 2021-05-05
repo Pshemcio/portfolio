@@ -6,7 +6,8 @@ import {
     Image,
     RevealImage,
     Heading3,
-    Heading4
+    Heading4,
+    MainLink
 } from '../Components';
 import { projects } from '../Settings';
 
@@ -18,7 +19,7 @@ import {
     ProjectsItemContainer
 } from './';
 
-const ProjectsContent = () => {
+const ProjectsContent = (props) => {
     return (
         <>
             <SectionContainer id="projects" data-scroll-section>
@@ -49,6 +50,10 @@ const ProjectsContent = () => {
                         </ProjectsItem>
                     ))}
                 </ProjectsList>
+
+                <MainLink className="cursor_hover" to={"/projects"} arrow="true" hide={props.hidelink}>
+                    Więcej
+                </MainLink>
             </SectionContainer>
         </>
     )

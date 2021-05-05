@@ -24,7 +24,10 @@ export const ProjectsList = styled.ul`
 `
 
 export const ProjectsItem = styled.li`
-    margin-bottom: 2em;
+
+    &:not(:last-of-type) {
+        margin-bottom: 2em;
+    }
 `
 
 export const ProjectsInfoContainer = styled.div`

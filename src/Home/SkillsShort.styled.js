@@ -2,9 +2,16 @@ import styled from 'styled-components';
 import { Theme } from '../Settings';
 
 const {
+    primaryColorLight,
     secondaryColor,
     tertiaryColor
 } = Theme.colors;
+
+export const SkillsWrapper = styled.div`
+    width: 100%;
+    background-color: ${primaryColorLight};
+    padding-bottom: 25px;
+`
 
 export const SkillsContainer = styled.ul`
     display: flex;

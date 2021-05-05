@@ -1,5 +1,5 @@
 import { Intro, AboutShort, SkillsShort } from './';
-import { MainContainer, MainLink, PageTransitioning } from '../Components';
+import { MainContainer, MainLink, PageTransitioning, SectionContainer } from '../Components';
 import { ProjectsContent } from '../Projects';
 import { Footer } from '../shared';
 
@@ -15,10 +15,7 @@ const Home = (props) => {
                 <Intro />
                 <AboutShort />
                 <SkillsShort />
-                <ProjectsContent />
-                <MainLink className="cursor_hover" to={"/projects"} arrow="true" homelink="true">
-                    Więcej
-                 </MainLink>
+                <ProjectsContent home />
                 <Footer />
             </MainContainer>
         </>

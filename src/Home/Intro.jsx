@@ -1,4 +1,9 @@
-import { HeadingDesc, Heading1, TextReveal, BaseLink } from '../Components/index';
+import {
+    HeadingDesc,
+    Heading1,
+    TextReveal,
+    BaseLink
+} from '../Components/index';
 import {
     IntroStyled,
     SvgWrapper,

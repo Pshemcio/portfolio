@@ -2,6 +2,7 @@ import styled, { css } from "styled-components"
 import { useState } from 'react';
 import { send } from 'emailjs-com';
 import Theme from "../Settings/theme";
+import { TextReveal } from "./ContentReveal";
 
 let {
     colors: {
@@ -23,13 +24,25 @@ const formBase = css`
     border: none;
     padding: 15px;
     outline: none;
-    margin: 20px 0;
+    margin: 4px 0 20px;
     font-size: 16px;
+    opacity: 0;
+    transition: opacity .6s .1s ease-in-out;
+
+    &.is-inview {
+        opacity: 1;
+    }
 `;
 
 const FormContainer = styled.form`
     max-width: 600px;
     margin: 0 auto;
+`
+
+const StyledLabel = styled.label`
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
 `
 
 const StyledInput = styled.input`
@@ -47,6 +60,7 @@ const StyledSubmit = styled.button`
     color: ${primaryColor};
     text-transform: uppercase;
     font-weight: 600;
+    margin-top: 35px;
 `
 
 export const FooterForm = () => {
@@ -83,28 +97,49 @@ export const FooterForm = () => {
 
     return (
         <FormContainer onSubmit={onSubmit}>
+            <StyledLabel htmlFor="from_name">
+                <TextReveal data-scroll delay={.2} transparent>
+                    imię:
+                </TextReveal>
+            </StyledLabel>
             <StyledInput
                 type='text'
                 name='from_name'
                 placeholder='Jak się do Ciebie zwracać?'
                 value={toSend.from_name}
                 onChange={handleChange}
+                data-scroll
             />
+            <StyledLabel htmlFor="reply_to">
+                <TextReveal data-scroll delay={.3} transparent>
+                    email:
+                </TextReveal>
+            </StyledLabel>
             <StyledInput
                 type='email'
                 name='reply_to'
                 placeholder='Muszę jakoś odpowiedzieć!'
                 value={toSend.reply_to}
                 onChange={handleChange}
+                data-scroll
             />
+            <StyledLabel htmlFor="message">
+                <TextReveal data-scroll delay={.4} transparent>
+                    wiadomość:
+                </TextReveal>
+            </StyledLabel>
             <StyledTextarea
                 type='text'
                 name='message'
-                placeholder='Tu może być cokolwiek ale nie obrażę się jeśli będzie to oferta pracy :)'
+                placeholder='Tu może być cokolwiek ale będę bardzo szczęśliwy jeśli będzie to oferta pracy :)'
                 value={toSend.message}
                 onChange={handleChange}
+                data-scroll
             />
-            <StyledSubmit type='submit'>Wyślij</StyledSubmit>
+
+            <StyledSubmit type='submit' data-scroll>
+                Wyślij!
+            </StyledSubmit>
         </FormContainer>
     )
 };
