@@ -107,22 +107,6 @@ export const BaseLink = styled.a`
             }
         }
     `}
-
-    ${props =>
-        props.footer &&
-        css`
-        display: block;
-        font-size: clamp(16px, 5vw, 50px);
-        padding: 8px 0;
-        font-weight: 600;
-        border-top: 1px solid white;
-        border-bottom: 1px solid white;
-        text-align: center;
-
-        &:first-of-type {
-            border-bottom: none;
-        }
-    `}
 `
 
 export const StyledNavLink = styled(NavLink)`
@@ -180,14 +164,12 @@ export const MainLink = styled(Link)`
 `;
 
 export const CryptoMailLink = styled(BaseLink)`
-    display: block;
     &::before {
         content: attr(data-name) "@" attr(data-domain) "." attr(data-tld); 
     }
 `
 
 export const CryptoPhoneLink = styled(BaseLink)`
-    display: block;
     &::before {
         content: "+48 " attr(data-first) " " attr(data-second) " " attr(data-third); 
     }

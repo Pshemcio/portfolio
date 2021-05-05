@@ -14,7 +14,7 @@ export const FooterWrapper = styled.div`
 `
 
 export const FooterContactContainer = styled.div`
-    margin: 50px 0;
+    margin: 30px 0 20px;
 `
 
 export const CopywrightContainer = styled.div`
@@ -24,4 +24,18 @@ export const CopywrightContainer = styled.div`
     position: relative;
     display: grid;
     place-items: center;
+`
+
+export const FooterContactItem = styled.div`
+    font-size: clamp(16px, 5vw, 50px);
+    padding: 8px 0;
+    font-weight: 600;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    text-align: center;
+
+    &:first-of-type {
+        border-bottom: none;
+    }
+
 `

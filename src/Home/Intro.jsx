@@ -54,7 +54,7 @@ const Intro = () => {
                     <BaseLink href="#projects" className="cursor_hover" intro data-scroll-to>
                         Projekty
                     </BaseLink>
-                    <BaseLink href="#contact" className="cursor_hover" intro data-scroll-to>
+                    <BaseLink href="#footer" className="cursor_hover" intro data-scroll-to>
                         Kontakt
                     </BaseLink>
                 </IntroLinksList>

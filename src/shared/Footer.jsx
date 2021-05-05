@@ -9,24 +9,21 @@ import {
     CryptoPhoneLink
 } from '../Components';
 import { LogoPath, SvgWrapper } from '../Home';
-import { Theme } from '../Settings';
-import { FooterContactContainer, CopywrightContainer } from './Footer.styled';
+import {
+    FooterContactContainer,
+    FooterContactItem,
+    CopywrightContainer
+} from './';
 
-const {
-    colors: {
-        tertiaryColor,
-        tertiaryColorDark
-    }
-} = Theme;
 
 const Footer = () => {
-    const test = (e) => {
+    const updateMail = (e) => {
         e.target.href = 'mailto:' + e.target.dataset.name + '@' + e.target.dataset.domain + '.' + e.target.dataset.tld;
-    }
+    };
 
-    const test2 = (e) => {
+    const updatePhone = (e) => {
         e.target.href = 'tel: +48' + e.target.dataset.first + e.target.dataset.second + e.target.dataset.third;
-    }
+    };
 
     return (
         <>
@@ -34,32 +31,38 @@ const Footer = () => {
                 <Heading2>
                     <TextReveal data-scroll>
                         Kontakt
-                    </TextReveal>
+                </TextReveal>
                 </Heading2>
                 <Heading3 footer>
-                    <TextReveal data-scroll delay={.5}>
-                        Napisz do mnie!
-                    </TextReveal>
-                </Heading3>
+                    Napisz do mnie!
+            </Heading3>
                 <FooterForm />
                 <FooterContactContainer>
-                    <CryptoMailLink href="mailto:someWeirdEmail@onet.xyz"
-                        data-name="przemysaw.majka"
-                        data-domain="gmail"
-                        data-tld="com"
-                        onClick={test}
-                        footer
-                    />
-                    <CryptoPhoneLink href="tel:901928492"
-                        data-first="884"
-                        data-second="283"
-                        data-third="234"
-                        onClick={test2}
-                        footer
-                    />
+                    <FooterContactItem>
+                        <CryptoMailLink
+                            className="cursor_hover"
+                            href="mailto:someWeirdEmail@onet.xyz"
+                            data-name="przemysaw.majka"
+                            data-domain="gmail"
+                            data-tld="com"
+                            onClick={updateMail}
+                            footer
+                        />
+                    </FooterContactItem>
+                    <FooterContactItem>
+                        <CryptoPhoneLink
+                            className="cursor_hover"
+                            href="tel:901928492"
+                            data-first="884"
+                            data-second="283"
+                            data-third="234"
+                            onClick={updatePhone}
+                            footer
+                        />
+                    </FooterContactItem>
                 </FooterContactContainer>
             </SectionContainer>
-            <CopywrightContainer>
+            <CopywrightContainer data-scroll-section>
                 <SvgWrapper data-scroll footer>
                     <svg viewBox="0 0 294 282" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <LogoPath

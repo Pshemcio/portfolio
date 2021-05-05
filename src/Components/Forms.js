@@ -10,9 +10,6 @@ let {
         tertiaryColor,
         primaryColor,
         primaryColorLight
-    },
-    typography: {
-        secondaryFont
     }
 } = Theme;
 
@@ -56,11 +53,33 @@ const StyledTextarea = styled.textarea`
 
 const StyledSubmit = styled.button`
     ${formBase};
-    background-color: ${tertiaryColor};
+    background-color: ${secondaryColor};
     color: ${primaryColor};
     text-transform: uppercase;
     font-weight: 600;
-    margin-top: 35px;
+    margin-top: 45px;
+    margin-bottom: 0;
+    cursor: pointer;
+    border: 1px solid ${secondaryColor};
+    transition: background-color .4s, opacity .4s, color .4s;
+
+    ${props =>
+        props.isSubmitted &&
+        css`
+            background-color: transparent;
+            color: ${secondaryColor};
+            opacity: .2;
+            pointer-events: none;
+        `
+    }
+`
+
+const SubmitInfo = styled.p`
+    text-align: center;
+    color: ${tertiaryColor};
+    transition: opacity .4s;
+    opacity: ${(props) => (props.isSubmitted ? "1" : "0")};
+    overflow: hidden;
 `
 
 export const FooterForm = () => {
@@ -68,9 +87,10 @@ export const FooterForm = () => {
     const TEMPLATE_KEY = process.env.REACT_APP_FORM_TEMPLATE_KEY;
     const USER_KEY = process.env.REACT_APP_FORM_USER_KEY;
 
+    const [isSubmitted, setIsSubmitted] = useState(false);
+
     const [toSend, setToSend] = useState({
         from_name: '',
-        to_name: '',
         message: '',
         reply_to: '',
     });
@@ -81,6 +101,11 @@ export const FooterForm = () => {
 
     const onSubmit = (e) => {
         e.preventDefault();
+
+        if (isSubmitted) {
+            return;
+        };
+
         send(
             SERVICE_KEY,
             TEMPLATE_KEY,
@@ -89,6 +114,7 @@ export const FooterForm = () => {
         )
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
+                setIsSubmitted(true);
             })
             .catch((err) => {
                 console.log('FAILED...', err);
@@ -136,10 +162,18 @@ export const FooterForm = () => {
                 onChange={handleChange}
                 data-scroll
             />
-
-            <StyledSubmit type='submit' data-scroll>
+            <StyledSubmit
+                className="cursor_hover"
+                type='submit'
+                data-scroll
+                isSubmitted={isSubmitted}
+            >
                 Wyślij!
             </StyledSubmit>
+            <SubmitInfo isSubmitted={isSubmitted}>
+                Poszło! Odezwę się najszybciej jak to możliwe!
+            </SubmitInfo>
+
         </FormContainer>
     )
 };
