@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.27024f6b.chunk.css",
-    "main.js": "/portfolio/static/js/main.59bfabe1.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.59bfabe1.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.b531a044.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.b531a044.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.c6716b6a.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.c6716b6a.js.map",
     "static/js/2.ba9c5c7a.chunk.js": "/portfolio/static/js/2.ba9c5c7a.chunk.js",
@@ -19,14 +19,20 @@
     "static/media/caroMain.0f0b1794.jpg": "/portfolio/static/media/caroMain.0f0b1794.jpg",
     "static/media/caroOverview.46d4e414.jpg": "/portfolio/static/media/caroOverview.46d4e414.jpg",
     "static/media/caroRwd.c87d94a8.jpg": "/portfolio/static/media/caroRwd.c87d94a8.jpg",
+    "static/media/twisterMain.e8d9208d.jpg": "/portfolio/static/media/twisterMain.e8d9208d.jpg",
+    "static/media/twisterOverview.c742f4a4.jpg": "/portfolio/static/media/twisterOverview.c742f4a4.jpg",
+    "static/media/twisterRwd.6a9ce752.jpg": "/portfolio/static/media/twisterRwd.6a9ce752.jpg",
     "static/media/valorantMain.bbfe634c.jpg": "/portfolio/static/media/valorantMain.bbfe634c.jpg",
     "static/media/valorantOverview.2bb9546e.jpg": "/portfolio/static/media/valorantOverview.2bb9546e.jpg",
-    "static/media/valorantRwd.405373b8.jpg": "/portfolio/static/media/valorantRwd.405373b8.jpg"
+    "static/media/valorantRwd.405373b8.jpg": "/portfolio/static/media/valorantRwd.405373b8.jpg",
+    "static/media/weatherAppMain.71ac82d1.jpg": "/portfolio/static/media/weatherAppMain.71ac82d1.jpg",
+    "static/media/weatherAppOverview.8043e42a.jpg": "/portfolio/static/media/weatherAppOverview.8043e42a.jpg",
+    "static/media/weatherAppRwd.70b7f10d.jpg": "/portfolio/static/media/weatherAppRwd.70b7f10d.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.c6716b6a.js",
     "static/js/2.ba9c5c7a.chunk.js",
     "static/css/main.27024f6b.chunk.css",
-    "static/js/main.59bfabe1.chunk.js"
+    "static/js/main.b531a044.chunk.js"
   ]
 }
