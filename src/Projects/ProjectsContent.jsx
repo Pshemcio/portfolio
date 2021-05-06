@@ -51,7 +51,7 @@ const ProjectsContent = (props) => {
                     ))}
                 </ProjectsList>
 
-                <MainLink className="cursor_hover" to={"/projects"} arrow="true" hide={props.hidecontent}>
+                <MainLink className="cursor_hover" to={"/projects"} arrow="true" hide={props.hidelink}>
                     Więcej
                 </MainLink>
             </SectionContainer>

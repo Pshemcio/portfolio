@@ -7,7 +7,13 @@ import {
     brunoRwd,
     caroMain,
     caroOverview,
-    caroRwd
+    caroRwd,
+    weatherAppMain,
+    weatherAppOverview,
+    weatherAppRwd,
+    twisterMain,
+    twisterOverview,
+    twisterRwd
 } from '../images/';
 
 const projects = [
@@ -84,6 +90,81 @@ const projects = [
         ],
         stack: [
             "HTML5", "CSS3", "Javascript"
+        ]
+    },
+    {
+        id: "weather-app",
+        name: "Weather App",
+        shortDescription: "Aplikacja pogodowa",
+        path: "/projects/weather-app",
+        photos: {
+            alt: "application that shows weather forecast for given city",
+            thumb: weatherAppMain,
+            overview: weatherAppOverview,
+            rwd: weatherAppRwd
+        },
+        links: {
+            live: "https://pshemcio.github.io/weather-app/",
+            github: "https://github.com/Pshemcio/weather-app/"
+        },
+        date: "11/2020",
+        text: [
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum laboriosam facilis unde nulla corrupti corporis reiciendis neque, pariatur distinctio beatae.",
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum laboriosam facilis unde nulla corrupti corporis reiciendis neque, pariatur distinctio beatae.",
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum laboriosam facilis unde nulla corrupti corporis reiciendis neque, pariatur distinctio beatae."
+        ],
+        stack: [
+            "React", "CSS3", "REST API"
+        ]
+    },
+    {
+        id: "twister-app",
+        name: "Twister App",
+        shortDescription: "Mini aplikacja do gry w Twistera",
+        path: "/projects/twister",
+        photos: {
+            alt: "useful commands reading application in case you would like to play twister",
+            thumb: twisterMain,
+            overview: twisterOverview,
+            rwd: twisterRwd
+        },
+        links: {
+            live: "https://pshemcio.github.io/weather-app/",
+            github: "https://github.com/Pshemcio/weather-app/"
+        },
+        date: "12/2020",
+        text: [
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum laboriosam facilis unde nulla corrupti corporis reiciendis neque, pariatur distinctio beatae.",
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum laboriosam facilis unde nulla corrupti corporis reiciendis neque, pariatur distinctio beatae.",
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum laboriosam facilis unde nulla corrupti corporis reiciendis neque, pariatur distinctio beatae."
+        ],
+        stack: [
+            "HTML5", "CSS3", "JavaScript", "SpeechSynthesis"
+        ]
+    },
+    {
+        id: "portfolio",
+        name: "Portfolio",
+        shortDescription: "Portfolio które właśnie oglądasz",
+        path: "/projects/portfolio",
+        photos: {
+            alt: "personal portfolio website",
+            thumb: twisterMain,
+            overview: twisterOverview,
+            rwd: twisterRwd
+        },
+        links: {
+            live: "https://przemekmajka.pl",
+            github: "https://github.com/Pshemcio/portfolio/"
+        },
+        date: "12/2020",
+        text: [
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum laboriosam facilis unde nulla corrupti corporis reiciendis neque, pariatur distinctio beatae.",
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum laboriosam facilis unde nulla corrupti corporis reiciendis neque, pariatur distinctio beatae.",
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum laboriosam facilis unde nulla corrupti corporis reiciendis neque, pariatur distinctio beatae."
+        ],
+        stack: [
+            "React", "React router", "Styled Components", "LocomotiveScroll"
         ]
     }
 ];

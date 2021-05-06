@@ -7,6 +7,12 @@ import brunoRwd from './brunobanani/brunoRwd.jpg';
 import caroMain from './caro/caroMain.jpg';
 import caroOverview from './caro/caroOverview.jpg';
 import caroRwd from './caro/caroRwd.jpg';
+import weatherAppMain from './weather-app/weatherAppMain.jpg';
+import weatherAppOverview from './weather-app/weatherAppOverview.jpg';
+import weatherAppRwd from './weather-app/weatherAppRwd.jpg';
+import twisterMain from './twister/twisterMain.jpg';
+import twisterOverview from './twister/twisterOverview.jpg';
+import twisterRwd from './twister/twisterRwd.jpg';
 
 export {
     valorantMain,
@@ -17,5 +23,11 @@ export {
     brunoRwd,
     caroMain,
     caroOverview,
-    caroRwd
+    caroRwd,
+    weatherAppMain,
+    weatherAppOverview,
+    weatherAppRwd,
+    twisterMain,
+    twisterOverview,
+    twisterRwd
 };

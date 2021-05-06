@@ -12,7 +12,7 @@ const Projects = (props) => {
         <>
             <PageTransitioning />
             <MainContainer className="smooth-scroll">
-                <ProjectsContent hidecontent={"true"} />
+                <ProjectsContent hidelink={"true"} />
                 <Footer />
             </MainContainer>
         </>
