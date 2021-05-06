@@ -33,7 +33,7 @@ import {
 const SkillsShort = () => {
     const skills = [
         { name: "html", icon: <Html5 />, color: "#e34c26" },
-        { name: "scc3", icon: <Css3 />, color: "#2965f1" },
+        { name: "css3", icon: <Css3 />, color: "#2965f1" },
         { name: "javascript", icon: <Javascript />, color: "#f0db4f" },
         { name: "sass", icon: <Sass />, color: "#c69" },
         { name: "bootstrap", icon: <Bootstrap />, color: "#563d7c" },

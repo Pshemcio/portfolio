@@ -23,9 +23,6 @@ const AboutShort = () => {
             <MainLink className="cursor_hover" to={"/about"} arrow="true">
                 Więcej
             </MainLink>
-            {/* <ImageWrapper data-scroll>
-                <Image src={myFace} alt="my face" />
-            </ImageWrapper> */}
         </SectionContainer>
     )
 }

@@ -58,6 +58,13 @@ export const Heading3 = styled.h3`
     `}
 
     ${props =>
+        props.about &&
+        css`
+        font-size: clamp(24px, 4vw, 25px);
+        margin: 25px 0 5px;
+    `}
+
+    ${props =>
         props.footer &&
         css`
         font-family: ${primaryFont};
@@ -104,7 +111,8 @@ export const Paragraph = styled.p`
         css`
         color: ${tertiaryColor};
         font-weight: 600;
-        margin: 1.5em 0 .5em;
+        margin: ;
+        margin: ${(props) => (props.about ? ".5em 0" : "1.5em 0 .5em")};
     `}
 
     ${props =>

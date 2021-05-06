@@ -1,5 +1,6 @@
 import { MainContainer, PageTransitioning } from '../Components';
 import { Footer } from '../shared';
+import AboutContent from './AboutContent';
 
 const About = (props) => {
     const { HandleMouseoverEffects, HandleLocomotiveScroll } = props;
@@ -11,7 +12,7 @@ const About = (props) => {
         <>
             <PageTransitioning />
             <MainContainer className="smooth-scroll">
-                <h1>O mnie :)</h1>
+                <AboutContent />
                 <Footer />
             </MainContainer>
         </>

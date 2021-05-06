@@ -143,7 +143,8 @@ export const MainLink = styled(Link)`
         css`
             &::after {
             display: inline-block;
-            content: url('data:image/svg+xml;charset=UTF-8, <svg width="20" height="20" viewBox="0 0 387 391" fill="none" xmlns="http://www.w3.org/2000/svg">
+            width: 20px;
+            content: url('data:image/svg+xml;charset=UTF-8, <svg viewBox="0 0 387 391" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 195.5H385.5M385.5 195.5L191 1M385.5 195.5L191 390" stroke="white" stroke-width= "20"/>
             </svg>');
             margin-left: 20px;
@@ -173,4 +174,25 @@ export const CryptoPhoneLink = styled(BaseLink)`
     &::before {
         content: "+48 " attr(data-first) " " attr(data-second) " " attr(data-third); 
     }
+`
+
+export const FooterLink = styled.a`
+    ${linksBase}
+
+    font-size: clamp(16px, 4vw, 20px);
+    margin: 0 10px 4px 0;
+
+    ${props =>
+        props.arrow &&
+        css`
+            &::after {
+            display: inline-block;
+            width: 15px;
+            content: url('data:image/svg+xml;charset=UTF-8, <svg viewBox="0 0 387 391" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 195.5H385.5M385.5 195.5L191 1M385.5 195.5L191 390" stroke="white" stroke-width= "20"/>
+            </svg>');
+            margin-left: 6px;
+            transform: rotate(-45deg);
+        }
+    `} 
 `

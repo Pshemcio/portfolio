@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { BaseLink } from '../Components';
 import { Theme } from '../Settings';
 
 const {
@@ -7,23 +8,30 @@ const {
     }
 } = Theme;
 
-export const FooterWrapper = styled.div`
-    min-height: 200vh;
-    background-color: green;
-    margin-top: 50px;
-`
-
 export const FooterContactContainer = styled.div`
     margin: 30px 0 20px;
 `
 
-export const CopywrightContainer = styled.div`
+export const FooterMenuContainer = styled.div`
     width: 100%;
-    height: 150px;
-    background-color: ${primaryColorLight};
-    position: relative;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+`
+
+export const FooterSocialsList = styled.ul`
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-top: 10px;
+`
+
+export const FooterSocialsItem = styled.li`
+    flex-grow: 1;   
+    a {
+        display: block;
+    }
 `
 
 export const FooterContactItem = styled.div`

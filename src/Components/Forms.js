@@ -32,6 +32,7 @@ const formBase = css`
 `;
 
 const FormContainer = styled.form`
+    position: relative;
     max-width: 600px;
     margin: 0 auto;
 `
@@ -57,8 +58,7 @@ const StyledSubmit = styled.button`
     color: ${primaryColor};
     text-transform: uppercase;
     font-weight: 600;
-    margin-top: 45px;
-    margin-bottom: 0;
+    margin: 45px 0;
     cursor: pointer;
     border: 1px solid ${secondaryColor};
     transition: background-color .4s, opacity .4s, color .4s;
@@ -75,7 +75,12 @@ const StyledSubmit = styled.button`
 `
 
 const SubmitInfo = styled.p`
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
     text-align: center;
+    font-size: clamp(12px, 4vw, 20px);
     color: ${tertiaryColor};
     transition: opacity .4s;
     opacity: ${(props) => (props.isSubmitted ? "1" : "0")};
@@ -173,7 +178,6 @@ export const FooterForm = () => {
             <SubmitInfo isSubmitted={isSubmitted}>
                 Poszło! Odezwę się najszybciej jak to możliwe!
             </SubmitInfo>
-
         </FormContainer>
     )
 };
