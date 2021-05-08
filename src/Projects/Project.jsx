@@ -44,9 +44,18 @@ const Project = (props) => {
         shortDescription,
         photos: {
             alt,
-            thumb,
-            overview,
-            rwd
+            thumb: {
+                desktop: desktopThumb,
+                mobile: mobileThumb
+            },
+            overview: {
+                desktop: desktopOverview,
+                mobile: mobileOverview
+            },
+            rwd: {
+                desktop: desktopRwd,
+                mobile: mobileRwd
+            }
         },
         links: {
             live,
@@ -77,7 +86,7 @@ const Project = (props) => {
                     <ProjectImageContainer>
                         <ImageWrapper>
                             <RevealImage data-scroll>
-                                <Image src={thumb} alt={alt} />
+                                <Image src={mobileThumb} srcSet={`${mobileThumb} 300w, ${desktopThumb} 768w`} />
                             </RevealImage>
                         </ImageWrapper>
                         <ProjectsInfoContainer projectIcons>
@@ -109,12 +118,12 @@ const Project = (props) => {
                     })}
                     <ImageWrapper project>
                         <RevealImage data-scroll>
-                            <Image src={overview} alt={alt} project />
+                            <Image src={mobileOverview} srcSet={`${mobileOverview} 300w, ${desktopOverview} 768w`} />
                         </RevealImage>
                     </ImageWrapper>
                     <ImageWrapper project>
                         <RevealImage data-scroll>
-                            <Image src={rwd} alt={alt} project />
+                            <Image src={mobileRwd} srcSet={`${mobileRwd} 300w, ${desktopRwd} 768w`} />
                         </RevealImage>
                     </ImageWrapper >
 

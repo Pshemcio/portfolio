@@ -38,7 +38,7 @@ const ProjectsContent = (props) => {
                                 </Heading3>
                                 <ImageWrapper>
                                     <RevealImage data-scroll>
-                                        <Image src={project.photos.thumb} alt="my face" />
+                                        <Image src={project.photos.thumb.mobile} srcSet={`${project.photos.thumb.mobile} 300w, ${project.photos.thumb.desktop} 768w`} />
                                     </RevealImage>
                                 </ImageWrapper>
                                 <ProjectsInfoContainer arrow>
