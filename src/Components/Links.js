@@ -10,7 +10,8 @@ let {
     },
     typography: {
         secondaryFont
-    }
+    },
+    breakpoints
 } = Theme;
 
 const showIcon = keyframes`
@@ -178,9 +179,12 @@ export const CryptoPhoneLink = styled(BaseLink)`
 
 export const FooterLink = styled.a`
     ${linksBase}
-
     font-size: clamp(16px, 4vw, 20px);
     margin: 0 10px 4px 0;
+
+    @media ${breakpoints.xs} {
+        font-size: clamp(14px, 3vw, 20px);
+    }
 
     ${props =>
         props.arrow &&

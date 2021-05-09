@@ -36,7 +36,7 @@ import {
 const projects = [
     {
         id: "brunobanani-store",
-        name: "BrunoBanani store",
+        name: "Bruno Banani",
         shortDescription: "Sklep internetowy",
         path: "/projects/brunobanani-store",
         photos: {

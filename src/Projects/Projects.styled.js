@@ -82,5 +82,7 @@ export const ProjectList = styled.ul`
 
 export const ProjectItem = styled.li`
     padding-right: 15px;
-    color: ${tertiaryColor}
+    color: ${tertiaryColor};
+    font-size: 12px;
+    font-size: clamp(13px, 3.6vw, 20px);
 `

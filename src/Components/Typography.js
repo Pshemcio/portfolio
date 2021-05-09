@@ -9,7 +9,8 @@ const {
     colors: {
         secondaryColor,
         tertiaryColor
-    }
+    },
+    breakpoints
 } = Theme;
 
 const typographyBase = css`
@@ -23,18 +24,31 @@ export const Heading1 = styled.h1`
     font-size: 39px;
     padding: 0 2px;
     letter-spacing: -1px;
+
+    @media ${breakpoints.xs} {
+        font-size: 30px;
+    }
 `;
 
 export const Heading2 = styled.h2`
     ${typographyBase}
-    font-size: ${(props) => (props.smaller ? "40px" : "50px")};
+    font-size: 40px;
+    font-size: clamp(40px, 10vw, 100px);
     margin-bottom: ${(props) => (props.smaller ? "30px" : "inherit")};
     
     ${props =>
         props.project &&
         css`
-        font-size: clamp(28px, 5vw, 60px);
+        font-size: 35px;
+        font-size: clamp(35px, 13vw, 80px);
         margin-top: 15px;
+        text-transform: uppercase;
+        line-height: 1em;
+
+        @media ${breakpoints.xs} {
+            font-size: 28px;
+            font-size: clamp(28px, 7vw, 80px);
+        }
     `}
 
     span {
@@ -48,6 +62,7 @@ export const Heading2 = styled.h2`
 export const Heading3 = styled.h3`
     ${typographyBase}
     font-size: 20px;
+    font-size: clamp(20px, 3vw, 30px);
     font-family: ${secondaryFont};
     font-weight: 600;
 
@@ -75,6 +90,10 @@ export const Heading3 = styled.h3`
         -webkit-text-stroke-color: ${secondaryColor};
         text-transform: uppercase;
         margin-bottom: 10px;
+
+        @media ${breakpoints.xs} {
+            font-size: clamp(30px, 6vw, 70px);
+        }
     `}
 `;
 
@@ -94,7 +113,7 @@ export const HeadingDesc = styled.p`
     ${props =>
         props.small &&
         css`
-        font-size: 16px;
+        font-size: 14px;
     `}
 `;
 
@@ -119,6 +138,7 @@ export const Paragraph = styled.p`
         props.project &&
         css`
         font-size: 14px;
+        line-height: 1.8em;
         margin: 20px 0;
     `}
 `;

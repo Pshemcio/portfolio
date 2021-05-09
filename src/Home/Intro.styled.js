@@ -5,14 +5,9 @@ const {
     colors: {
         primaryColor,
         secondaryColor
-    }
+    },
+    breakpoints
 } = Theme;
-
-// const dash = keyframes`
-//   to {
-//         stroke-dashoffset: 0;
-//     }
-// `
 
 const dash = keyframes`
     80% {
@@ -25,15 +20,15 @@ const dash = keyframes`
     }
 `
 
-const fill = keyframes`
-    20% {
-        stroke-opacity: 0;
-    }
-    100%{
-        stroke-opacity: 0;
-        fill-opacity: 1;
-    }
-`
+// const fill = keyframes`
+//     20% {
+//         stroke-opacity: 0;
+//     }
+//     100%{
+//         stroke-opacity: 0;
+//         fill-opacity: 1;
+//     }
+// `
 
 export const IntroStyled = styled.section`
     position: relative;
@@ -54,6 +49,10 @@ export const SvgWrapper = styled.div`
     width: 250px;
     margin: 0 auto;
 
+    @media ${breakpoints.xs} {
+        width: 30vw;
+    }
+
     ${props =>
         props.footer &&
         css`
@@ -67,8 +66,6 @@ export const SvgWrapper = styled.div`
     &.is-inview {
         path {
             animation: ${dash} 3s 1s cubic-bezier(0.43, 0.29, 0.58, 1.01) forwards;
-
-            /* animation: ${dash} 3s 1s cubic-bezier(0.43, 0.29, 0.58, 1.01) forwards, ${fill} 1.5s 3.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; */
         }
     }
 `
@@ -107,6 +104,10 @@ export const IntroLinksList = styled.div`
     transform: translateX(-40%);
     opacity: 0;
     transition: opacity 1s 1.5s, transform 1s 1s;
+
+    @media ${breakpoints.xs} {
+        top: 75%;
+    }
 
     &.is-inview {
         opacity: 1;

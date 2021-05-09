@@ -24,7 +24,7 @@ import {
 
 import {
     SkillsWrapper,
-    SkillsContainer,
+    SkillsList,
     SkillsItem,
     SkillsInfo,
     SkillsSvgWrapper
@@ -49,12 +49,12 @@ const SkillsShort = () => {
     return (
         <SkillsWrapper>
             <SectionContainer id="skills" data-scroll-section>
-                <Heading2 smaller>
+                <Heading2>
                     <TextReveal data-scroll>
                         Umiejętności
                 </TextReveal>
                 </Heading2>
-                <SkillsContainer>
+                <SkillsList>
                     {skills.map((link, index) => (
                         <SkillsItem className="cursor_hover" key={index}>
                             <SkillsSvgWrapper color={link.color} data-scroll>
@@ -65,7 +65,7 @@ const SkillsShort = () => {
                             </SkillsInfo>
                         </SkillsItem>
                     ))}
-                </SkillsContainer>
+                </SkillsList>
             </SectionContainer>
         </SkillsWrapper>
 

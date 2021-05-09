@@ -10,7 +10,8 @@ let {
         tertiaryColor,
         primaryColor,
         primaryColorLight
-    }
+    },
+    breakpoints
 } = Theme;
 
 const formBase = css`
@@ -50,6 +51,10 @@ const StyledInput = styled.input`
 const StyledTextarea = styled.textarea`
     ${formBase};
     min-height: 25vh;
+
+    @media ${breakpoints.xs} {
+        min-height: 40vh;
+    }
 `
 
 const StyledSubmit = styled.button`

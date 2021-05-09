@@ -5,7 +5,8 @@ import { Theme } from '../Settings';
 const {
     colors: {
         primaryColorLight
-    }
+    },
+    breakpoints
 } = Theme;
 
 export const FooterContactContainer = styled.div`
@@ -16,7 +17,7 @@ export const FooterMenuContainer = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     flex-wrap: wrap;
 `
 
@@ -36,15 +37,18 @@ export const FooterSocialsItem = styled.li`
 `
 
 export const FooterContactItem = styled.div`
-    font-size: clamp(16px, 5vw, 50px);
+    font-size: clamp(16px, 5vw, 30px);
     padding: 8px 0;
     font-weight: 600;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
     text-align: center;
+    
+    @media ${breakpoints.xs} {
+        font-size: clamp(20px, 3vw, 30px);
+    }
 
     &:first-of-type {
         border-bottom: none;
     }
-
 `

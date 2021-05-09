@@ -10,6 +10,7 @@ import {
     HeadingDesc,
     TextReveal,
     SectionContainer,
+    SectionContainerInner,
     BaseLink,
     Paragraph,
     MainLink
@@ -73,70 +74,75 @@ const Project = (props) => {
         <>
             <PageTransitioning />
             <MainContainer className="smooth-scroll" data-scroll-container>
-                <SectionContainer data-scroll-section>
-                    <Heading2 project="true">
-                        <TextReveal data-scroll>
-                            {name}
-                        </TextReveal>
-                    </Heading2>
-                    <ProjectsInfoContainer>
-                        <HeadingDesc small>{shortDescription}</HeadingDesc>
-                        <HeadingDesc small>{date}</HeadingDesc>
-                    </ProjectsInfoContainer>
-                    <ProjectImageContainer>
-                        <ImageWrapper>
-                            <RevealImage data-scroll>
-                                <Image src={mobileThumb} srcSet={`${mobileThumb} 300w, ${desktopThumb} 768w`} />
-                            </RevealImage>
-                        </ImageWrapper>
-                        <ProjectsInfoContainer projectIcons>
-                            <BaseLink target="_BLANK" href={github} rel="noreferrer" className="cursor_hover" project="true">
-                                <Github />
-                            </BaseLink>
-                            <BaseLink target="_BLANK" href={live} rel="noreferrer" className="cursor_hover" project="true">
-                                <Eye />
-                            </BaseLink>
+                <SectionContainer project>
+                    <SectionContainerInner data-scroll-section>
+                        <Heading2 project="true">
+                            <TextReveal data-scroll>
+                                {name}
+                            </TextReveal>
+                        </Heading2>
+                        <ProjectsInfoContainer>
+                            <HeadingDesc small>{shortDescription}</HeadingDesc>
+                            <HeadingDesc small>{date}</HeadingDesc>
                         </ProjectsInfoContainer>
-                    </ProjectImageContainer>
-                    <ProjectList>
-                        {stack.map((stack, index) => {
+                        <ProjectImageContainer>
+                            <ImageWrapper>
+                                <RevealImage data-scroll>
+                                    <Image src={mobileThumb} srcSet={`${mobileThumb} 300w, ${desktopThumb} 768w`} />
+                                </RevealImage>
+                            </ImageWrapper>
+                            <ProjectsInfoContainer projectIcons>
+                                <BaseLink target="_BLANK" href={github} rel="noreferrer" className="cursor_hover" project="true">
+                                    <Github />
+                                </BaseLink>
+                                <BaseLink target="_BLANK" href={live} rel="noreferrer" className="cursor_hover" project="true">
+                                    <Eye />
+                                </BaseLink>
+                            </ProjectsInfoContainer>
+                        </ProjectImageContainer>
+                        <ProjectList>
+                            {stack.map((stack, index) => {
+                                return (
+                                    <ProjectItem project="true" key={index}>
+                                        {stack}
+                                    </ProjectItem>
+                                )
+                            })}
+                        </ProjectList>
+                        {text.map((text, index) => {
                             return (
-                                <ProjectItem project="true" key={index}>
-                                    {stack}
-                                </ProjectItem>
+                                <TextReveal data-scroll transparent shift={.2} key={index}>
+                                    <Paragraph project="true" key={index}>
+                                        {text}
+                                    </Paragraph>
+                                </TextReveal>
                             )
                         })}
-                    </ProjectList>
-                    {text.map((text, index) => {
-                        return (
-                            <TextReveal data-scroll transparent shift={.2} key={index}>
-                                <Paragraph project="true" key={index}>
-                                    {text}
-                                </Paragraph>
+                    </SectionContainerInner>
+                    <SectionContainerInner data-scroll-section fluid>
+                        <ImageWrapper project>
+                            <RevealImage data-scroll>
+                                <Image src={mobileOverview} srcSet={`${mobileOverview} 300w, ${desktopOverview} 768w`} />
+                            </RevealImage>
+                        </ImageWrapper>
+                        <ImageWrapper project>
+                            <RevealImage data-scroll>
+                                <Image src={mobileRwd} srcSet={`${mobileRwd} 300w, ${desktopRwd} 768w`} />
+                            </RevealImage>
+                        </ImageWrapper >
+                    </SectionContainerInner>
+                    <SectionContainerInner data-scroll-section>
+                        <Heading3 project>
+                            <TextReveal data-scroll>
+                                Następny projekt
+                        </TextReveal>
+                        </Heading3>
+                        <MainLink className="cursor_hover" to={projects[nextSite].path} project="true" main="true">
+                            <TextReveal data-scroll transparent delay={.5}>
+                                {projects[nextSite].name}
                             </TextReveal>
-                        )
-                    })}
-                    <ImageWrapper project>
-                        <RevealImage data-scroll>
-                            <Image src={mobileOverview} srcSet={`${mobileOverview} 300w, ${desktopOverview} 768w`} />
-                        </RevealImage>
-                    </ImageWrapper>
-                    <ImageWrapper project>
-                        <RevealImage data-scroll>
-                            <Image src={mobileRwd} srcSet={`${mobileRwd} 300w, ${desktopRwd} 768w`} />
-                        </RevealImage>
-                    </ImageWrapper >
-
-                    <Heading3 project>
-                        <TextReveal data-scroll>
-                            Następny projekt
-                        </TextReveal>
-                    </Heading3>
-                    <MainLink className="cursor_hover" to={projects[nextSite].path} project="true" main="true">
-                        <TextReveal data-scroll transparent delay={.5}>
-                            {projects[nextSite].name}
-                        </TextReveal>
-                    </MainLink>
+                        </MainLink>
+                    </SectionContainerInner>
                 </SectionContainer>
                 <Footer />
             </MainContainer>
