@@ -11,6 +11,7 @@ import {
     TextReveal,
     SectionContainer,
     SectionContainerInner,
+    SectionContainerFluid,
     BaseLink,
     Paragraph,
     MainLink
@@ -86,7 +87,7 @@ const Project = (props) => {
                             <HeadingDesc small>{date}</HeadingDesc>
                         </ProjectsInfoContainer>
                         <ProjectImageContainer>
-                            <ImageWrapper>
+                            <ImageWrapper project>
                                 <RevealImage data-scroll>
                                     <Image src={mobileThumb} srcSet={`${mobileThumb} 300w, ${desktopThumb} 768w`} />
                                 </RevealImage>
@@ -119,7 +120,7 @@ const Project = (props) => {
                             )
                         })}
                     </SectionContainerInner>
-                    <SectionContainerInner data-scroll-section fluid>
+                    <SectionContainerFluid data-scroll-section>
                         <ImageWrapper project>
                             <RevealImage data-scroll>
                                 <Image src={mobileOverview} srcSet={`${mobileOverview} 300w, ${desktopOverview} 768w`} />
@@ -130,8 +131,8 @@ const Project = (props) => {
                                 <Image src={mobileRwd} srcSet={`${mobileRwd} 300w, ${desktopRwd} 768w`} />
                             </RevealImage>
                         </ImageWrapper >
-                    </SectionContainerInner>
-                    <SectionContainerInner data-scroll-section>
+                    </SectionContainerFluid>
+                    <SectionContainerInner data-scroll-section nextProject="true">
                         <Heading3 project>
                             <TextReveal data-scroll>
                                 Następny projekt

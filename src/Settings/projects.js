@@ -129,7 +129,7 @@ const projects = [
         date: "12/2020",
         text: [
             "Był to dla mnie bardzo ekscytujący projekt - strona wzorowana na formularzu rejestracyjnym mojej ulubionej gry. :)",
-            'Oryginał stworzony został za pomocą Reacta, ja postanowiłem jednak pozostać przy "klasyce".',
+            'Oryginał stworzony został za pomocą ReactJS, ja postanowiłem jednak pozostać przy "klasyce".',
             "W formularzu zastosowałem zaaawansowaną walidację po stronie klienta. W trakcie jej tworzenia nauczyłem się podstaw wyrażeń regularnych (RegExp). Strona powstała w dwóch wersjach językowych - polskiej oraz angielskiej."
         ],
         stack: [
@@ -231,7 +231,7 @@ const projects = [
         date: "12/2020",
         text: [
             "Strona na której aktualnie się znajdujesz. Jest to jak do tej pory największy projekt jaki stworzyłem, jestem z niego bardzo dumny.",
-            "Do stworzenia portfolio postanowiłem użyć Reacta - głownie ze względu na możliwość wykorzystania routingu. Za jego pomocą udało mi się stworzyć animowane przejścia między podstronami.",
+            "Do stworzenia portfolio postanowiłem użyć ReactJS - głownie ze względu na możliwość wykorzystania routingu. Za jego pomocą udało mi się stworzyć animowane przejścia między podstronami.",
             "Strona wykorzystuje bibliotekę LocomotiveScroll - to dzięki niej strona na desktopach przewija się tak głaaadko, działa ona również trochę jak Intersection Observer API. Okrąg podążający za kursorem to już czysty JS.",
             "W planach mam również implementację Redux'a. Za jego pomocą chcę stworzyć obsługę trybu jasnego oraz zmiany języka na angielski - ale na to przyjdzie jeszcze czas."
         ],

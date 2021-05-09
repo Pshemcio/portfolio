@@ -24,9 +24,18 @@ export const Heading1 = styled.h1`
     font-size: 39px;
     padding: 0 2px;
     letter-spacing: -1px;
+    cursor: default;
 
     @media ${breakpoints.xs} {
-        font-size: 30px;
+        font-size: clamp(30px, 6.5vw, 50px);
+    }
+
+    @media ${breakpoints.md} {
+        font-size: clamp(50px, 8vw, 100px);
+    }
+
+    @media ${breakpoints.smPortrait} {
+        font-size: clamp(50px, 10vw, 100px);
     }
 `;
 
@@ -48,6 +57,14 @@ export const Heading2 = styled.h2`
         @media ${breakpoints.xs} {
             font-size: 28px;
             font-size: clamp(28px, 7vw, 80px);
+        }
+    `}
+
+    ${props =>
+        props.footer &&
+        css`
+        @media ${breakpoints.sm} {
+            text-align: center;
         }
     `}
 
@@ -75,7 +92,7 @@ export const Heading3 = styled.h3`
     ${props =>
         props.about &&
         css`
-        font-size: clamp(24px, 4vw, 25px);
+        font-size: clamp(24px, 4vw, 80px);
         margin: 25px 0 5px;
     `}
 
@@ -94,6 +111,10 @@ export const Heading3 = styled.h3`
         @media ${breakpoints.xs} {
             font-size: clamp(30px, 6vw, 70px);
         }
+
+        @media ${breakpoints.sm} {
+            text-align: center;
+        }
     `}
 `;
 
@@ -109,11 +130,25 @@ export const HeadingDesc = styled.p`
     font-weight: 300;
     font-family: ${secondaryFont};
     font-size: 20px;
+    transform: translateY(-.4em);
+    cursor: default;
+
+    @media ${breakpoints.xs} {
+        font-size: clamp(20px, 2.4vw, 70px);
+    }
+
+    @media ${breakpoints.smPortrait} {
+        font-size: clamp(35px, 4vw, 100px);
+    }
 
     ${props =>
         props.small &&
         css`
-        font-size: 14px;
+        transform: none;
+
+        @media ${breakpoints.xs} {
+            font-size: clamp(20px, 2.4vw, 70px);
+        }
     `}
 `;
 
@@ -125,13 +160,33 @@ export const Paragraph = styled.p`
     line-height: 1.7em;
     margin-bottom: .5em;
 
+    @media ${breakpoints.md} {
+        font-size: 26px;
+    }
+
+    ${props =>
+        props.about &&
+        css`
+        @media ${breakpoints.md} {
+            font-size: 26px;
+        }
+
+        @media ${breakpoints.lg} {
+            width: 50%;
+        }
+    `}
+
     ${props =>
         props.nice &&
         css`
         color: ${tertiaryColor};
         font-weight: 600;
         margin: ;
-        margin: ${(props) => (props.about ? ".5em 0" : "1.5em 0 .5em")};
+        margin: ${(props) => (props.aboutme ? ".5em 0" : "1.5em 0 .5em")};
+
+        @media ${breakpoints.md} {
+            font-size: 30px;
+        }
     `}
 
     ${props =>
@@ -140,5 +195,10 @@ export const Paragraph = styled.p`
         font-size: 14px;
         line-height: 1.8em;
         margin: 20px 0;
+
+        @media ${breakpoints.smPortrait} {
+            font-size: 22px;
+            line-height: 1.5em;
+        }
     `}
 `;

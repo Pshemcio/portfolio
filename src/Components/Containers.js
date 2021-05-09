@@ -2,9 +2,7 @@ import styled, { css } from 'styled-components';
 import { Theme } from '../Settings';
 
 const {
-    breakpoints: {
-        xs
-    }
+    breakpoints
 } = Theme;
 
 export const MainContainer = styled.div`
@@ -14,10 +12,26 @@ export const MainContainer = styled.div`
 
 export const SectionContainer = styled.section`
     padding: ${(props) => (props.project ? "4vh 0" : "4vh 15px")};
+    margin: 0 auto;
 
-    @media ${xs} {
+    @media ${breakpoints.xs} {
         max-width: ${(props) => (props.project ? "100%" : "600px")};
-        margin: 0 auto;
+    }
+
+    @media ${breakpoints.md} {
+        max-width: ${(props) => (props.project ? "100%" : "90%")};
+    }
+    
+    @media ${breakpoints.lg} {
+        max-width: ${(props) => (props.project ? "100%" : "95%")};
+    }
+
+    @media ${breakpoints.xl} {
+        max-width: ${(props) => (props.project ? "100%" : "1440px")};
+    }
+
+    @media ${breakpoints.smPortrait} {
+        max-width: ${(props) => (props.project ? "100%" : "92vw")};
     }
 
     &#footer {
@@ -25,16 +39,32 @@ export const SectionContainer = styled.section`
     }
 `
 
-export const SectionContainerInner = styled.section`
+export const SectionContainerInner = styled(SectionContainer)`
     padding: 0 15px;
 
-    @media ${xs} {
-        padding: ${(props) => (props.fluid ? "0" : "0 15px")};
-        max-width: ${(props) => (props.fluid ? "100%" : "600px")};
-        margin: 0 auto;
+    ${props =>
+        props.nextProject &&
+        css`
+        @media ${breakpoints.sm} {
+            text-align: center;
+        }
+    `}
+`
+
+export const SectionContainerFluid = styled.section`
+    padding: 0 15px;
+
+    @media ${breakpoints.xs} {
+        padding: 0;
+        width: 100%;
+        margin-top: 50px;
     }
 
-    &#footer {
-        padding-top: 0;
+    @media ${breakpoints.lg} {
+        max-width: ${(props) => (props.project ? "100%" : "95%")};
+    }
+
+    @media ${breakpoints.xl} {
+        max-width: ${(props) => (props.project ? "100%" : "1440px")};
     }
 `

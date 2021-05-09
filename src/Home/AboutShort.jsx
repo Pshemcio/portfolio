@@ -8,7 +8,7 @@ const AboutShort = () => {
                     Cześć
                 </TextReveal>
             </Heading2>
-            <Paragraph>
+            <Paragraph about="true">
                 <TextReveal data-scroll shift={.3} transparent>
                     Nazywam się Przemysław Majka, mieszkam w Krakowie.
                     Swoją przygodę z FrontEndem rozpocząłem pod koniec 2019 roku. Od tamtej pory na naukę poświęcam każdą wolną chwilę i sprawia mi ona ogromną przyjemność.

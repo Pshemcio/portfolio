@@ -36,12 +36,12 @@ const Intro = () => {
                     </svg>
                 </SvgWrapper>
                 <InfoWrapper>
-                    <Heading1 data-scroll data-scroll-speed="-.5">
+                    <Heading1 data-scroll data-scroll-speed="-.3">
                         <TextReveal data-scroll>
                             Przemek Majka
                         </TextReveal>
                     </Heading1>
-                    <HeadingDesc data-scroll data-scroll-speed="-1">
+                    <HeadingDesc data-scroll data-scroll-speed="-.5">
                         <TextReveal data-scroll delay={1.2}>
                             FrontEnd Developer
                         </TextReveal>

@@ -6,7 +6,8 @@ const {
     colors: {
         secondaryColor,
         tertiaryColor
-    }
+    },
+    breakpoints
 } = Theme;
 
 const showIcons = keyframes`
@@ -21,12 +22,21 @@ const showIcons = keyframes`
 export const ProjectsList = styled.ul`
     list-style: none;
     margin-top: 15px;
+    
+    @media ${breakpoints.lg} {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 `
 
 export const ProjectsItem = styled.li`
-
     &:not(:last-of-type) {
         margin-bottom: 2em;
+    }
+
+    @media ${breakpoints.lg} {
+        flex-basis: 48%;
     }
 `
 

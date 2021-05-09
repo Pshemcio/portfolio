@@ -15,11 +15,6 @@ const AboutContent = () => {
                         O mnie
                     </TextReveal>
                 </Heading2>
-                <Heading3 about="true">
-                    <TextReveal data-scroll>
-                        W skrócie.
-                    </TextReveal>
-                </Heading3>
                 <Paragraph>
                     <TextReveal data-scroll transparent shift={.2}>
                         Nazywam się Przemysław Majka, mieszkam w Krakowie. Studiowałem Inżynierię Naftową i Gazowniczą na Akademii Górniczo Hutniczej w Krakowie.
@@ -75,7 +70,7 @@ const AboutContent = () => {
                         Jeżeli ktokolwiek dotarł do końca to serdecznie DZIĘKUJĘ / GRATULUJĘ! Mam tylko nadzieję że proces czytania był chociaż troszkę ciekawszy niż pisania... Taki żarcik. :)
                     </TextReveal>
                 </Paragraph>
-                <Paragraph nice about="true">
+                <Paragraph nice aboutme="true">
                     <TextReveal data-scroll transparent shift={.1}>
                         Serdecznie zapraszam do kontaktu, czy to w sprawie pracy czy luźnej rozmowy. Z chęcią odpiszę na każdą wiadomość jaką dostanę.
                     </TextReveal>

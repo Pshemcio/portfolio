@@ -16,12 +16,6 @@ const {
     }
 } = Theme;
 
-export const SkillsWrapper = styled.div`
-    width: 100%;
-    background-color: ${primaryColorLight};
-    padding-bottom: 25px;
-`
-
 export const SkillsList = styled.ul`
     display: flex;
     flex-wrap: wrap;

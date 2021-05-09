@@ -11,6 +11,10 @@ const {
 
 export const FooterContactContainer = styled.div`
     margin: 30px 0 20px;
+
+    @media ${breakpoints.md} {
+        margin: 60px 0 60px;
+    }
 `
 
 export const FooterMenuContainer = styled.div`

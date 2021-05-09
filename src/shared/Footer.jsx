@@ -35,7 +35,7 @@ const Footer = () => {
 
     return (
         <SectionContainer id="footer" data-scroll-section>
-            <Heading2>
+            <Heading2 footer>
                 <TextReveal data-scroll>
                     Kontakt
                 </TextReveal>

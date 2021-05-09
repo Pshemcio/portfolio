@@ -1,4 +1,8 @@
 import styled from 'styled-components';
+import { Theme } from '../Settings';
+const {
+    breakpoints
+} = Theme;
 
 export const ImageWrapper = styled.div`
     background-color: transparent;

@@ -20,16 +20,6 @@ const dash = keyframes`
     }
 `
 
-// const fill = keyframes`
-//     20% {
-//         stroke-opacity: 0;
-//     }
-//     100%{
-//         stroke-opacity: 0;
-//         fill-opacity: 1;
-//     }
-// `
-
 export const IntroStyled = styled.section`
     position: relative;
     height: 100vh;
@@ -51,6 +41,10 @@ export const SvgWrapper = styled.div`
 
     @media ${breakpoints.xs} {
         width: 30vw;
+    }
+
+    @media ${breakpoints.md} {
+        width: 300px;
     }
 
     ${props =>
@@ -106,7 +100,15 @@ export const IntroLinksList = styled.div`
     transition: opacity 1s 1.5s, transform 1s 1s;
 
     @media ${breakpoints.xs} {
-        top: 75%;
+        top: 80%;
+    }
+
+    @media ${breakpoints.md} {
+        top: 105%;
+    }
+
+    @media ${breakpoints.smPortrait} {
+        top: 102%;
     }
 
     &.is-inview {

@@ -87,10 +87,13 @@ export const BaseLink = styled.a`
         display: inline-block;
         text-transform: uppercase;
         padding: 4px 5px;
-        font-weight: 500;
+        font-weight: 600;
         font-size: 14px;   
         font-family: ${secondaryFont};
 
+        @media ${breakpoints.md} {
+            font-size: clamp(16px, 2vw, 26px);
+        }
         &:nth-of-type(2) {
             &::before,
             &::after {
@@ -162,6 +165,10 @@ export const MainLink = styled(Link)`
             padding-bottom: 5px;
             font-weight: 600;
             text-transform: uppercase;
+
+            @media ${breakpoints.xs} {
+                font-size: clamp(14px, 9vw, 140px);
+            }
     `}
 `;
 
