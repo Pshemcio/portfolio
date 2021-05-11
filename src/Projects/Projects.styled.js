@@ -81,7 +81,7 @@ export const ProjectsItemContainer = styled(Link)`
     text-decoration: none;
     position: relative;
 
-    @media ${breakpoints.md} {
+    @media ${breakpoints.md} and (pointer: fine) {
         &:hover {
             ${Heading3} {
                 opacity: 1;

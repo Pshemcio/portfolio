@@ -68,8 +68,8 @@ export const BaseLink = styled.a`
         css`
         width: 3em;
         height: 3em;
-        width: clamp(3em, 4vw, 5em);
-        height: clamp(3em, 4vw, 5em);
+        width: clamp(3em, 4vw, 7em);
+        height: clamp(3em, 4vw, 7em);
         animation: ${showIcon} 2s 1s cubic-bezier(.645,.045,.355,1) infinite;
     `}
 
@@ -169,7 +169,6 @@ export const MainLink = styled(Link)`
         }
     `} 
     
-
     ${props =>
         props.project &&
         css`
@@ -184,6 +183,24 @@ export const MainLink = styled(Link)`
             font-size: clamp(14px, 8vw, 120px);
         }
     `}
+
+    ${props =>
+        props.notfound &&
+        css`
+        font-size: 4vw;
+        font-size: clamp(16px, 4vw, 30px);
+        padding: 2vw 4vw;
+        padding: clamp(8px, 2vw, 20px) clamp(16px, 5vw, 40px);
+        margin-top: 30px;
+        border: 1px solid ${secondaryColor};
+        border-radius: 10px;
+        transition: color .4s, background-color .4s;
+
+        &:hover {
+            background-color: ${secondaryColor};
+            color: ${primaryColor};
+        }
+    `} 
 `;
 
 export const CryptoMailLink = styled(BaseLink)`

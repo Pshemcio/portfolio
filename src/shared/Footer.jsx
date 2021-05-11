@@ -1,7 +1,6 @@
 import {
     Heading2,
     Heading3,
-    Heading4,
     SectionContainer,
     TextReveal,
     FooterForm,

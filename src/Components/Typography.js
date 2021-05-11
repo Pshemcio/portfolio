@@ -37,6 +37,13 @@ export const Heading1 = styled.h1`
     @media ${breakpoints.smPortrait} {
         font-size: clamp(50px, 10vw, 100px);
     }
+
+    ${props =>
+        props.notfound &&
+        css`
+        font-size: 8vw;
+        text-transform: uppercase;
+    `}
 `;
 
 export const Heading2 = styled.h2`
@@ -95,7 +102,7 @@ export const Heading3 = styled.h3`
     ${props =>
         props.projectscontent &&
         css`
-        @media ${breakpoints.md} {
+        @media ${breakpoints.md} and (pointer: fine) {
             position: absolute;
             top: 70px;
             width: 500px;
@@ -140,10 +147,11 @@ export const Heading3 = styled.h3`
 export const Heading4 = styled.h4`
     ${typographyBase}
     font-size: 14px;
+    font-size: clamp(14px, 2vw, 20px);
     font-family: ${secondaryFont};
     font-weight: 400;
 
-    @media ${breakpoints.sm} {
+    @media ${breakpoints.md} and (pointer: fine) {
         position: relative;
         font-size: 20px;
         font-weight: 600;
@@ -189,16 +197,12 @@ export const Paragraph = styled.p`
     margin-bottom: .5em;
 
     @media ${breakpoints.md} {
-        font-size: 26px;
+        font-size: clamp(16px, 1.5vw, 24px);
     }
 
     ${props =>
         props.about &&
         css`
-        @media ${breakpoints.md} {
-            font-size: 26px;
-        }
-
         @media ${breakpoints.lg} {
             width: 50%;
         }

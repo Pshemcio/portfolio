@@ -15,7 +15,7 @@ import { Projects } from './Projects';
 import { Header, LoadingScreen } from './shared';
 import { About } from './About';
 import Project from './Projects/Project';
-// import { NotFound } from './NotFound'
+import { NotFound } from './NotFound'
 
 const {
   colors: {
@@ -120,6 +120,9 @@ function App() {
                 </Route>
                 <Route exact path='/'>
                   <Home {...routingProps} />
+                </Route>
+                <Route>
+                  <NotFound {...routingProps} />
                 </Route>
               </Switch>
             </AnimatePresence>
