@@ -3,16 +3,13 @@ import { Theme } from '../Settings';
 
 const {
     colors: {
-        primaryColorLight,
         secondaryColor,
         tertiaryColor
     },
     breakpoints: {
         xs,
-        sm,
         md,
-        lg,
-        xl
+        lg
     }
 } = Theme;
 

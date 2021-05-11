@@ -1,9 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Theme } from '../Settings';
 const {
-    colors: {
-        primaryColor
-    },
     breakpoints
 } = Theme;
 

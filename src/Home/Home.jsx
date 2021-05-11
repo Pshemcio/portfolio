@@ -1,5 +1,5 @@
 import { Intro, AboutShort, SkillsShort } from './';
-import { MainContainer, MainLink, PageTransitioning, SectionContainer } from '../Components';
+import { MainContainer, PageTransitioning } from '../Components';
 import { ProjectsContent } from '../Projects';
 import { Footer } from '../shared';
 

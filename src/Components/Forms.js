@@ -109,8 +109,44 @@ export const FooterForm = () => {
         setToSend({ ...toSend, [e.target.name]: e.target.value });
     };
 
+    const textValidation = (fieldName, fieldValue) => {
+        if (fieldValue.trim() === '') {
+            return `Proszę wpisać ${fieldName}`;
+        }
+        if (/[^a-zA-Z -?]/.test(fieldValue)) {
+            return 'Niedozwolone znaki';
+        }
+        if (fieldValue.trim().length < 3) {
+            return `${fieldName} musi mieć conajmniej trzy znaki`;
+        }
+        return null;
+    };
+
+    const emailValidation = email => {
+        if (
+            /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+                email,
+            )
+        ) {
+            return null;
+        }
+        if (email.trim() === '') {
+            return 'Proszę wpisać email';
+        }
+        return 'Proszę wpisać POPRAWNY email';
+    };
+
+    const validation = (name, email, message) => {
+        textValidation("imię", name);
+        console.log(textValidation("wiadomość", message));
+        console.log(emailValidation(email));
+        console.log(toSend);
+    };
+
     const onSubmit = (e) => {
         e.preventDefault();
+        validation(toSend.from_name, toSend.reply_to, toSend.message);
+        return;
 
         if (isSubmitted) {
             return;

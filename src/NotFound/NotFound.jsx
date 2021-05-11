@@ -8,8 +8,6 @@ import {
     NotFoundContainer,
     NotFoundWrapper
 } from './';
-import { Footer } from "../shared";
-
 
 const NotFound = (props) => {
     const { HandleMouseoverEffects, HandleLocomotiveScroll } = props;

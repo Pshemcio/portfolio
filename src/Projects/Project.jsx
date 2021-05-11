@@ -91,7 +91,7 @@ const Project = (props) => {
                         <ProjectImageContainer>
                             <ImageWrapper projectmain>
                                 <RevealImage data-scroll>
-                                    <Image src={mobileThumb} srcSet={`${mobileThumb} 300w, ${desktopThumb} 768w`} />
+                                    <Image src={mobileThumb} srcSet={`${mobileThumb} 300w, ${desktopThumb} 768w`} alt={alt} />
                                 </RevealImage>
                             </ImageWrapper>
                             <ProjectsInfoContainer projectIcons>
@@ -125,12 +125,12 @@ const Project = (props) => {
                     <SectionContainerFluid data-scroll-section>
                         <ImageWrapper projectoverview>
                             <RevealImage data-scroll>
-                                <Image className="cursor_hover" src={mobileOverview} srcSet={`${mobileOverview} 300w, ${desktopOverview} 768w`} />
+                                <Image className="cursor_hover" src={mobileOverview} srcSet={`${mobileOverview} 300w, ${desktopOverview} 768w`} alt={alt} />
                             </RevealImage>
                         </ImageWrapper>
                         <ImageWrapper projectrwd>
                             <RevealImage data-scroll>
-                                <Image className="cursor_hover" src={mobileRwd} srcSet={`${mobileRwd} 300w, ${desktopRwd} 768w`} />
+                                <Image className="cursor_hover" src={mobileRwd} srcSet={`${mobileRwd} 300w, ${desktopRwd} 768w`} alt={alt} />
                             </RevealImage>
                         </ImageWrapper >
                     </SectionContainerFluid>

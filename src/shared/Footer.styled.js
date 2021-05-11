@@ -1,11 +1,7 @@
 import styled from 'styled-components';
-import { BaseLink } from '../Components';
 import { Theme } from '../Settings';
 
 const {
-    colors: {
-        primaryColorLight
-    },
     breakpoints
 } = Theme;
 
