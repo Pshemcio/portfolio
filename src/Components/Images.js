@@ -1,13 +1,71 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Theme } from '../Settings';
 const {
+    colors: {
+        primaryColor
+    },
     breakpoints
 } = Theme;
 
 export const ImageWrapper = styled.div`
     background-color: transparent;
     overflow: hidden;
-    margin: ${(props) => (props.project ? "20px 0" : "7px 0")};
+    margin: 7px 0;
+
+    ${props =>
+        props.projectoverview &&
+        css`
+            max-height: 1200px;
+            margin-top: 30px;
+        `}
+
+        ${props =>
+        props.projectrwd &&
+        css`
+            max-height: 1050px;
+            margin: 30px auto 25px;
+        `}
+
+    @media ${breakpoints.md} {
+        ${props =>
+        props.projectscontent &&
+        css`
+            height: 80vw;
+        `}
+
+        ${props =>
+        props.projectmain &&
+        css`
+            height: 72vw;
+            max-height: 920px;
+        `}
+
+        ${props =>
+        props.projectoverview &&
+        css`
+            height: 59vw;
+            max-height: 1200px;
+            margin-top: 80px;
+        `}
+
+        ${props =>
+        props.projectrwd &&
+        css`
+            height: 52vw;
+            max-height: 1050px;
+            width: 80%;
+            margin: 50px auto 0;
+        `}
+    }
+    
+    @media ${breakpoints.lg} {
+        ${props =>
+        props.projectscontent &&
+        css`
+            height: 44.5vw;
+            max-height: 850px;
+        `}
+    }
 `;
 
 export const RevealImage = styled.div`
@@ -29,4 +87,13 @@ export const Image = styled.img`
     transform: translateX(100%) scale(1.4);
     transform-origin: left;
     transition: transform 1s .2s cubic-bezier(.87,.03,.12,1);
+
+    @media ${breakpoints.lg} {
+        ${props =>
+        props.projectscontent &&
+        css`
+            height: 100%;
+            object-fit: contain;
+    `}
+    }
 `

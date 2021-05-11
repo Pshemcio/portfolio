@@ -230,10 +230,9 @@ const projects = [
         },
         date: "12/2020",
         text: [
-            "Strona na której aktualnie się znajdujesz. Jest to jak do tej pory największy projekt jaki stworzyłem, jestem z niego bardzo dumny.",
+            "Strona na której aktualnie się znajdujesz. Jest to jak do tej pory jeden z bardziej rozbudowanych projektów jakie stworzyłem.",
             "Do stworzenia portfolio postanowiłem użyć ReactJS - głownie ze względu na możliwość wykorzystania routingu. Za jego pomocą udało mi się stworzyć animowane przejścia między podstronami.",
-            "Strona wykorzystuje bibliotekę LocomotiveScroll - to dzięki niej strona na desktopach przewija się tak głaaadko, działa ona również trochę jak Intersection Observer API. Okrąg podążający za kursorem to już czysty JS.",
-            "W planach mam również implementację Redux'a. Za jego pomocą chcę stworzyć obsługę trybu jasnego oraz zmiany języka na angielski - ale na to przyjdzie jeszcze czas."
+            "Strona wykorzystuje bibliotekę LocomotiveScroll, dzięki której scrollowanie na desktopach jest bardzo gładkie i przyjemne dla oka. Okrąg podążający za kursorem to już czysty JS."
         ],
         stack: [
             "React", "React router", "Styled Components", "LocomotiveScroll"

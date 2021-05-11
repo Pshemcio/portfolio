@@ -68,6 +68,8 @@ export const BaseLink = styled.a`
         css`
         width: 3em;
         height: 3em;
+        width: clamp(3em, 4vw, 5em);
+        height: clamp(3em, 4vw, 5em);
         animation: ${showIcon} 2s 1s cubic-bezier(.645,.045,.355,1) infinite;
     `}
 
@@ -159,7 +161,7 @@ export const MainLink = styled(Link)`
     ${props =>
         props.project &&
         css`
-            display: block;
+            display: inline-block;
             font-size: clamp(35px, 5vw, 100px);
             margin-top: 0;
             padding-bottom: 5px;
@@ -167,7 +169,7 @@ export const MainLink = styled(Link)`
             text-transform: uppercase;
 
             @media ${breakpoints.xs} {
-                font-size: clamp(14px, 9vw, 140px);
+                font-size: clamp(14px, 8vw, 120px);
             }
     `}
 `;

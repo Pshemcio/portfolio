@@ -12,26 +12,11 @@ export const MainContainer = styled.div`
 
 export const SectionContainer = styled.section`
     padding: ${(props) => (props.project ? "4vh 0" : "4vh 15px")};
+    max-width: ${(props) => (props.project ? "1920px" : "1800px")};
     margin: 0 auto;
 
     @media ${breakpoints.xs} {
-        max-width: ${(props) => (props.project ? "100%" : "600px")};
-    }
-
-    @media ${breakpoints.md} {
-        max-width: ${(props) => (props.project ? "100%" : "90%")};
-    }
-    
-    @media ${breakpoints.lg} {
-        max-width: ${(props) => (props.project ? "100%" : "95%")};
-    }
-
-    @media ${breakpoints.xl} {
-        max-width: ${(props) => (props.project ? "100%" : "1440px")};
-    }
-
-    @media ${breakpoints.smPortrait} {
-        max-width: ${(props) => (props.project ? "100%" : "92vw")};
+        padding: ${(props) => (props.project ? "4vh 0" : "4vh 40px")};
     }
 
     &#footer {
@@ -41,6 +26,16 @@ export const SectionContainer = styled.section`
 
 export const SectionContainerInner = styled(SectionContainer)`
     padding: 0 15px;
+    max-width: 600px;
+
+    @media ${breakpoints.sm} {
+        max-width: 1000px;
+        max-width: clamp(600px, 80vw, 1000px);
+    }
+`
+
+export const SectionContainerFluid = styled.section`
+    padding: 0 15px;
 
     ${props =>
         props.nextProject &&
@@ -49,22 +44,9 @@ export const SectionContainerInner = styled(SectionContainer)`
             text-align: center;
         }
     `}
-`
 
-export const SectionContainerFluid = styled.section`
-    padding: 0 15px;
-
-    @media ${breakpoints.xs} {
+    @media ${breakpoints.md} {
         padding: 0;
         width: 100%;
-        margin-top: 50px;
-    }
-
-    @media ${breakpoints.lg} {
-        max-width: ${(props) => (props.project ? "100%" : "95%")};
-    }
-
-    @media ${breakpoints.xl} {
-        max-width: ${(props) => (props.project ? "100%" : "1440px")};
     }
 `

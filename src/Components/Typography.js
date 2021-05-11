@@ -42,21 +42,23 @@ export const Heading1 = styled.h1`
 export const Heading2 = styled.h2`
     ${typographyBase}
     font-size: 40px;
-    font-size: clamp(40px, 10vw, 100px);
+    font-size: clamp(40px, 10vw, 120px);
     margin-bottom: ${(props) => (props.smaller ? "30px" : "inherit")};
     
     ${props =>
         props.project &&
         css`
         font-size: 35px;
-        font-size: clamp(35px, 13vw, 80px);
+        font-size: clamp(32px, 11vw, 50px);
         margin-top: 15px;
         text-transform: uppercase;
         line-height: 1em;
+        text-align: center;
 
         @media ${breakpoints.xs} {
             font-size: 28px;
-            font-size: clamp(28px, 7vw, 80px);
+            font-size: clamp(28px, 9vw, 130px);
+            margin-bottom: 10px;
         }
     `}
 
@@ -134,7 +136,7 @@ export const HeadingDesc = styled.p`
     cursor: default;
 
     @media ${breakpoints.xs} {
-        font-size: clamp(20px, 2.4vw, 70px);
+        font-size: clamp(20px, 2.4vw, 60px);
     }
 
     @media ${breakpoints.smPortrait} {
@@ -145,9 +147,11 @@ export const HeadingDesc = styled.p`
         props.small &&
         css`
         transform: none;
+        font-size: 15px;
+        font-size: clamp(15px, 4.5vw, 30px);
 
         @media ${breakpoints.xs} {
-            font-size: clamp(20px, 2.4vw, 70px);
+            font-size: clamp(20px, 2.2vw, 30px);
         }
     `}
 `;
@@ -192,12 +196,12 @@ export const Paragraph = styled.p`
     ${props =>
         props.project &&
         css`
-        font-size: 14px;
+        font-size: 16px;
+        font-size: clamp(16px, 2vw, 24px);
         line-height: 1.8em;
         margin: 20px 0;
 
         @media ${breakpoints.smPortrait} {
-            font-size: 22px;
             line-height: 1.5em;
         }
     `}

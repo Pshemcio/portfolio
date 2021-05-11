@@ -76,18 +76,20 @@ const Project = (props) => {
             <PageTransitioning />
             <MainContainer className="smooth-scroll" data-scroll-container>
                 <SectionContainer project>
-                    <SectionContainerInner data-scroll-section>
+                    <SectionContainerFluid data-scroll-section>
                         <Heading2 project="true">
                             <TextReveal data-scroll>
                                 {name}
                             </TextReveal>
                         </Heading2>
+                    </SectionContainerFluid>
+                    <SectionContainerInner data-scroll-section>
                         <ProjectsInfoContainer>
                             <HeadingDesc small>{shortDescription}</HeadingDesc>
                             <HeadingDesc small>{date}</HeadingDesc>
                         </ProjectsInfoContainer>
                         <ProjectImageContainer>
-                            <ImageWrapper project>
+                            <ImageWrapper projectmain>
                                 <RevealImage data-scroll>
                                     <Image src={mobileThumb} srcSet={`${mobileThumb} 300w, ${desktopThumb} 768w`} />
                                 </RevealImage>
@@ -121,18 +123,18 @@ const Project = (props) => {
                         })}
                     </SectionContainerInner>
                     <SectionContainerFluid data-scroll-section>
-                        <ImageWrapper project>
+                        <ImageWrapper projectoverview>
                             <RevealImage data-scroll>
-                                <Image src={mobileOverview} srcSet={`${mobileOverview} 300w, ${desktopOverview} 768w`} />
+                                <Image className="cursor_hover" src={mobileOverview} srcSet={`${mobileOverview} 300w, ${desktopOverview} 768w`} />
                             </RevealImage>
                         </ImageWrapper>
-                        <ImageWrapper project>
+                        <ImageWrapper projectrwd>
                             <RevealImage data-scroll>
-                                <Image src={mobileRwd} srcSet={`${mobileRwd} 300w, ${desktopRwd} 768w`} />
+                                <Image className="cursor_hover" src={mobileRwd} srcSet={`${mobileRwd} 300w, ${desktopRwd} 768w`} />
                             </RevealImage>
                         </ImageWrapper >
                     </SectionContainerFluid>
-                    <SectionContainerInner data-scroll-section nextProject="true">
+                    <SectionContainerFluid data-scroll-section nextProject="true">
                         <Heading3 project>
                             <TextReveal data-scroll>
                                 Następny projekt
@@ -143,7 +145,7 @@ const Project = (props) => {
                                 {projects[nextSite].name}
                             </TextReveal>
                         </MainLink>
-                    </SectionContainerInner>
+                    </SectionContainerFluid>
                 </SectionContainer>
                 <Footer />
             </MainContainer>
