@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled, { css, keyframes } from 'styled-components';
+import { Heading3, Heading4, ImageWrapper } from '../Components';
 import { Theme } from '../Settings';
 
 const {
@@ -55,6 +56,7 @@ export const ProjectsInfoContainer = styled.div`
             <path d="M0 195.5H385.5M385.5 195.5L191 1M385.5 195.5L191 390" stroke="white" stroke-width= "20"/>
             </svg>');
             margin-left: 20px;
+            transition: transform .3s;
             transform: translateY(3px);
         }
     `} 
@@ -66,14 +68,45 @@ export const ProjectsInfoContainer = styled.div`
             bottom: 10px;
             padding: 0 20px;
             mix-blend-mode: difference;
-
             animation: ${showIcons} 2s .5s cubic-bezier(.645,.045,.355,1) both;
     `} 
 `
 
+export const ProjectsImageHoverContainer = styled.div`
+    transition: transform 1.2s cubic-bezier(0.14, 0.99, 0.43, 1.01);
+`;
+
 export const ProjectsItemContainer = styled(Link)`
     color: ${secondaryColor};
     text-decoration: none;
+    position: relative;
+
+    @media ${breakpoints.md} {
+        &:hover {
+            ${Heading3} {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            ${Heading4} {
+                color: ${tertiaryColor};
+            }
+            
+            ${ImageWrapper} {
+                transform: scale(.93);
+            }
+
+            ${ProjectsImageHoverContainer} {
+                transform: scale(1.2);
+            }
+
+            ${ProjectsInfoContainer} {
+                &::after {
+                    transform: translateY(3px) scale(1.5);
+                }
+            }
+        }
+    }
 `
 
 

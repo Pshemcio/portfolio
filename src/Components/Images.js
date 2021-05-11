@@ -30,6 +30,7 @@ export const ImageWrapper = styled.div`
         ${props =>
         props.projectscontent &&
         css`
+            transition: transform 1.2s cubic-bezier(0.14, 0.99, 0.43, 1.01);
             height: 80vw;
         `}
 
@@ -62,7 +63,7 @@ export const ImageWrapper = styled.div`
         ${props =>
         props.projectscontent &&
         css`
-            height: 44.5vw;
+            height: 43vw;
             max-height: 850px;
         `}
     }

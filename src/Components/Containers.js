@@ -15,6 +15,17 @@ export const SectionContainer = styled.section`
     max-width: ${(props) => (props.project ? "1920px" : "1800px")};
     margin: 0 auto;
 
+    ${props =>
+        props.aboutme &&
+        css`
+        max-width: 1200px;
+
+        @media ${breakpoints.md} {
+            text-align: center;
+        }
+
+    `}
+
     @media ${breakpoints.xs} {
         padding: ${(props) => (props.project ? "4vh 0" : "4vh 40px")};
     }

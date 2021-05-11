@@ -9,7 +9,7 @@ import {
 const AboutContent = () => {
     return (
         <>
-            <SectionContainer id="projects" data-scroll-section>
+            <SectionContainer id="projects" data-scroll-section aboutme>
                 <Heading2>
                     <TextReveal data-scroll>
                         O mnie

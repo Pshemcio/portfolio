@@ -120,6 +120,7 @@ export const StyledNavLink = styled(NavLink)`
     ${showLineOnHover};
     text-transform: uppercase;
     font-size: 1.6rem;
+    font-size: clamp(1.6rem, 3vw, 2.5rem);
     font-weight: 300;
     font-family: ${secondaryFont};
     color: ${primaryColor};
@@ -159,18 +160,29 @@ export const MainLink = styled(Link)`
     `} 
 
     ${props =>
+        props.projectscontent &&
+        css`
+        @media ${breakpoints.md} {
+            display: ${(props) => (props.hide ? "none" : "block")};
+            text-align: center;
+            font-size: 25px;
+        }
+    `} 
+    
+
+    ${props =>
         props.project &&
         css`
-            display: inline-block;
-            font-size: clamp(35px, 5vw, 100px);
-            margin-top: 0;
-            padding-bottom: 5px;
-            font-weight: 600;
-            text-transform: uppercase;
+        display: inline-block;
+        font-size: clamp(35px, 5vw, 100px);
+        margin-top: 0;
+        padding-bottom: 5px;
+        font-weight: 600;
+        text-transform: uppercase;
 
-            @media ${breakpoints.xs} {
-                font-size: clamp(14px, 8vw, 120px);
-            }
+        @media ${breakpoints.xs} {
+            font-size: clamp(14px, 8vw, 120px);
+        }
     `}
 `;
 

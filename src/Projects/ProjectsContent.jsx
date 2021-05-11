@@ -16,7 +16,8 @@ import {
     ProjectsList,
     ProjectsItem,
     ProjectsInfoContainer,
-    ProjectsItemContainer
+    ProjectsItemContainer,
+    ProjectsImageHoverContainer
 } from './';
 
 const ProjectsContent = (props) => {
@@ -33,13 +34,15 @@ const ProjectsContent = (props) => {
                     {projects.map((project) => (
                         <ProjectsItem key={project.id}>
                             <ProjectsItemContainer className="cursor_hover" to={project.path}>
-                                <Heading3>
+                                <Heading3 projectscontent>
                                     {project.name}
                                 </Heading3>
                                 <ImageWrapper projectscontent="true">
-                                    <RevealImage data-scroll>
-                                        <Image src={project.photos.thumb.mobile} srcSet={`${project.photos.thumb.mobile} 300w, ${project.photos.thumb.desktop} 768w`} />
-                                    </RevealImage>
+                                    <ProjectsImageHoverContainer>
+                                        <RevealImage data-scroll>
+                                            <Image src={project.photos.thumb.mobile} srcSet={`${project.photos.thumb.mobile} 300w, ${project.photos.thumb.desktop} 768w`} />
+                                        </RevealImage>
+                                    </ProjectsImageHoverContainer>
                                 </ImageWrapper>
                                 <ProjectsInfoContainer arrow>
                                     <Heading4>
@@ -51,7 +54,7 @@ const ProjectsContent = (props) => {
                     ))}
                 </ProjectsList>
 
-                <MainLink className="cursor_hover" to={"/projects"} arrow="true" hide={props.hidelink}>
+                <MainLink className="cursor_hover" to={"/projects"} arrow="true" hide={props.hidelink} projectscontent="true">
                     Więcej
                 </MainLink>
             </SectionContainer>

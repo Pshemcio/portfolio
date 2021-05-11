@@ -42,7 +42,7 @@ export const Heading1 = styled.h1`
 export const Heading2 = styled.h2`
     ${typographyBase}
     font-size: 40px;
-    font-size: clamp(40px, 10vw, 120px);
+    font-size: clamp(40px, 8vw, 120px);
     margin-bottom: ${(props) => (props.smaller ? "30px" : "inherit")};
     
     ${props =>
@@ -88,13 +88,30 @@ export const Heading3 = styled.h3`
     ${props =>
         props.project &&
         css`
+        font-size: 16px;
         font-size: clamp(14px, 4vw, 25px);
+    `}
+
+    ${props =>
+        props.projectscontent &&
+        css`
+        @media ${breakpoints.md} {
+            position: absolute;
+            top: 70px;
+            width: 500px;
+            opacity: 0;
+            font-size: 40px;
+            font-weight: 800;
+            transform: translateY(25px);
+            transition: opacity .5s cubic-bezier(0.14, 0.99, 0.43, 1.01), transform .5s cubic-bezier(0.14, 0.99, 0.43, 1.01);
+        }
     `}
 
     ${props =>
         props.about &&
         css`
-        font-size: clamp(24px, 4vw, 80px);
+        font-size: 30px;
+        font-size: clamp(24px, 3vw, 80px);
         margin: 25px 0 5px;
     `}
 
@@ -125,6 +142,13 @@ export const Heading4 = styled.h4`
     font-size: 14px;
     font-family: ${secondaryFont};
     font-weight: 400;
+
+    @media ${breakpoints.sm} {
+        position: relative;
+        font-size: 20px;
+        font-weight: 600;
+        transition: color .5s;
+    }
 `;
 
 export const HeadingDesc = styled.p`

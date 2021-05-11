@@ -42,6 +42,10 @@ export const MainNavigationList = styled.ul`
 
   @media ${breakpoints.xs} {
     clip-path: ${(props) => (props.clicked ? "circle(120% at 0% 40%)" : "circle(0% at 0% 0%)")};
+    padding-top: 0;
+    display: grid;
+    place-content: center;
+
   }
 `;
 
