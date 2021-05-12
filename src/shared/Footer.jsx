@@ -78,7 +78,7 @@ const Footer = () => {
             </FooterContactContainer>
             <FooterMenuContainer>
                 <FooterLink href={CvPdf} target='_blank' className="cursor_hover" arrow>
-                    CV / Pobierz
+                    CV / Podgląd
                 </FooterLink>
                 <FooterSocialsList>
                     {socialsFooter.map((social, index) => (

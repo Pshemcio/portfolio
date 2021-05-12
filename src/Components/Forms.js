@@ -87,6 +87,16 @@ const StyledSubmit = styled.button`
     border: 1px solid ${secondaryColor};
     transition: background-color .4s, opacity .4s, color .4s;
 
+    @media ${breakpoints.md} {
+        font-size: clamp(16px, 2vw, 22px);
+    }
+
+    &:focus,
+    &:hover {
+        background-color: transparent;
+        color: ${secondaryColor};
+    }
+
     ${props =>
         props.isSubmitted &&
         css`

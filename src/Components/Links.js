@@ -46,7 +46,7 @@ const showLineOnHover = css`
     &::before {
         content: "";
         position: absolute;
-        top: ${(props) => (props.main ? "90%" : "100%")};
+        top: ${(props) => (props.main ? "90%" : "95%")};
         left: 0;
         width: 0;
         height: 1px;
@@ -116,7 +116,7 @@ export const BaseLink = styled.a`
 `
 
 export const StyledNavLink = styled(NavLink)`
-    ${linksBase}
+    ${linksBase};
     ${showLineOnHover};
     text-transform: uppercase;
     font-size: 1.6rem;
@@ -155,7 +155,7 @@ export const MainLink = styled(Link)`
             <path d="M0 195.5H385.5M385.5 195.5L191 1M385.5 195.5L191 390" stroke="white" stroke-width= "20"/>
             </svg>');
             margin-left: 20px;
-            transform: translateY(2.5px);
+            transform: translateY(3px);
         }
     `} 
 
@@ -163,9 +163,30 @@ export const MainLink = styled(Link)`
         props.projectscontent &&
         css`
         @media ${breakpoints.md} {
-            display: ${(props) => (props.hide ? "none" : "block")};
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            display: ${(props) => (props.hide ? "none" : "inline-block")};
             text-align: center;
             font-size: 25px;
+            font-size: clamp(22px, 3vw, 32px);
+
+            &::after {
+                width: clamp(22px, 3vw, 30px);
+            }
+        }
+    `} 
+
+    ${props =>
+        props.aboutshort &&
+        css`
+        @media ${breakpoints.md} {
+            font-size: 20px;
+            font-size: clamp(20px, 2.5vw, 28px);
+
+            &::after {
+                width: clamp(20px, 2.5vw, 28px);
+            }
         }
     `} 
     
@@ -216,7 +237,10 @@ export const CryptoPhoneLink = styled(BaseLink)`
 `
 
 export const FooterLink = styled.a`
-    ${linksBase}
+    ${linksBase};
+    ${showLineOnHover};
+
+    position: relative;
     font-size: clamp(16px, 4vw, 20px);
     margin: 0 10px 4px 0;
 
@@ -235,6 +259,11 @@ export const FooterLink = styled.a`
             </svg>');
             margin-left: 6px;
             transform: rotate(-45deg);
+
+            @media ${breakpoints.xs} {
+                margin-left: 9px;
+                width: clamp(15px, 2vw, 30px);
+            }   
         }
     `} 
 `

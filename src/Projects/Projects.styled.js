@@ -52,7 +52,8 @@ export const ProjectsInfoContainer = styled.div`
         css`
             &::after {
             display: inline-block;
-            content: url('data:image/svg+xml;charset=UTF-8, <svg width="20" height="20" viewBox="0 0 387 391" fill="none" xmlns="http://www.w3.org/2000/svg">
+            width: 20px;
+            content: url('data:image/svg+xml;charset=UTF-8, <svg viewBox="0 0 387 391" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 195.5H385.5M385.5 195.5L191 1M385.5 195.5L191 390" stroke="white" stroke-width= "20"/>
             </svg>');
             margin-left: 20px;
@@ -80,9 +81,11 @@ export const ProjectsItemContainer = styled(Link)`
     color: ${secondaryColor};
     text-decoration: none;
     position: relative;
+    outline: none;
 
     @media ${breakpoints.md} and (pointer: fine) {
-        &:hover {
+        &:hover,
+        &:focus {
             ${Heading3} {
                 opacity: 1;
                 transform: translateY(0);
