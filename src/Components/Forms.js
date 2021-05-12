@@ -1,8 +1,9 @@
-import styled, { css } from "styled-components"
+import styled, { css, keyframes } from "styled-components"
 import { useEffect, useState } from 'react';
 import { send } from 'emailjs-com';
 import Theme from "../Settings/theme";
 import { TextReveal } from "./ContentReveal";
+import { Loader } from "@styled-icons/remix-line";
 
 let {
     colors: {
@@ -13,6 +14,12 @@ let {
     },
     breakpoints
 } = Theme;
+
+const rotate = keyframes`
+    to {
+        transform: rotate(360deg);
+    }
+`
 
 const formBase = css`
     display: block;
@@ -104,12 +111,32 @@ const SubmitInfo = styled.p`
     overflow: hidden;
 `
 
+const LoaderContainer = styled.div`
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    z-index: 1;
+    pointer-events: ${(props) => (props.isReadyToSubmit ? "all" : "none")};
+    opacity: ${(props) => (props.isReadyToSubmit ? "1" : "0")};
+    transition: opacity .5s;
+`
+
+const LoaderStyled = styled(Loader)`
+    color: ${secondaryColor};
+    width: 80px;
+    animation: ${rotate} 3s linear infinite both;
+`
+
 export const FooterForm = () => {
     const SERVICE_KEY = process.env.REACT_APP_FORM_SERVICE_KEY;
     const TEMPLATE_KEY = process.env.REACT_APP_FORM_TEMPLATE_KEY;
     const USER_KEY = process.env.REACT_APP_FORM_USER_KEY;
 
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isReadyToSubmit, setIsReadyToSubmit] = useState(false);
+    const [submitInfoMessage, setSubmitInfoMessage] = useState("");
 
     const [toSend, setToSend] = useState({
         from_name: '',
@@ -173,6 +200,8 @@ export const FooterForm = () => {
                 };
             };
 
+            setIsReadyToSubmit(true);
+
             send(
                 SERVICE_KEY,
                 TEMPLATE_KEY,
@@ -181,21 +210,34 @@ export const FooterForm = () => {
             )
                 .then((response) => {
                     console.log('SUCCESS!', response.status, response.text);
+                    setSubmitInfoMessage("Poszło! Odezwę się najszybciej jak to możliwe!");
                     setIsSubmitted(true);
+                    setIsReadyToSubmit(false);
+                    resetFields();
                 })
                 .catch((err) => {
                     console.log('FAILED...', err);
+                    setSubmitInfoMessage("Coś poszło nie tak, użyj maila poniżej. :(");
+                    setIsReadyToSubmit(false);
                 });
-
-            setErrors({
-                name: "",
-                email: "",
-                message: ""
-            });
         };
 
         validation();
     }, [errors]); //eslint-disable-line react-hooks/exhaustive-deps
+
+    const resetFields = () => {
+        setToSend({
+            from_name: '',
+            message: '',
+            reply_to: '',
+        });
+
+        setErrors({
+            name: "",
+            email: "",
+            message: ""
+        });
+    };
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -208,7 +250,10 @@ export const FooterForm = () => {
     };
 
     return (
-        <FormContainer onSubmit={onSubmit} noValidate>
+        <FormContainer id="footer-form" onSubmit={onSubmit} noValidate>
+            <LoaderContainer isReadyToSubmit={isReadyToSubmit}>
+                <LoaderStyled />
+            </LoaderContainer>
             <InputGroup>
                 <StyledLabel htmlFor="from_name">
                     <TextReveal data-scroll delay={.2} transparent>
@@ -266,7 +311,7 @@ export const FooterForm = () => {
                 Wyślij!
             </StyledSubmit>
             <SubmitInfo isSubmitted={isSubmitted}>
-                Poszło! Odezwę się najszybciej jak to możliwe!
+                {submitInfoMessage}
             </SubmitInfo>
         </FormContainer>
     )

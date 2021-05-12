@@ -61,7 +61,7 @@ const projects = [
         date: "03/2021",
         text: [
             "Sklep internetowy wykorzystujący produkty marki Brunobanani.",
-            "Wybrałem tą markę z dwóch powodów - mnogości fajnie prezentujących się produktów oraz ciekawego layoutu strony głównej, który jednak nie do końca wpasował się w moje gusta. Dlatego postanowiłem troszeczkę go odświeżyć.",
+            "Wybrałem tą markę z dwóch powodów - mnogości fajnie prezentujących się produktów, oraz ciekawego layoutu strony głównej. Wydał mi się on jednak troszeczkę przestarzały więc postanowiłem troszeczkę go odświeżyć.",
             "Podczas tworzenia projektu przypomniałem sobie podstawy Wordpress'a. Nauczyłem się również obsługi WooCommerce i kilku wtyczek obsługujących go, takich jak Advanced Woo Search. Poznałem również narzędzie do sprawnego przenoszenia stron opartych na wordpress z serwera lokalnego na hosting - duplicator."
         ],
         stack: [
@@ -163,7 +163,7 @@ const projects = [
         date: "11/2020",
         text: [
             "Aplikacja pogodowa w której, po wpisaniu miasta, pojawia się prognoza pogody na najbliższy tydzień.",
-            "Niewielki ale całkiem ciekawy projekt w którym nauczyłem się pobierania danych za pomocą Axios'a oraz późniejszej ich implementacji. Poszerzyłem również swoją wiedzę na temat React'a.",
+            "Niewielki, ale całkiem ciekawy projekt, w którym nauczyłem się pobierania danych za pomocą Axios'a oraz późniejszej ich implementacji. Poszerzyłem również swoją wiedzę na temat React'a.",
             "Do stworzenia projektu wykorzystałem API z serwisu openweathermap.org."
         ],
         stack: [
@@ -197,8 +197,8 @@ const projects = [
         date: "12/2020",
         text: [
             'Na pomysł stworzenia tej aplikacji wpadłem w momencie, gdy chcieliśmy we dwoje z żoną zagrać w grę Twister. Problem polegał na tym że nie mieliśmy "sędziego" - osoby która losuje i mówi komendy.',
-            "Po szybkim sprawdzeniu w google okazało się że aplikacji tego typu jest sporo, ale w żadnej nie znalazłem syntezatora komend. Dlatego postanowiłem stworzyć ten projekt.",
-            "Jest to całkiem prosta aplikacja wykorzystująca HTML, CSS oraz JavaScript. Do czytania komend wykorzystałem API SpeechSynthesis. Dodałem możliwość zmiany języka czytania bo uznałem że może to być zabawne. Faktycznie czasem jest. :)"
+            "Po szybkim sprawdzeniu w google okazało się, że aplikacji tego typu jest sporo, ale w żadnej nie znalazłem syntezatora komend. Dlatego postanowiłem stworzyć ten projekt.",
+            "Jest to całkiem prosta aplikacja wykorzystująca HTML, CSS oraz JavaScript. Do czytania komend wykorzystałem API SpeechSynthesis. Dodałem również możliwość zmiany języka czytania, bo uznałem, że może to być całkiem zabawne. Faktycznie czasem jest. :)"
         ],
         stack: [
             "HTML5", "CSS3", "JavaScript", "SpeechSynthesis"

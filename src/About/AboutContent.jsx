@@ -22,7 +22,7 @@ const AboutContent = () => {
                 </Paragraph>
                 <Paragraph>
                     <TextReveal data-scroll transparent shift={.1} delay={.5}>
-                        Jestem adeptem sztuki web developmentu poszukującym pierwszego komercyjnego doświadczenia. Uwielbiam minimalistyczny design oraz subtelne animacje. Długo uczyłem się czystego JavaScriptu więc nie miałem dużego problemu z przejściem na ReactJS. Jego prostota oraz możliwości sprawiają że to właśnie z pracą na tej technologii wiążę swoją przyszłość zawodową.
+                        Jestem adeptem sztuki web developmentu poszukującym pierwszego komercyjnego doświadczenia. Uwielbiam minimalistyczny design oraz subtelne animacje. Długo uczyłem się czystego JavaScriptu więc nie miałem dużego problemu z przejściem na ReactJS. Jego prostota oraz możliwości sprawiają, że to właśnie z pracą na tej technologii wiążę swoją przyszłość zawodową.
                         </TextReveal>
                 </Paragraph>
                 <Heading3 about="true">
@@ -32,12 +32,12 @@ const AboutContent = () => {
                 </Heading3>
                 <Paragraph>
                     <TextReveal data-scroll transparent shift={.1} delay={.5}>
-                        Web developmentem i programowaniem ogólnie zacząłem interesować się w lipcu 2019 roku. Ukończyłem kilka kursów na Udemy na których nauczyłem się wielu podstaw pozwalających na tworzenie samodzielnych projektów. W sierpniu 2020 roku postanowiłem odbyć stacjonarne szkolenie w Akademia108, głównie w celu usystematyzowania wiedzy. To właśnie tam miałem pierwszą styczność z Reactem. Nauczyłem się tam również wielu dobrych praktyk programowania.
+                        Web developmentem i programowaniem ogólnie zacząłem interesować się w lipcu 2019 roku. Ukończyłem kilka kursów na Udemy, dzięki którym nauczyłem się wielu podstaw pozwalających na tworzenie samodzielnych projektów. W sierpniu 2020 roku postanowiłem odbyć stacjonarne szkolenie w Akademia108, głównie w celu usystematyzowania wiedzy. To właśnie tam miałem pierwszą styczność z Reactem. Nauczyłem się tam również wielu dobrych praktyk programowania.
                     </TextReveal>
                 </Paragraph>
                 <Paragraph>
                     <TextReveal data-scroll transparent shift={.2}>
-                        Szkolenie w Akademia108 ukończyłem z końcem listopada 2020 roku. Od tamtej pory każdego dnia kontynuuję samodzielną naukę. Nie tylko utrwalam zdobytą do tej pory wiedzę ale również uczę się nowych rozwiązań i technologii.
+                        Szkolenie w Akademia108 ukończyłem z końcem listopada 2020 roku. Od tamtej pory każdego dnia kontynuuję samodzielną naukę. Nie tylko utrwalam zdobytą do tej pory wiedzę, ale również uczę się nowych rozwiązań i technologii.
                     </TextReveal>
                 </Paragraph>
                 <Heading3 about="true">
@@ -47,7 +47,7 @@ const AboutContent = () => {
                 </Heading3>
                 <Paragraph>
                     <TextReveal data-scroll transparent shift={.2}>
-                        Trochę o mnie - jestem osobą spokojną i ambitną. Uwielbiam pracę w zespole oraz naukę nowych rzeczy. Nie boję się wyzwań, wręcz sam ich szukam bo wiem że jest to najlepsza droga do rozwinięcia pełnego potencjału. Uwielbiam rozwiązywać problemy i zawsze robię to samodzielnie bo jest to najlepszy sposób na poszerzanie swojej wiedzy.
+                        Trochę o mnie - jestem osobą spokojną i ambitną. Uwielbiam pracę w zespole oraz naukę nowych rzeczy. Nie boję się wyzwań, wręcz przeciwnie - sam ciągle ich poszukuję. Samodzielne rozwiązywanie problemów jest, moim zdaniem, najlepszym sposobem nauki.
                     </TextReveal>
                 </Paragraph>
                 <Heading3 about="true">
