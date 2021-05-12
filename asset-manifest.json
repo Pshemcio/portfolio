@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.27024f6b.chunk.css",
-    "main.js": "/portfolio/static/js/main.2021fb03.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.2021fb03.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.d8de9aee.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.d8de9aee.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.1b636ecd.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.1b636ecd.js.map",
     "static/js/2.8fec7cf4.chunk.js": "/portfolio/static/js/2.8fec7cf4.chunk.js",
@@ -27,6 +27,16 @@
     "static/media/caroRwdMobile.c940af24.jpg": "/portfolio/static/media/caroRwdMobile.c940af24.jpg",
     "static/media/portfolioMain.5950ac03.jpg": "/portfolio/static/media/portfolioMain.5950ac03.jpg",
     "static/media/portfolioMainMobile.5ffa4898.jpg": "/portfolio/static/media/portfolioMainMobile.5ffa4898.jpg",
+    "static/media/portfolioOverview.671096f1.jpg": "/portfolio/static/media/portfolioOverview.671096f1.jpg",
+    "static/media/portfolioOverviewMobile.d3e52c43.jpg": "/portfolio/static/media/portfolioOverviewMobile.d3e52c43.jpg",
+    "static/media/portfolioRwd.eee0375f.jpg": "/portfolio/static/media/portfolioRwd.eee0375f.jpg",
+    "static/media/portfolioRwdMobile.5859ca50.jpg": "/portfolio/static/media/portfolioRwdMobile.5859ca50.jpg",
+    "static/media/restaurantMain.9f78c1b7.jpg": "/portfolio/static/media/restaurantMain.9f78c1b7.jpg",
+    "static/media/restaurantMainMobile.f92e97d0.jpg": "/portfolio/static/media/restaurantMainMobile.f92e97d0.jpg",
+    "static/media/restaurantOverview.cd6baf48.jpg": "/portfolio/static/media/restaurantOverview.cd6baf48.jpg",
+    "static/media/restaurantOverviewMobile.40a21ccb.jpg": "/portfolio/static/media/restaurantOverviewMobile.40a21ccb.jpg",
+    "static/media/restaurantRwd.88deae82.jpg": "/portfolio/static/media/restaurantRwd.88deae82.jpg",
+    "static/media/restaurantRwdMobile.b019971b.jpg": "/portfolio/static/media/restaurantRwdMobile.b019971b.jpg",
     "static/media/twisterMain.77d73a5c.jpg": "/portfolio/static/media/twisterMain.77d73a5c.jpg",
     "static/media/twisterMainMobile.1a453829.jpg": "/portfolio/static/media/twisterMainMobile.1a453829.jpg",
     "static/media/twisterOverview.be245422.jpg": "/portfolio/static/media/twisterOverview.be245422.jpg",
@@ -50,6 +60,6 @@
     "static/js/runtime-main.1b636ecd.js",
     "static/js/2.8fec7cf4.chunk.js",
     "static/css/main.27024f6b.chunk.css",
-    "static/js/main.2021fb03.chunk.js"
+    "static/js/main.d8de9aee.chunk.js"
   ]
 }
