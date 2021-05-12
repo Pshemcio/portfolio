@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components"
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { send } from 'emailjs-com';
 import Theme from "../Settings/theme";
 import { TextReveal } from "./ContentReveal";
@@ -22,7 +22,7 @@ const formBase = css`
     border: none;
     padding: 15px;
     outline: none;
-    margin: 4px 0 20px;
+    margin: 4px 0 24px;
     font-size: 16px;
     opacity: 0;
     transition: opacity .6s .1s ease-in-out;
@@ -36,6 +36,18 @@ const FormContainer = styled.form`
     position: relative;
     max-width: 600px;
     margin: 0 auto;
+`
+
+const InputGroup = styled.div`
+    position: relative;
+`
+
+const ErrorMessage = styled.span`
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    font-size: 14px;
+    color: ${tertiaryColor};
 `
 
 const StyledLabel = styled.label`
@@ -85,7 +97,7 @@ const SubmitInfo = styled.p`
     left: 0;
     width: 100%;
     text-align: center;
-    font-size: clamp(12px, 4vw, 20px);
+    font-size: clamp(12px, 3.5vw, 20px);
     color: ${tertiaryColor};
     transition: opacity .4s;
     opacity: ${(props) => (props.isSubmitted ? "1" : "0")};
@@ -105,6 +117,12 @@ export const FooterForm = () => {
         reply_to: '',
     });
 
+    const [errors, setErrors] = useState({
+        name: "",
+        email: "",
+        message: ""
+    });
+
     const handleChange = (e) => {
         setToSend({ ...toSend, [e.target.name]: e.target.value });
     };
@@ -113,7 +131,7 @@ export const FooterForm = () => {
         if (fieldValue.trim() === '') {
             return `Proszę wpisać ${fieldName}`;
         }
-        if (/[^a-zA-Z -?]/.test(fieldValue)) {
+        if (/[^a-zA-Z0-9 -?!()ąęćśółżźńĄĘĆŚÓŁŻŹŃ]/.test(fieldValue)) {
             return 'Niedozwolone znaki';
         }
         if (fieldValue.trim().length < 3) {
@@ -136,78 +154,109 @@ export const FooterForm = () => {
         return 'Proszę wpisać POPRAWNY email';
     };
 
-    const validation = (name, email, message) => {
-        textValidation("imię", name);
-        console.log(textValidation("wiadomość", message));
-        console.log(emailValidation(email));
-        console.log(toSend);
+    const handleErrors = (name, email, message) => {
+        setErrors({
+            name: textValidation("imię", name),
+            email: emailValidation(email),
+            message: textValidation("wiadomość", message)
+        });
     };
+
+    useEffect(() => {
+        const validation = () => {
+            for (const error in errors) {
+                if (Object.hasOwnProperty.call(errors, error)) {
+                    const element = errors[error];
+                    if (element === null) {
+                        console.log("okie!");
+                    } else return;
+                };
+            };
+
+            send(
+                SERVICE_KEY,
+                TEMPLATE_KEY,
+                toSend,
+                USER_KEY
+            )
+                .then((response) => {
+                    console.log('SUCCESS!', response.status, response.text);
+                    setIsSubmitted(true);
+                })
+                .catch((err) => {
+                    console.log('FAILED...', err);
+                });
+
+            setErrors({
+                name: "",
+                email: "",
+                message: ""
+            });
+        };
+
+        validation();
+    }, [errors]); //eslint-disable-line react-hooks/exhaustive-deps
 
     const onSubmit = (e) => {
         e.preventDefault();
-        validation(toSend.from_name, toSend.reply_to, toSend.message);
-        return;
 
         if (isSubmitted) {
             return;
         };
 
-        send(
-            SERVICE_KEY,
-            TEMPLATE_KEY,
-            toSend,
-            USER_KEY
-        )
-            .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
-                setIsSubmitted(true);
-            })
-            .catch((err) => {
-                console.log('FAILED...', err);
-            });
+        handleErrors(toSend.from_name, toSend.reply_to, toSend.message);
     };
 
     return (
-        <FormContainer onSubmit={onSubmit}>
-            <StyledLabel htmlFor="from_name">
-                <TextReveal data-scroll delay={.2} transparent>
-                    imię:
+        <FormContainer onSubmit={onSubmit} noValidate>
+            <InputGroup>
+                <StyledLabel htmlFor="from_name">
+                    <TextReveal data-scroll delay={.2} transparent>
+                        imię:
                 </TextReveal>
-            </StyledLabel>
-            <StyledInput
-                type='text'
-                name='from_name'
-                placeholder='Jak się do Ciebie zwracać?'
-                value={toSend.from_name}
-                onChange={handleChange}
-                data-scroll
-            />
-            <StyledLabel htmlFor="reply_to">
-                <TextReveal data-scroll delay={.3} transparent>
-                    email:
+                </StyledLabel>
+                <StyledInput
+                    type='text'
+                    name='from_name'
+                    placeholder='Jak się do Ciebie zwracać?'
+                    value={toSend.from_name}
+                    onChange={handleChange}
+                    data-scroll
+                />
+                <ErrorMessage>{errors.name}</ErrorMessage>
+            </InputGroup>
+            <InputGroup>
+                <StyledLabel htmlFor="reply_to">
+                    <TextReveal data-scroll delay={.3} transparent>
+                        email:
                 </TextReveal>
-            </StyledLabel>
-            <StyledInput
-                type='email'
-                name='reply_to'
-                placeholder='Muszę jakoś odpowiedzieć!'
-                value={toSend.reply_to}
-                onChange={handleChange}
-                data-scroll
-            />
-            <StyledLabel htmlFor="message">
-                <TextReveal data-scroll delay={.4} transparent>
-                    wiadomość:
+                </StyledLabel>
+                <StyledInput
+                    type='email'
+                    name='reply_to'
+                    placeholder='Muszę jakoś odpowiedzieć!'
+                    value={toSend.reply_to}
+                    onChange={handleChange}
+                    data-scroll
+                />
+                <ErrorMessage>{errors.email}</ErrorMessage>
+            </InputGroup>
+            <InputGroup>
+                <StyledLabel htmlFor="message">
+                    <TextReveal data-scroll delay={.4} transparent>
+                        wiadomość:
                 </TextReveal>
-            </StyledLabel>
-            <StyledTextarea
-                type='text'
-                name='message'
-                placeholder='Tu może być cokolwiek ale będę bardzo szczęśliwy jeśli będzie to oferta pracy :)'
-                value={toSend.message}
-                onChange={handleChange}
-                data-scroll
-            />
+                </StyledLabel>
+                <StyledTextarea
+                    type='text'
+                    name='message'
+                    placeholder='Tu może być cokolwiek ale będę bardzo szczęśliwy jeśli będzie to oferta pracy :)'
+                    value={toSend.message}
+                    onChange={handleChange}
+                    data-scroll
+                />
+                <ErrorMessage>{errors.message}</ErrorMessage>
+            </InputGroup>
             <StyledSubmit
                 className="cursor_hover"
                 type='submit'

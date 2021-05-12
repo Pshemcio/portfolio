@@ -221,7 +221,7 @@ export const FooterLink = styled.a`
     margin: 0 10px 4px 0;
 
     @media ${breakpoints.xs} {
-        font-size: clamp(14px, 3vw, 20px);
+        font-size: clamp(14px, 2vw, 30px);
     }
 
     ${props =>

@@ -8,6 +8,7 @@ const {
   colors: {
     secondaryColor,
     primaryColor,
+    primaryColorLight,
     quaternaryColor
   }
 } = Theme;
@@ -36,6 +37,20 @@ const GlobalStyle = createGlobalStyle`
   ::selection {
     background: ${quaternaryColor};
     color: ${secondaryColor};
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus, 
+  input:-webkit-autofill:active
+  {
+    box-shadow: 0 0 0 30px ${primaryColorLight} inset !important;
+    -webkit-box-shadow: 0 0 0 30px ${primaryColorLight} inset !important;
+  }
+
+  input:-webkit-autofill
+  {
+    -webkit-text-fill-color: ${secondaryColor} !important;
   }
 `
 

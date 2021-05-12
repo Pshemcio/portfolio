@@ -1,3 +1,5 @@
+import { Phone, Mail } from '@styled-icons/fluentui-system-regular';
+
 import {
     Heading2,
     Heading3,
@@ -13,7 +15,8 @@ import {
     FooterContactItem,
     FooterMenuContainer,
     FooterSocialsList,
-    FooterSocialsItem
+    FooterSocialsItem,
+    FooterSvgWrapper
 } from './';
 import { CvPdf } from '../docs';
 
@@ -45,6 +48,9 @@ const Footer = () => {
             <FooterForm />
             <FooterContactContainer>
                 <FooterContactItem>
+                    <FooterSvgWrapper>
+                        <Mail />
+                    </FooterSvgWrapper>
                     <CryptoMailLink
                         className="cursor_hover"
                         href="mailto:someWeirdEmail@onet.xyz"
@@ -56,6 +62,9 @@ const Footer = () => {
                     />
                 </FooterContactItem>
                 <FooterContactItem>
+                    <FooterSvgWrapper>
+                        <Phone />
+                    </FooterSvgWrapper>
                     <CryptoPhoneLink
                         className="cursor_hover"
                         href="tel:901928492"

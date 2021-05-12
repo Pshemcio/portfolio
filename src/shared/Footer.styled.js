@@ -43,12 +43,28 @@ export const FooterContactItem = styled.div`
     border-top: 1px solid white;
     border-bottom: 1px solid white;
     text-align: center;
+    display: flex;
+    justify-content: center;
     
     @media ${breakpoints.xs} {
-        font-size: clamp(20px, 3vw, 30px);
+        font-size: clamp(20px, 3vw, 50px);
     }
 
     &:first-of-type {
         border-bottom: none;
+    }
+`
+
+export const FooterSvgWrapper = styled.span`
+    height:  clamp(16px, 5vw, 30px);
+    margin-right: 4px;
+
+    @media ${breakpoints.xs} {
+        height: clamp(20px, 3vw, 50px);
+        margin-right: 10px;
+    }
+
+    svg {
+        height: 100%;
     }
 `
