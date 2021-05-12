@@ -32,25 +32,26 @@ const ProjectsContent = (props) => {
 
                 <ProjectsList>
                     {projects.map((project) => (
-                        <ProjectsItem key={project.id}>
-                            <ProjectsItemContainer className="cursor_hover" to={project.path}>
-                                <Heading3 projectscontent>
-                                    {project.name}
-                                </Heading3>
-                                <ImageWrapper projectscontent="true">
-                                    <ProjectsImageHoverContainer>
-                                        <RevealImage data-scroll>
-                                            <Image src={project.photos.thumb.mobile} srcSet={`${project.photos.thumb.mobile} 300w, ${project.photos.thumb.desktop} 768w`} />
-                                        </RevealImage>
-                                    </ProjectsImageHoverContainer>
-                                </ImageWrapper>
-                                <ProjectsInfoContainer arrow>
-                                    <Heading4>
-                                        {project.shortDescription}
-                                    </Heading4>
-                                </ProjectsInfoContainer>
-                            </ProjectsItemContainer>
-                        </ProjectsItem>
+                        project.hide === true && props.home === true ? "" :
+                            <ProjectsItem key={project.id}>
+                                <ProjectsItemContainer className="cursor_hover" to={project.path}>
+                                    <Heading3 projectscontent>
+                                        {project.name}
+                                    </Heading3>
+                                    <ImageWrapper projectscontent="true">
+                                        <ProjectsImageHoverContainer>
+                                            <RevealImage data-scroll>
+                                                <Image src={project.photos.thumb.mobile} srcSet={`${project.photos.thumb.mobile} 300w, ${project.photos.thumb.desktop} 768w`} />
+                                            </RevealImage>
+                                        </ProjectsImageHoverContainer>
+                                    </ImageWrapper>
+                                    <ProjectsInfoContainer arrow>
+                                        <Heading4>
+                                            {project.shortDescription}
+                                        </Heading4>
+                                    </ProjectsInfoContainer>
+                                </ProjectsItemContainer>
+                            </ProjectsItem>
                     ))}
                 </ProjectsList>
 

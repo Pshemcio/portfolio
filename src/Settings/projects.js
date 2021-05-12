@@ -30,7 +30,17 @@ import {
     twisterOverviewMobile,
     twisterRwdMobile,
     portfolioMain,
-    portfolioMainMobile
+    portfolioMainMobile,
+    portfolioOverview,
+    portfolioOverviewMobile,
+    portfolioRwd,
+    portfolioRwdMobile,
+    restaurantMain,
+    restaurantMainMobile,
+    restaurantOverview,
+    restaurantOverviewMobile,
+    restaurantRwd,
+    restaurantRwdMobile
 } from '../images/';
 
 const projects = [
@@ -58,7 +68,7 @@ const projects = [
             live: "https://brunobanani-fake-store.pl/",
             github: "https://github.com/Pshemcio/fake-bruno-banani-shop"
         },
-        date: "03/2021",
+        date: "04/2021",
         text: [
             "Sklep internetowy wykorzystujący produkty marki Brunobanani.",
             "Wybrałem tą markę z dwóch powodów - mnogości fajnie prezentujących się produktów, oraz ciekawego layoutu strony głównej. Wydał mi się on jednak troszeczkę przestarzały więc postanowiłem troszeczkę go odświeżyć.",
@@ -66,7 +76,8 @@ const projects = [
         ],
         stack: [
             "HTML5", "SCSS", "Javascript", "Wordpress", "Woocommerce"
-        ]
+        ],
+        hide: false
     },
     {
         id: "caro-elektro",
@@ -100,41 +111,8 @@ const projects = [
         ],
         stack: [
             "HTML5", "SASS", "Javascript", "BEM", "SplideJS", "PhotoSwipe"
-        ]
-    },
-    {
-        id: "valorant-form",
-        name: "Valorant Form",
-        shortDescription: "Formularz rejestracyjny",
-        path: "/projects/valorant-form",
-        photos: {
-            alt: "website with form similar to registration form from game Valorant",
-            thumb: {
-                desktop: valorantMain,
-                mobile: valorantMainMobile
-            },
-            overview: {
-                desktop: valorantOverview,
-                mobile: valorantOverviewMobile
-            },
-            rwd: {
-                desktop: valorantRwd,
-                mobile: valorantRwdMobile
-            }
-        },
-        links: {
-            live: "https://pshemcio.github.io/valorant-form/",
-            github: "https://github.com/Pshemcio/valorant-form"
-        },
-        date: "12/2020",
-        text: [
-            "Był to dla mnie bardzo ekscytujący projekt - strona wzorowana na formularzu rejestracyjnym mojej ulubionej gry. :)",
-            'Oryginał stworzony został za pomocą ReactJS, ja postanowiłem jednak pozostać przy "klasyce".',
-            "W formularzu zastosowałem zaaawansowaną walidację po stronie klienta. W trakcie jej tworzenia nauczyłem się podstaw wyrażeń regularnych (RegExp). Strona powstała w dwóch wersjach językowych - polskiej oraz angielskiej."
         ],
-        stack: [
-            "HTML5", "CSS3", "Javascript", "RegExp"
-        ]
+        hide: false
     },
     {
         id: "weather-app",
@@ -168,7 +146,78 @@ const projects = [
         ],
         stack: [
             "React", "CSS3", "REST API"
-        ]
+        ],
+        hide: false
+    },
+    {
+        id: "portfolio",
+        name: "Portfolio",
+        shortDescription: "Portfolio które właśnie oglądasz",
+        path: "/projects/portfolio",
+        photos: {
+            alt: "personal portfolio website",
+            thumb: {
+                desktop: portfolioMain,
+                mobile: portfolioMainMobile
+            },
+            overview: {
+                desktop: portfolioOverview,
+                mobile: portfolioOverviewMobile
+            },
+            rwd: {
+                desktop: portfolioRwd,
+                mobile: portfolioRwdMobile
+            }
+        },
+        links: {
+            live: "https://przemekmajka.pl",
+            github: "https://github.com/Pshemcio/portfolio/"
+        },
+        date: "05/2021",
+        text: [
+            "Strona na której aktualnie się znajdujesz. Jest to jak do tej pory jeden z bardziej rozbudowanych projektów jakie stworzyłem.",
+            "Do stworzenia portfolio postanowiłem użyć ReactJS - głownie ze względu na możliwość wykorzystania routingu. Za jego pomocą udało mi się stworzyć animowane przejścia między podstronami.",
+            "Strona wykorzystuje bibliotekę LocomotiveScroll, dzięki której scrollowanie na desktopach jest bardzo gładkie i przyjemne dla oka. Okrąg podążający za kursorem to już czysty JS."
+        ],
+        stack: [
+            "React", "React router", "Styled Components", "LocomotiveScroll"
+        ],
+        hide: false
+    },
+    {
+        id: "valorant-form",
+        name: "Valorant Form",
+        shortDescription: "Formularz rejestracyjny",
+        path: "/projects/valorant-form",
+        photos: {
+            alt: "website with form similar to registration form from game Valorant",
+            thumb: {
+                desktop: valorantMain,
+                mobile: valorantMainMobile
+            },
+            overview: {
+                desktop: valorantOverview,
+                mobile: valorantOverviewMobile
+            },
+            rwd: {
+                desktop: valorantRwd,
+                mobile: valorantRwdMobile
+            }
+        },
+        links: {
+            live: "https://pshemcio.github.io/valorant-form/",
+            github: "https://github.com/Pshemcio/valorant-form"
+        },
+        date: "12/2020",
+        text: [
+            "Był to dla mnie bardzo ekscytujący projekt - strona wzorowana na formularzu rejestracyjnym mojej ulubionej gry. :)",
+            'Oryginał stworzony został za pomocą ReactJS, ja postanowiłem jednak pozostać przy "klasyce".',
+            "W formularzu zastosowałem zaaawansowaną walidację po stronie klienta. W trakcie jej tworzenia nauczyłem się podstaw wyrażeń regularnych (RegExp). Strona powstała w dwóch wersjach językowych - polskiej oraz angielskiej."
+        ],
+        stack: [
+            "HTML5", "CSS3", "Javascript", "RegExp"
+        ],
+        hide: true
     },
     {
         id: "twister-app",
@@ -202,41 +251,43 @@ const projects = [
         ],
         stack: [
             "HTML5", "CSS3", "JavaScript", "SpeechSynthesis"
-        ]
+        ],
+        hide: true
     },
     {
-        id: "portfolio",
-        name: "Portfolio",
-        shortDescription: "Portfolio które właśnie oglądasz",
-        path: "/projects/portfolio",
+        id: "cutie-pies",
+        name: "CutiePies",
+        shortDescription: "Strona internetowa dla restauracji",
+        path: "/projects/cutie-pies",
         photos: {
-            alt: "personal portfolio website",
+            alt: "restaurant website, serves delicious pizza",
             thumb: {
-                desktop: portfolioMain,
-                mobile: portfolioMainMobile
+                desktop: restaurantMain,
+                mobile: restaurantMainMobile
             },
             overview: {
-                desktop: twisterOverview,
-                mobile: twisterOverviewMobile
+                desktop: restaurantOverview,
+                mobile: restaurantOverviewMobile
             },
             rwd: {
-                desktop: twisterRwd,
-                mobile: twisterRwdMobile
+                desktop: restaurantRwd,
+                mobile: restaurantRwdMobile
             }
         },
         links: {
-            live: "https://przemekmajka.pl",
-            github: "https://github.com/Pshemcio/portfolio/"
+            live: "https://pshemcio.github.io/restaurant-site/",
+            github: "https://github.com/Pshemcio/restaurant-site/"
         },
-        date: "12/2020",
+        date: "01/2021",
         text: [
-            "Strona na której aktualnie się znajdujesz. Jest to jak do tej pory jeden z bardziej rozbudowanych projektów jakie stworzyłem.",
-            "Do stworzenia portfolio postanowiłem użyć ReactJS - głownie ze względu na możliwość wykorzystania routingu. Za jego pomocą udało mi się stworzyć animowane przejścia między podstronami.",
-            "Strona wykorzystuje bibliotekę LocomotiveScroll, dzięki której scrollowanie na desktopach jest bardzo gładkie i przyjemne dla oka. Okrąg podążający za kursorem to już czysty JS."
+            "Strona internetowa amerykańskiej restauracji.",
+            "W poszukiwaniu inspiracji natrafiłem na stronę internetową restauracji z Dallas. Zrobiłem jej kopię chyba głównie ze względu na to jaka była paskudna. :)",
+            "Pierwszy większy projekt na podstawie innej witryny który skończyłem w całości. Stworzony głównie w celu poćwiczenia SCSS, ale w międzyczasie napisałem też własną, prostą karuzelę w czystym JavaScript."
         ],
         stack: [
-            "React", "React router", "Styled Components", "LocomotiveScroll"
-        ]
+            "HTML5", "SCSS", "JavaScript"
+        ],
+        hide: true
     }
 ];
 

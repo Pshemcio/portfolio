@@ -30,6 +30,17 @@ import twisterOverviewMobile from './twister/twisterOverviewMobile.jpg';
 import twisterRwdMobile from './twister/twisterRwdMobile.jpg';
 import portfolioMain from './portfolio/portfolioMain.jpg';
 import portfolioMainMobile from './portfolio/portfolioMainMobile.jpg';
+import portfolioOverview from './portfolio/portfolioOverview.jpg';
+import portfolioOverviewMobile from './portfolio/portfolioOverviewMobile.jpg';
+import portfolioRwd from './portfolio/portfolioRwd.jpg';
+import portfolioRwdMobile from './portfolio/portfolioRwdMobile.jpg';
+import restaurantMain from './restaurant/restaurantMain.jpg';
+import restaurantMainMobile from './restaurant/restaurantMainMobile.jpg';
+import restaurantOverview from './restaurant/restaurantOverview.jpg';
+import restaurantOverviewMobile from './restaurant/restaurantOverviewMobile.jpg';
+import restaurantRwd from './restaurant/restaurantRwd.jpg';
+import restaurantRwdMobile from './restaurant/restaurantRwdMobile.jpg';
+
 
 export {
     valorantMain,
@@ -63,5 +74,15 @@ export {
     twisterOverviewMobile,
     twisterRwdMobile,
     portfolioMain,
-    portfolioMainMobile
+    portfolioMainMobile,
+    portfolioOverview,
+    portfolioOverviewMobile,
+    portfolioRwd,
+    portfolioRwdMobile,
+    restaurantMain,
+    restaurantMainMobile,
+    restaurantOverview,
+    restaurantOverviewMobile,
+    restaurantRwd,
+    restaurantRwdMobile
 };
