@@ -31,9 +31,10 @@ import {
     Eye,
     Github
 } from '@styled-icons/bootstrap';
+import { useEffect } from "react";
 
 const Project = (props) => {
-    const { HandleMouseoverEffects, HandleLocomotiveScroll } = props;
+    const { HandleMouseoverEffects, HandleLocomotiveScroll, title } = props;
     const location = useLocation();
 
     const project = projects.find(({ path }) => path === location.pathname);
@@ -67,6 +68,10 @@ const Project = (props) => {
         text,
         stack
     } = project;
+
+    useEffect(() => {
+        document.title = title || "";
+    }, [title]);
 
     HandleMouseoverEffects();
     HandleLocomotiveScroll();

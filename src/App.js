@@ -108,21 +108,21 @@ function App() {
             <AnimatePresence exitBeforeEnter >
               <Switch location={location} key={location.pathname}>
                 <Route exact path='/projects'>
-                  <Projects {...routingProps} />
+                  <Projects {...routingProps} title="Projekty | Przemek M. | FrontEnd Developer" />
                 </Route>
                 {projects.map((project) => (
                   <Route key={project.id} exact path={project.path}>
-                    <Project {...routingProps} />
+                    <Project {...routingProps} title={`${project.name} | Przemek M. | FrontEnd Developer`} />
                   </Route>
                 ))}
                 <Route exact path='/about'>
-                  <About {...routingProps} />
+                  <About {...routingProps} title="O mnie | Przemek M. | FrontEnd Developer" />
                 </Route>
                 <Route exact path='/'>
-                  <Home {...routingProps} />
+                  <Home {...routingProps} title="Przemek M. | FrontEnd Developer" />
                 </Route>
                 <Route>
-                  <NotFound {...routingProps} />
+                  <NotFound {...routingProps} title="Przemek M. | FrontEnd Developer" />
                 </Route>
               </Switch>
             </AnimatePresence>
