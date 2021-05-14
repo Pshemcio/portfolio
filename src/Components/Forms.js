@@ -168,9 +168,6 @@ export const FooterForm = () => {
         if (fieldValue.trim() === '') {
             return `Proszę wpisać ${fieldName}`;
         }
-        if (/[^a-zA-Z0-9 -?!()ąęćśółżźńĄĘĆŚÓŁŻŹŃ]/.test(fieldValue)) {
-            return 'Niedozwolone znaki';
-        }
         if (fieldValue.trim().length < 3) {
             return `${fieldName} musi mieć conajmniej trzy znaki`;
         }

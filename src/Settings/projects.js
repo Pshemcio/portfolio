@@ -105,8 +105,8 @@ const projects = [
         },
         date: "02/2021",
         text: [
-            "Mój pierwszy projekt który można nazwać komercyjnym - strona internetowa znajomej firmy elektrycznej.",
-            "Wstępny layout strony stworzyłem w Figmie, na podstawie wytycznych klienta. Była to moja pierwsza większa styczność z tym serwisem. Bardzo spodobała mi się jego przejżystość oraz łatwość obsługi.",
+            "Mój pierwszy projekt, który można nazwać komercyjnym - strona internetowa znajomej firmy elektrycznej.",
+            "Wstępny layout strony stworzyłem w Figmie, na podstawie wytycznych klienta. Była to moja pierwsza większa styczność z tym serwisem. Bardzo spodobała mi się jego przejrzystość oraz łatwość obsługi.",
             'Do produkcji projektu postanowiłem wykorzystać "wielką trójcę" FrontEndu, stylowałem z użyciem SASSa. W czasie tworzenia projektu nauczyłem się również metodologii BEM. Dodatkowo zaimplementowałem dwie biblioteki do obsługi galerii i slidera. Formularz kontaktowy obsługiwany jest przez PHPMailer.'
         ],
         stack: [

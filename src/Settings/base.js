@@ -46,10 +46,7 @@ const GlobalStyle = createGlobalStyle`
   {
     box-shadow: 0 0 0 30px ${primaryColorLight} inset !important;
     -webkit-box-shadow: 0 0 0 30px ${primaryColorLight} inset !important;
-  }
-
-  input:-webkit-autofill
-  {
+    background-clip: content-box !important;
     -webkit-text-fill-color: ${secondaryColor} !important;
   }
 `
