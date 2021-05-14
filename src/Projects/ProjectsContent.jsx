@@ -41,7 +41,7 @@ const ProjectsContent = (props) => {
                                     <ImageWrapper projectscontent="true">
                                         <ProjectsImageHoverContainer>
                                             <RevealImage data-scroll>
-                                                <Image src={project.photos.thumb.mobile} srcSet={`${project.photos.thumb.mobile} 300w, ${project.photos.thumb.desktop} 768w`} />
+                                                <Image src={project.photos.thumb.mobile} srcSet={`${project.photos.thumb.mobile} 300w, ${project.photos.thumb.desktop} 768w`} projectscontent="true" />
                                             </RevealImage>
                                         </ProjectsImageHoverContainer>
                                     </ImageWrapper>

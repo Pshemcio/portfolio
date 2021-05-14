@@ -74,6 +74,7 @@ export const ProjectsInfoContainer = styled.div`
 `
 
 export const ProjectsImageHoverContainer = styled.div`
+    height: 100%;
     transition: transform 1.2s cubic-bezier(0.14, 0.99, 0.43, 1.01);
 `;
 

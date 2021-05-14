@@ -71,6 +71,7 @@ export const RevealImage = styled.div`
     transform: translateX(-100%);
     overflow: hidden;
     transition: transform 1s .2s cubic-bezier(.87,.03,.12,1);
+    height: 100%;
     &.is-inview {
         transform: translateX(0);
 
@@ -85,13 +86,13 @@ export const Image = styled.img`
     transform: translateX(100%) scale(1.4);
     transform-origin: left;
     transition: transform 1s .2s cubic-bezier(.87,.03,.12,1);
-
-    @media ${breakpoints.lg} {
-        ${props =>
+    ${props =>
         props.projectscontent &&
         css`
+        @media ${breakpoints.md} {
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
+        }    
     `}
-    }
+    
 `
