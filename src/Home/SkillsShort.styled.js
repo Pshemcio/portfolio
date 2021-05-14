@@ -9,7 +9,8 @@ const {
     breakpoints: {
         xs,
         md,
-        lg
+        lg,
+        xl
     }
 } = Theme;
 
@@ -21,6 +22,11 @@ export const SkillsList = styled.ul`
     margin-top: 10px;
     padding: 4vh 0;
     border: 1px solid white;
+    min-height: 45vw;
+
+    @media (min-width: 1800px) {
+        min-height: 840px;
+    }
 `
 
 export const SkillsItem = styled.li`

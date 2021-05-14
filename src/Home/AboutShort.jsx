@@ -2,7 +2,7 @@ import { Heading2, Paragraph, SectionContainer, MainLink, TextReveal } from '../
 
 const AboutShort = () => {
     return (
-        <SectionContainer id="about" data-scroll-section>
+        <SectionContainer id="about">
             <Heading2>
                 <TextReveal data-scroll>
                     Cześć

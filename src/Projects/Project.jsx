@@ -79,16 +79,16 @@ const Project = (props) => {
     return (
         <>
             <PageTransitioning />
-            <MainContainer className="smooth-scroll" data-scroll-container>
+            <MainContainer className="smooth-scroll" data-scroll-section>
                 <SectionContainer project>
-                    <SectionContainerFluid data-scroll-section>
+                    <SectionContainerFluid>
                         <Heading2 project="true">
                             <TextReveal data-scroll>
                                 {name}
                             </TextReveal>
                         </Heading2>
                     </SectionContainerFluid>
-                    <SectionContainerInner data-scroll-section>
+                    <SectionContainerInner>
                         <ProjectsInfoContainer>
                             <HeadingDesc small>{shortDescription}</HeadingDesc>
                             <HeadingDesc small>{date}</HeadingDesc>
@@ -127,7 +127,7 @@ const Project = (props) => {
                             )
                         })}
                     </SectionContainerInner>
-                    <SectionContainerFluid data-scroll-section>
+                    <SectionContainerFluid>
                         <ImageWrapper projectoverview>
                             <RevealImage data-scroll>
                                 <Image className="cursor_hover" src={mobileOverview} srcSet={`${mobileOverview} 300w, ${desktopOverview} 768w`} alt={alt} />
@@ -139,7 +139,7 @@ const Project = (props) => {
                             </RevealImage>
                         </ImageWrapper >
                     </SectionContainerFluid>
-                    <SectionContainerFluid data-scroll-section nextProject="true">
+                    <SectionContainerFluid nextProject="true">
                         <Heading3 project>
                             <TextReveal data-scroll>
                                 Następny projekt

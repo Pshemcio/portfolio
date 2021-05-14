@@ -27,7 +27,7 @@ const variants = {
         bottom: 0,
         transition: {
             duration: .6,
-            delay: .9,
+            delay: .5,
             ease: [0.12, 1, 0.2, 1]
         }
     }

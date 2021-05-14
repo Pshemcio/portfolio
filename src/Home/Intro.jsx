@@ -16,7 +16,7 @@ import {
 
 const Intro = () => {
     return (
-        <IntroStyled data-scroll-section >
+        <IntroStyled>
             <IntroContainer>
                 <SvgWrapper data-scroll>
                     <svg viewBox="0 0 294 282" fill="none" xmlns="http://www.w3.org/2000/svg">

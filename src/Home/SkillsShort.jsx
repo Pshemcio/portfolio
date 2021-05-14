@@ -46,7 +46,7 @@ const SkillsShort = () => {
     ];
 
     return (
-        <SectionContainer id="skills" data-scroll-section>
+        <SectionContainer id="skills">
             <Heading2>
                 <TextReveal data-scroll>
                     Umiejętności

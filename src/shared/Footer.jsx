@@ -36,7 +36,7 @@ const Footer = () => {
     };
 
     return (
-        <SectionContainer id="footer" data-scroll-section>
+        <SectionContainer id="footer">
             <Heading2 footer>
                 <TextReveal data-scroll>
                     Kontakt

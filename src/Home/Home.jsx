@@ -17,7 +17,7 @@ const Home = (props) => {
     return (
         <>
             <PageTransitioning />
-            <MainContainer className="smooth-scroll" data-scroll-container home>
+            <MainContainer data-scroll-section home>
                 <Intro />
                 <AboutShort />
                 <SkillsShort />

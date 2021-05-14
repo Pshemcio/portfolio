@@ -16,7 +16,7 @@ const About = (props) => {
     return (
         <>
             <PageTransitioning />
-            <MainContainer className="smooth-scroll">
+            <MainContainer data-scroll-section>
                 <AboutContent />
                 <Footer />
             </MainContainer>

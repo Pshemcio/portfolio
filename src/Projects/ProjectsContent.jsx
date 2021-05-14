@@ -23,7 +23,7 @@ import {
 const ProjectsContent = (props) => {
     return (
         <>
-            <SectionContainer id="projects" data-scroll-section>
+            <SectionContainer id="projects">
                 <Heading2>
                     <TextReveal data-scroll>
                         Projekty

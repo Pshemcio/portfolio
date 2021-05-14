@@ -35,9 +35,7 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    setTimeout(() => {
-      setIsReady(true);
-    }, 1200);
+    setIsReady(true);
     return () => {
       setIsReady(false);
     }
@@ -69,13 +67,15 @@ function App() {
     }, []);
   };
 
+  let firefoxAgent = navigator.userAgent.indexOf("Firefox") > -1;
+
   const HandleLocomotiveScroll = () => {
     useEffect(() => {
       const scroll = new LocomotiveScroll({
         el: document.querySelector(".smooth-scroll"),
         lerp: 0.09,
         reloadOnContextChange: true,
-        smooth: true
+        smooth: !firefoxAgent
       });
       return () => {
         scroll.destroy();
@@ -91,7 +91,7 @@ function App() {
   }
 
   return (
-    <AppStyled className="App">
+    <AppStyled className="App smooth-scroll" data-scroll-container>
       {
         isReady ? (
           <>
