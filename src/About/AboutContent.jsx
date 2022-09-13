@@ -22,8 +22,8 @@ const AboutContent = () => {
                 </Paragraph>
                 <Paragraph>
                     <TextReveal data-scroll transparent shift={.1} delay={.5}>
-                        Jestem adeptem sztuki web developmentu poszukującym pierwszego komercyjnego doświadczenia. Uwielbiam minimalistyczny design oraz subtelne animacje. Długo uczyłem się czystego JavaScriptu więc nie miałem dużego problemu z przejściem na ReactJS. Jego prostota oraz możliwości sprawiają, że to właśnie z pracą na tej technologii wiążę swoją przyszłość zawodową.
-                        </TextReveal>
+                        Jako front-end developer pracuję od czerwca 2021. Uwielbiam minimalistyczny design oraz subtelne animacje. Ciągle dążę do poszerzania swoich kompetencji poprzez poznawanie najnowszych rozwiązań i technologii.
+                    </TextReveal>
                 </Paragraph>
                 <Heading3 about="true">
                     <TextReveal data-scroll>
@@ -57,7 +57,8 @@ const AboutContent = () => {
                 </Heading3>
                 <Paragraph>
                     <TextReveal data-scroll transparent shift={.1}>
-                        Do tej pory pracowałem jako monter izolacji przemysłowych oraz elektryk na wielu zagranicznych projektach. Była to praca zarówno na lądzie jak i na platformach wiertniczych, więc można powiedzieć związana z moim wykształceniem. Doświadczenie na zagranicznych projektach znacząco podniosło mój poziom języka angielskiego. Nie mam najmniejszych problemów z rozumieniem dokumentacji czy komunikacją. Nauczyłem się też podstaw języka norweskiego jednak w nim nie czuję się już zbyt pewnie.
+                        Pierwszą pracę jako web developer zdobyłem w czerwcu 2021, w firmie Kodefix. Tworzyłem w niej od zera motywy w wordpressie. W lutym 2022 przeszedłem do Devopsbay, w którym pracuję do dziś. Tworzymy platformę konsultingową w ReactJs. 
+                        Zanim związałem się z front-endem pracowałem jako monter izolacji przemysłowych oraz elektryk na wielu zagranicznych projektach. Doświadczenie na zagranicznych projektach znacząco podniosło mój poziom języka angielskiego. Nie mam najmniejszych problemów z rozumieniem dokumentacji czy komunikacją.
                     </TextReveal>
                 </Paragraph>
                 <Heading3 about="true">
@@ -71,9 +72,9 @@ const AboutContent = () => {
                     </TextReveal>
                 </Paragraph>
                 <Paragraph nice aboutme="true">
-                    <TextReveal data-scroll transparent shift={.1}>
+                    {/* <TextReveal data-scroll transparent shift={.1}>
                         Serdecznie zapraszam do kontaktu, czy to w sprawie pracy czy luźnej rozmowy. Z chęcią odpiszę na każdą wiadomość jaką dostanę.
-                    </TextReveal>
+                    </TextReveal> */}
                 </Paragraph>
                 <Heading3 footer>
                     Pozdrawiam i życzę miłego dnia!

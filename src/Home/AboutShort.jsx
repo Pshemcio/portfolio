@@ -10,14 +10,12 @@ const AboutShort = () => {
             </Heading2>
             <Paragraph about="true">
                 <TextReveal data-scroll shift={.3} transparent>
-                    Nazywam się Przemysław Majka, mieszkam w Krakowie.
-                    Swoją przygodę z FrontEndem rozpocząłem w połowie 2019 roku. Od tamtej pory na naukę poświęcam każdą wolną chwilę i sprawia mi ona ogromną przyjemność.
-                    Ciągle dążę do poszerzania swoich kompetencji poprzez poznawanie najnowszych rozwiązań i technologii.
+                    Nazywam się Przemysław Majka, mieszkam w Krakowie. Swoją przygodę z FrontEndem rozpocząłem pod koniec 2019 roku. Po półtora roku nauki udało mi się znaleźć pierwszą pracę w IT. Obecnie pracuję jako React developer w Sopockiej firmie Devopsbay.
                 </TextReveal>
             </Paragraph>
             <Paragraph nice>
                 <TextReveal data-scroll>
-                    Poszukuję pracy jako FrontEnd Developer.
+                    Zapraszam do przeglądania! :)
                 </TextReveal>
             </Paragraph>
             <MainLink className="cursor_hover" to={"/about"} arrow="true" aboutshort="true">

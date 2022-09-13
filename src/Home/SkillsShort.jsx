@@ -8,18 +8,22 @@ import { PhoneDesktop } from '@styled-icons/fluentui-system-regular/PhoneDesktop
 
 import {
     ReactLogo,
-    Bootstrap
+    Bootstrap,
+    Redux,
+    TailwindCss,
 } from '@styled-icons/boxicons-logos';
 
 import {
     Css3,
     Javascript,
-    StyledComponents,
+    Styledcomponents,
     Sass,
     Wordpress,
     Figma,
     Html5,
-    Woo
+    Woo,
+    Nextdotjs,
+    Mui,
 } from '@styled-icons/simple-icons';
 
 import {
@@ -31,14 +35,18 @@ import {
 
 const SkillsShort = () => {
     const skills = [
+        { name: "javascript", icon: <Javascript />, color: "#f0db4f" },
+        { name: "react", icon: <ReactLogo />, color: "#61dbfb" },
+        { name: "next", icon: <Nextdotjs />, color: "#fff" },
+        { name: "redux", icon: <Redux />, color: "#764abc" },
         { name: "html", icon: <Html5 />, color: "#e34c26" },
         { name: "css3", icon: <Css3 />, color: "#2965f1" },
-        { name: "javascript", icon: <Javascript />, color: "#f0db4f" },
         { name: "sass", icon: <Sass />, color: "#c69" },
-        { name: "bootstrap", icon: <Bootstrap />, color: "#563d7c" },
+        { name: "tailwind", icon: <TailwindCss />, color: "#38BDF7" },
+        { name: "mui", icon: <Mui />, color: "#027FFF" },
         { name: "rwd", icon: <PhoneDesktop />, color: "#e75a7c" },
-        { name: "react", icon: <ReactLogo />, color: "#61dbfb" },
-        { name: "styled components", icon: <StyledComponents />, color: "#fff" },
+        { name: "bootstrap", icon: <Bootstrap />, color: "#563d7c" },
+        { name: "styled components", icon: <Styledcomponents />, color: "#fff" },
         { name: "wordpress", icon: <Wordpress />, color: "#21759b" },
         { name: "Woocommerce", icon: <Woo />, color: "#764abc" },
         { name: "git", icon: <Github />, color: "#fff" },

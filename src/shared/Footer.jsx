@@ -46,7 +46,7 @@ const Footer = () => {
                 Napisz do mnie!
             </Heading3>
             <FooterForm />
-            <FooterContactContainer>
+            {/* <FooterContactContainer>
                 <FooterContactItem>
                     <FooterSvgWrapper>
                         <Mail />
@@ -89,7 +89,7 @@ const Footer = () => {
                         </FooterSocialsItem>
                     ))}
                 </FooterSocialsList>
-            </FooterMenuContainer>
+            </FooterMenuContainer> */}
         </SectionContainer>
     )
 }
